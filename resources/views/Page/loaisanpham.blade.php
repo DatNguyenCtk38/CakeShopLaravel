@@ -115,13 +115,15 @@
             </div><!-- end browse-view -->
                 <div class="horizontal-separator"></div>
 
-                <div class="pagging-sort" style="margin-bottom: 10px">
+                @if (count($sp_theoloai)>0)
+                    <div class="pagging-sort" style="margin-bottom: 10px">
                     <div class="pagination clearfix">
                        {{ $sp_theoloai->links() }}
                     </div>
 
 
                 </div>
+                @endif
 
             </div><!-- end browse-view -->
 

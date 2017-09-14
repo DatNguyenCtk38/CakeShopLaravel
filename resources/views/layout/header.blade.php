@@ -93,7 +93,7 @@
                         <div class="modcontent clearfix">
                             <!-- Default of smart -->
                             <div class="vmCartModule  cart blank" id="vmCartModule">
-                                <h3 class="title"><a href="index.php/virtuemart/other-pages/shopping-cart/cart.html">Giỏ hàng</a></h3>
+                                <h3 class="title"><a href="{{ route('dathang') }}">Giỏ hàng</a></h3>
 
 
                                 <div class="total_products gio-hang-tb">(@if(Session::has('cart'))
@@ -147,7 +147,7 @@
                 </div>
                 <div id="yt_menuposition" class="span10 offset2">
                     <ul id="meganavigator" class="navi"><li class="active level1 first" style="float: left;">
-                            <a class="active level1 first item-link" href="index.html"><span class="menu-title">Home</span></a>	
+                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Home</span></a>	
                         </li>
 
                         <li class="level1 havechild" style="float: left;">
