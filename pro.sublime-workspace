@@ -455,7 +455,7 @@
 			"file": "app/Http/Controllers/PageController.php",
 			"settings":
 			{
-				"buffer_size": 7052,
+				"buffer_size": 7032,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -523,14 +523,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/Cake",
-		"/C/xampp/htdocs/Cake/app",
-		"/C/xampp/htdocs/Cake/app/Http",
-		"/C/xampp/htdocs/Cake/app/Http/Controllers",
-		"/C/xampp/htdocs/Cake/resources",
-		"/C/xampp/htdocs/Cake/resources/views",
-		"/C/xampp/htdocs/Cake/resources/views/Page",
-		"/C/xampp/htdocs/Cake/routes"
+		"/C/xampp/htdocs/CakeShopLaravel"
 	],
 	"file_history":
 	[
@@ -736,15 +729,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7052,
+						"buffer_size": 7032,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								244,
-								40
+								0,
+								0
 							]
 						],
 						"settings":
@@ -814,7 +807,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2907.0,
+						"translation.y": 2490.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

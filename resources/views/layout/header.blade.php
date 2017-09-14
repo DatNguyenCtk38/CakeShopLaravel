@@ -93,23 +93,20 @@
                         <div class="modcontent clearfix">
                             <!-- Default of smart -->
                             <div class="vmCartModule  cart blank" id="vmCartModule">
-                                <h3 class="title"><a href="index.php/virtuemart/other-pages/shopping-cart/cart.html">Your cart</a></h3>
+                                <h3 class="title"><a href="index.php/virtuemart/other-pages/shopping-cart/cart.html">Giỏ hàng</a></h3>
 
 
-                                <div class="total_products">(Cart empty)</div>
+                                <div class="total_products gio-hang-tb">(@if(Session::has('cart'))
+                                {{Session('cart')->totalQty}}
+                                        @else 0
+                                    @endif)</div>
 
                                 <noscript>
                                 Please wait	
                                 </noscript>
                             </div>
 
-                            <script id="vm.CartModule.UpdateModule_js" type="text/javascript">//<![CDATA[ 
-                                jQuery(document).ready(function () {
-                                    jQuery("body").live("updateVirtueMartCartModule", function (e) {
-                                        jQuery("#vmCartModule").updateVirtueMartCartModule();
-                                    });
-                                }); //]]>
-                            </script>
+                           
                         </div>
                     </div>
                 </div>

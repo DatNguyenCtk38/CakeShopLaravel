@@ -30,13 +30,12 @@ class PageController extends Controller
     	return view('page.trangchu',compact('top3Crepe','promotion_product'));
     }
     public function getLoaiSp($type){
-        $sp_theoloai = Product::where('id_type',$type)->get();
-        $sp_khac = Product::where('id_type','<>',$type)->paginate(3);
-        $loai = ProductType::all();
+        $sp_theoloai = Product::where('id_type',$type)->paginate(9);
+       
         $loai_sp = ProductType::where('id',$type)->first();
         //print_r($loai_sp);
         //die();
-    	return view('page.loaisanpham',compact('sp_theoloai','sp_khac','loai','loai_sp'));
+    	return view('page.loaisanpham',compact('sp_theoloai','loai_sp'));
     }
     public function getChiTietSanPham(Request $req){
         $product = Product::where('id',$req->id)->first();

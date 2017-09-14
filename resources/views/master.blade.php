@@ -169,5 +169,29 @@ jQuery(function($) {
   		</section>
       @include('layout.footer')
   	</section>
+    <script src="public/source/templates/sj_bakery/js/jquery-3.1.0.min.js"></script>
   </body>
 </html>
+
+<script>
+    function addcart(id) {
+
+        $.ajax({
+
+            url: "{{ route('Addcartajax') }}",
+            type: "get",
+            dataType: "text",
+            data: {
+                id : id
+            },
+            success: function (data) {
+              //alert(data);
+              
+                $('.gio-hang-tb').html(" ("+ data+")");
+               
+        alert("Đã thêm vào giỏ hàng");
+                
+            }
+        });
+    }
+    </script>

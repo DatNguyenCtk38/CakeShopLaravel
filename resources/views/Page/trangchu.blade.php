@@ -71,29 +71,29 @@
 
                                                 <div class="item-price">
                                                     <div class="PricesalesPrice vm-display vm-price-value">
-                                                    <span class="vm-price-desc">Unit Price: 
+                                                    <span class="vm-price-desc">Giá: 
                                                     </span>
                                                     <span 
                                                      @if ($product->promotion_price > 0)
                                                             style="text-decoration: line-through;" 
                                                         @endif
-                                                    class="PricesalesPrice">{{number_format($product->unit_price) }} đồng
+                                                    class="PricesalesPrice">{{number_format($product->unit_price) }} ₫
                                                     </span><br>
                                                     @if ($product->promotion_price == 0)
                                                           
                                                     <br>
-                                                    <span hidden="hidden" class="vm-price-desc">Promotion Price: </span>
-                                                    <span hidden="hidden" class="PricesalesPrice">{{number_format($product->promotion_price) }} đồng
+                                                    <span hidden="hidden" class="vm-price-desc">Khuyến mãi: </span>
+                                                    <span hidden="hidden" class="PricesalesPrice">{{number_format($product->promotion_price) }} ₫
                                                     </span>
                                                     @else
                                                     <span  class="vm-price-desc">Promotion Price: </span>
-                                                    <span  class="PricesalesPrice">{{number_format($product->promotion_price) }} đồng</span>
+                                                    <span  class="PricesalesPrice">{{number_format($product->promotion_price) }} ₫</span>
                                                     @endif
                                                     </div></div>
                                                 <div class="addtocard-readmore">
                                                     <div class="item-readmore">
                                                         <a class="button1" href="index.php/fruits-cake/fate-rinus-late-detail.html" title="Fate rinus late">
-                                                            View
+                                                           Chi tiết
                                                         </a>
                                                     </div></div>
                                                 <div class="item-addtocart">
@@ -103,7 +103,10 @@
 
                                                             <div class="addtocart-bar">
                                                                 <span class="addtocart-button">
-                                                                    <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart">				</span> 							<!-- <label for="quantity17" class="quantity_box">Quantity: </label> -->
+                                                                    <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart(@php echo $product->id;@endphp)"
+                                                                    >
+                                                                    
+                                                                </span> 							<!-- <label for="quantity17" class="quantity_box">Quantity: </label> -->
                                                                 <span class="quantity-box">
                                                                     <input type="text" class="quantity-input js-recalculate" name="quantity[]" onblur="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onclick="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onchange="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onsubmit="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" value="1" data-init="1" data-step="1">
                                                                 </span>
@@ -247,21 +250,22 @@
                                         <div class="info-product">
                                             <h2><a href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}">{{ $product->name }}</a></h2>
                                             <div class="product-price marginbottom12" id="productPrice54">
-                                                <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Price: </span><span class="PricesalesPrice">{{ number_format($product->unit_price )  }} đồng</span></div>
+                                                <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Giá: </span><span class="PricesalesPrice">{{ number_format($product->unit_price )  }} ₫</span></div>
                                             </div>
                                             <p class="product_s_desc">
                                                 Makin zaten gravida eros quis justo sed nonummy...
                                             </p>
                                                 <div class="btn-action clearfix">
                                                     <div class="wrap-button">
-                                                        <a href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}" title="Diten face xare" class="button1 product-details">Detail
+                                                        <a href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}" title="Diten face xare" class="button1 product-details">Chi tiết
                                                         </a>
                                                     </div>
                                                         <div class="addtocart-area">
                                                             <form method="post" class="product js-recalculate" action="#">
                                                                 <div class="addtocart-bar">
                                                                 <span class="addtocart-button">
-                                                                <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart"/>
+                                                                <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart(@php echo $product->id;@endphp)"
+                                                                    >
                                                                 </span>
 
                                                 <div class="clear"></div>

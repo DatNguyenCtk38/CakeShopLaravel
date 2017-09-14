@@ -27,30 +27,16 @@
                     <div class="main_info clearfix">
                         <div class="product_image">
                             <div class="main-image">
-                                <div id="wrap" style="top:0px;z-index:9999;position:relative;"><a id="yt_cloudzoom" href="public/source/images/stories/virtuemart/product/{{$product->image}}" class="cloud-zoom" rel="zoomWidth:200, zoomHeight:200, adjustX: 20, adjustY: -3" style="position: relative; display: block;">
+                                <div id="wrap" style="top:0px;z-index:9999;position:relative;">
+                                    <a id="yt_cloudzoom" href="public/source/images/stories/virtuemart/product/{{$product->image}}"  rel="zoomWidth:200, zoomHeight:200, adjustX: 20, adjustY: -3" style="position: relative; display: block;">
                                         <img class="img-large" style="height: 210px;width: 305px" src="public/source/images/stories/virtuemart/product/{{$product->image}}" title="" alt="" style="display: block;">
 
-                                    </a><div class="mousetrap" style="background-image: url(&quot;.&quot;); z-index: 999; position: absolute; width: 305px; height: 210px; left: 0px; top: 0px; cursor: move;"></div></div>
+                                    </a>
+                                    <div class="mousetrap" style="background-image: url(&quot;.&quot;); z-index: 999; position: absolute; width: 305px; height: 210px; left: 0px; top: 0px;">
+                                    </div>
+                                </div>
                             </div>
-
-
-
-                            <script type="text/javascript" src="public/source/templates/sj_bakery/js/cloud-zoom.1.0.2.js">
-                            </script>
-                            <script type="text/javascript" src="public/source/templates/sj_bakery/js/carousel_lite.js">
-                            </script>
-                            <script type="text/javascript">
-                                jQuery(document).ready(function ($) {
-                                    $(".yt-carousel .jCarouselLite").jCarouselLite({
-                                        btnPrev: ".yt-carousel .prev",
-                                        btnNext: ".yt-carousel .next",
-                                        visible: 3});
-                                    $('a.cloud-zoom-gallery').bind('click', function () {
-                                        $('a.cloud-zoom-gallery').removeClass('active');
-                                        $(this).addClass('active');
-                                    });
-                                });
-                            </script>
+                           
                         </div>
                     </div>
 
@@ -70,8 +56,27 @@
                                 </div>
                             </div>
 
-                            <br><div class="product-price" id="productPrice33">
-                                <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Sales price: </span><span class="PricesalesPrice">{{ number_format($product->unit_price) }}</span></div></div>
+                            <br>
+                            <div class="product-price" id="productPrice33">
+                                <
+                                @if ($product->promotion_price > 0)
+                                    <div class="PricesalesPrice vm-display vm-price-value">
+                                        <span class="vm-price-desc">Giá : </span><span style="text-decoration: line-through;" class="PricesalesPrice">{{ number_format($product->unit_price) }} ₫
+                                        </span>
+                                    </div>
+                                <br>
+                                    <div class="PricesalesPrice vm-display vm-price-value">
+                                    <span class="vm-price-desc">Khuyến mãi: </span><span class="PricesalesPrice">{{ number_format($product->promotion_price) }}₫
+                                    </span>
+                                </div>
+                                @else
+                                    <div class="PricesalesPrice vm-display vm-price-value">
+                                        <span class="vm-price-desc">Giá : </span><span class="PricesalesPrice">{{ number_format($product->unit_price) }}₫
+                                        </span>
+                                    </div>
+                                <br>
+                                @endif
+                            </div>
 
 
                             <div class="addtocart-area">
@@ -79,7 +84,8 @@
 
                                     <div class="addtocart-bar">
                                         <span class="addtocart-button">
-                                            <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart">             </span>                             <!-- <label for="quantity33" class="quantity_box">Quantity: </label> -->
+                                            <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart(@php echo $product->id;@endphp)"
+                                                                    >             </span>                             <!-- <label for="quantity33" class="quantity_box">Quantity: </label> -->
                                         <span class="quantity-box">
                                             <input type="text" class="quantity-input js-recalculate" name="quantity[]" onblur="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onclick="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onchange="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onsubmit="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" value="1" data-init="1" data-step="1">
                                         </span>
@@ -165,7 +171,7 @@
                                         <div class="info-product">
                                             <h2><a style="font-size: 13px" href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}">{{ $product->name }}</a></h2>
                                             <div class="product-price marginbottom12" id="productPrice54">
-                                                <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Price: </span><span class="PricesalesPrice">{{ number_format($product->unit_price )  }} </span></div>
+                                                <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Price: </span><span class="PricesalesPrice">{{ number_format($product->unit_price )  }} ₫</span></div>
                                             </div>
                                             <p class="product_s_desc">
                                                 Makin zaten gravida eros quis justo sed nonummy...
@@ -176,7 +182,8 @@
                                                             <form method="post" class="product js-recalculate" action="#">
                                                                 <div class="addtocart-bar">
                                                                 <span class="addtocart-button">
-                                                                <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart"/>
+                                                               <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart(@php echo $product->id;@endphp)"
+                                                                    >
                                                                 </span>
 
                                                 <div class="clear"></div>
