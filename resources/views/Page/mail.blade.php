@@ -71,7 +71,7 @@
 				<base href="{{asset('')}}">
 				@foreach ($listBillDetail as $bill)
 				@php
-					$ten = 'public/source/images/stories/virtuemart/product/sli12.jpg';
+					$ten = 'public/source/images/stories/virtuemart/product/'.$bill->image;
 				@endphp
 
 				<div id="mainDetail" style="float: left;width: 598px">
@@ -79,7 +79,7 @@
 						<img style="padding-left: 10px; padding-top: 10px" height="120px" width="120px" 
 						src="<?php echo $message->embed($ten); ?>">
 					</div>
-
+					
 					<div class="content" style="float: left;width: 300px;padding-right: 35px">
 						<p>{{$bill->name}}</p>
 						<p>{{$bill->quantity}}</p>

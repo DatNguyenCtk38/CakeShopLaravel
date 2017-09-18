@@ -15,11 +15,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('header',function($view){
-            $loai_sp = ProductType::all();
-            
-            $view->with('loai_sp',$loai_sp);
-        });
         view()->composer('layout.content_left',function($view){
             $loai_sp = ProductType::all();
             
@@ -43,7 +38,10 @@ class AppServiceProvider extends ServiceProvider
                 'product_cart'=>$cart->items,
                 'totalPrice'=>$cart->totalPrice,
                 'totalQty'=>$cart->totalQty]);
+                // print_r( $cart);
+                 //die();
             }
+
         });
 
     }

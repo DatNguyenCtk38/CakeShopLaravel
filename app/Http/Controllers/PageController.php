@@ -113,6 +113,8 @@ class PageController extends Controller
             $bill_detail->unit_price = $value['price']/$value['qty'];
             $bill_detail->save();
         }
+        //print_r($cart);
+        //die();
         //--------------------------MAIL-------------------
         //Mail::send(new newMail());
         //$listBill = BillDetail::where('id_bill',$bill->id)->get();
@@ -122,7 +124,7 @@ class PageController extends Controller
                 ->where('bill_detail.id_bill','=',$bill->id)
                 ->get();
         //print_r($listBill);
-        //die();
+        die();
         Mail::send(new SendMail($listBill,$req->name,$req->phone,$req->address,$bill->created_at,$bill->total, $customer->email));
         //__________________________MAIL___________________
         Session::forget('cart');
@@ -178,8 +180,8 @@ class PageController extends Controller
         $credentials = array('email'=>$req->email,'password'=>$req->password);
         
             if(Auth::attempt($credentials)){
-
-            return redirect()->route('trang-chu');
+                return redirect()->back();
+            //return redirect()->route('trang-chu');
             }
             else{
                 return redirect()->back()->with(['flag'=>'danger','message'=>'Đăng nhập không thành công']);
@@ -188,7 +190,7 @@ class PageController extends Controller
         
     public function postLogout(){
         Auth::logout();
-        return redirect()->route('trang-chu');
+        return redirect()->back();
     }
     public function getTimKiem(Request $req){
         $product = Product::where('name','like','%'.$req->key.'%')->orWhere('unit_price',$req->key)->get();

@@ -50,7 +50,7 @@
                                     <td>{{$sanpham->name}}</td>
                                     <td>{{$sanpham->catename}}</td>
                                     
-                                    <td><img width="100px" height="100px" src="public/source/image/product/{{$sanpham->image}}"></td>
+                                    <td><img width="100px" height="100px" src="public/source/images/stories/virtuemart/product/{{$sanpham->image}}"></td>
                                     
                                     <td>{{$sanpham->unit_price}}</td>
                                     <td>{{$sanpham->promotion_price}}</td>

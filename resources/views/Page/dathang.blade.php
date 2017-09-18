@@ -13,7 +13,16 @@
 	    	    <div class="modcontent clearfix">
 		
 <ul class="breadcrumb ">
-<li class="active"><span class="divider"><i class="icon-home" rel="tooltip" title="You are here: "></i></span></li><li><a href="/templates/joomla3/sj-bakery/index.php" class="pathway">Home</a><span class="divider">/</span></li><li></li><li><a href="/templates/joomla3/sj-bakery/index.php/specialty-cake/manufacturer/?categorylayout=0&amp;showcategory=1&amp;showproducts=1&amp;productsublayout=0" class="pathway">Virtuemart</a><span class="divider">/</span></li><li></li><li><span>Other Pages</span><span class="divider">/</span></li><li></li><li><a href="/templates/joomla3/sj-bakery/index.php/virtuemart/other-pages/shopping-cart/cart" class="pathway">Shopping Cart</a></li><li></li><li><span class="divider">/</span><span>Shopping cart</span></li><li></li></ul>
+<li class="active">
+	<span class="divider">
+		<i class="icon-home" rel="tooltip" title="You are here: "></i>
+	</span>
+</li>
+<li>
+	<a href="/templates/joomla3/sj-bakery/index.php" class="pathway">Home</a>
+	<span class="divider">/</span>
+</li>
+<li></li><li><a href="/templates/joomla3/sj-bakery/index.php/virtuemart/other-pages/shopping-cart/cart" class="pathway">Shopping Cart</a></li><li></li></ul>
 	    </div>
 		
 	   
@@ -34,7 +43,24 @@
 			<a class="continue_link" href="/templates/joomla3/sj-bakery/index.php/specialty-cake">Continue Shopping</a>		</div>
 		<div class="clear"></div>
 	</div>
-
+	@php
+		
+		if (Auth::check()){
+			 $name = Auth::user()->full_name ;
+			 $gender =  Auth::user()->gender ;
+			 $email =  Auth::user()->email ;
+			 $address =  Auth::user()->address ;
+			 $phone =  Auth::user()->phone ;
+		}
+		else{
+			 $name = "";
+			 $gender =  "";
+			 $email = "" ;
+			 $address =  "" ;
+			 $phone =  "" ;
+			}
+		
+	@endphp
 	    <form id="com-form-login" action="{{route('chuyenhang')}}" method="post" >
 	    	<input type="hidden" name="_token" value="{{csrf_token()}}">
     <fieldset class="userdata">
@@ -45,7 +71,7 @@
 		</p>
 
         <p class="width30 floatleft" id="name">
-            <input style="margin-bottom: 20px;width: 130%" type="text" name="name" class="inputbox" size="18" placeholder="Họ tên">
+            <input required style="margin-bottom: 20px;width: 130%" type="text" value="{!! $name !!}" name="name" class="inputbox" size="18" placeholder="Họ tên">
 		</p>
 		<div class="clear"></div>
 		<!--Giới tính-->
@@ -55,8 +81,16 @@
         <p class="width30 floatleft" id="gender">
            <div class="form-block"  style="margin-bottom: 20px">
 							
-							<input id="gender" type="radio" class="input-radio" name="gender" value="nam" checked="checked" style="width: 5%">Nam</span>
-							<input id="gender" type="radio" class="input-radio" name="gender" value="nữ" style="width: 5%"><span>Nữ</span>
+							<input id="gender" type="radio" class="input-radio" name="gender" value="nam" 
+								@if ( $gender ==0)
+									checked="checked" 
+								@endif
+							 style="width: 5%">Nam</span>
+							<input id="gender" type="radio" class="input-radio" name="gender" value="nữ" 
+								@if ( $gender ==1 )
+									checked="checked" 
+								@endif
+							style="width: 5%"><span>Nữ</span>
 										
 						</div>
 		</p>
@@ -66,7 +100,7 @@
             Email
 		</p>
         <p class="width30 floatleft" id="email">
-            <input style="margin-bottom: 20px;width: 130%" type="text" name="email" class="inputbox" size="18" placeholder="Email@gmail.com">
+            <input required value="{!! $email !!}" style="margin-bottom: 20px;width: 130%" type="text" name="email" class="inputbox" size="18" placeholder="Email@gmail.com">
 		</p>
 		<!--Địa chỉ-->
 		<div class="clear"></div>
@@ -74,7 +108,7 @@
             Địa chỉ
 		</p>
         <p class="width30 floatleft" id="address">
-            <input style="margin-bottom: 20px;width: 130%" type="text" name="address" class="inputbox" size="18" placeholder="Địa chỉ">
+            <input required value="{!! $address !!}" style="margin-bottom: 20px;width: 130%" type="text" name="address" class="inputbox" size="18" placeholder="Địa chỉ">
 		</p>
 		<!--Điện thoại-->
 		<div class="clear"></div>
@@ -82,7 +116,7 @@
             Số điện thoại
 		</p>
         <p class="width30 floatleft" id="phone">
-            <input style="margin-bottom: 20px;width: 130%" type="text" name="phone" class="inputbox" size="18" placeholder="Số điện thoại">
+            <input required value="{!! $phone !!}" style="margin-bottom: 20px;width: 130%" type="text" name="phone" class="inputbox" size="18" placeholder="Số điện thoại">
 		</p>
 		<!--Ghi chú-->
 		<div class="clear"></div>
@@ -135,49 +169,66 @@
 
 <table class="cart-summary" cellspacing="0" cellpadding="0" border="0" width="100%">
 <tbody><tr>
-	<th align="left">Name</th>
-	<th align="left">SKU</th>
-	<th style="min-width:70px;width:5%;align:right;text-align:center">Price</th>
-	<th style="min-width:120px;width:10%;align:right;text-align:center">Quantity		/ Update</th>
+	<th align="left">Tên sản phẩm</th>
+	<th style="min-width:70px;width:5%;align:right;text-align:center" align="left">Hình ảnh</th>
+	<th style="min-width:70px;width:5%;align:right;text-align:center">Giá</th>
+	<th style="min-width:120px;width:10%;align:right;text-align:center">Số lượng		/ Xóa</th>
 
 
-		<th style="min-width:76px;width:5%;align:right;text-align:center"><span class="priceColor2">Tax 21%</span></th>
-		<th style="min-width:76px;width:5%;align:right;text-align:center"><span class="priceColor2">Discount</span></th>
-	<th style="min-width:80px;width:5%;align:right;text-align:center">Total</th>
+		<th style="min-width:76px;width:5%;align:right;text-align:center"><span class="priceColor2">Thuế</span></th>
+		<th style="min-width:76px;width:5%;align:right;text-align:center"><span class="priceColor2">Giảm giá</span></th>
+	<th style="min-width:80px;width:5%;align:right;text-align:center">Tổng giá</th>
 </tr>
 
+@if(Session::has('cart'))
 
-<tr valign="top" class="sectiontableentry1">
+	@foreach($product_cart as $cart)
+					<!-- end one item -->				
+	<tr id="row_{{$cart['item']['id']}}" valign="top" class="sectiontableentry1">
+
 	<input type="hidden" name="cartpos[]" value="0">
 	<td align="left">
 				<span class="cart-images">
 						 						</span>
-				<a href="/templates/joomla3/sj-bakery/index.php/fruits-cake/dika-lote-case-detail">Dika lote case</a><div class="vm-customfield-cart"></div>
+				<a href="/templates/joomla3/sj-bakery/index.php/fruits-cake/dika-lote-case-detail">{{$cart['item']['name']}}</a><div class="vm-customfield-cart"></div>
 	</td>
-	<td align="left">F900994</td>
+	<td align="center" style="width: 23%">
+		<img width="92%" src="public/source/images/stories/virtuemart/product/{{$cart['item']['image']}}" alt="" class="pull-left">
+	</td>
 	<td align="right">
-        <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc"></span><span class="PricesalesPrice">94,38 €</span></div>        
+        <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc"></span><span " class="PricesalesPrice">@if ($cart['item']['promotion_price']>0)
+        	{{number_format($cart['item']['promotion_price'])}}
+        @else
+        	{{number_format($cart['item']['unit_price'])}}
+        @endif ₫</span></div>        
         
 	</td>
-	<td align="right">		   <input type="text" onblur="Virtuemart.checkQuantity(this,1,'You can buy this product only in multiples of %s pieces!');" onclick="Virtuemart.checkQuantity(this,1,'You can buy this product only in multiples of %s pieces!');" onchange="Virtuemart.checkQuantity(this,1,'You can buy this product only in multiples of %s pieces!');" onsubmit="Virtuemart.checkQuantity(this,1,'You can buy this product only in multiples of %s pieces!');" title="Update Quantity In Cart" class="quantity-input js-recalculate" size="3" maxlength="4" name="quantity[0]" value="1">
+	<td align="center">
+		<input min="1" max="5" id="gh_sl_{{$cart['item']['id']}}" onchange="changecart({{$cart['item']['id']}},
+			@if ($cart['item']['promotion_price']==0)
+				{{$cart['item']['unit_price']}}
+			@else
+				{{$cart['item']['promotion_price']}}
+			@endif
 
-        <button type="submit" class="vmicon vm2-add_quantity_cart" name="updatecart.0" title="Update Quantity In Cart"><i class="fa fa-refresh"></i></button>
-
-			<button type="submit" class="vmicon vm2-remove_from_cart" name="delete.0" title="Delete Product From Cart"><i class="fa fa-trash-o"></i></button>
+		)" type="number" title="Update Quantity In Cart" class="quantity-input js-recalculate" size="3"  name="quantity[0]" value="{{$cart['qty']}}">
+			<a type="button" onclick="deletecart({{$cart['item']['id']}})" style="background-image: url('public/source/images/stories/virtuemart/product/icons8-Delete Bin-20.png');" type="submit" class="vmicon vm2-remove_from_cart" name="delete.0" title="Delete Product From Cart"><i class="fa fa-trash-o"></i></button>
 	</td>
 
 		<td align="right"><span class="priceColor2"></span>    </td>
 		<td align="right"><span class="priceColor2"></span></td>
 	<td colspan="1" align="right">
-		<div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc"></span><span class="PricesalesPrice">94,38 €</span></div></td>
-</tr>
+		<div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc"></span><span id="gh_tt_{{$cart['item']['id']}}" class="PricesalesPrice">{{number_format($cart['price'])}} ₫</span></div></td>
+	</tr>
+	@endforeach
+@endif
 	<!--Begin of SubTotal, Tax, Shipment, Coupon Discount and Total listing -->
 <tr class="sectiontableentry1">
-	<td colspan="4" align="right">Product prices result</td>
+	<td colspan="4" align="right">Tổng tiền</td>
 
 		<td align="right"><span class="priceColor2"></span></td>
 		<td align="right"><span class="priceColor2"></span></td>
-	<td align="right"><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc"></span><span class="PricesalesPrice">94,38 €</span></div></td>
+	<td align="right"><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc"></span><span id="totalPrice" class="PricesalesPrice">{{number_format($totalPrice)}} ₫</span></div></td>
 </tr>
 
 </tbody>
