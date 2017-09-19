@@ -2,6 +2,31 @@
     <div class="content-left-in row-fluid">
         <div id="position-2" class="span12">
             <!--<div class="yt-position-inner">-->
+             <div class="module exclusive">
+                 <div class="modcontent clearfix">
+                    <div style="text-align: center;">
+                        <h3 class="modtitle">Tìm kiếm</h3>
+                    </div>
+                    <div class="box">
+                        <form method="get" action="{{ route('timtheogia') }}">
+                          
+                           <span style="font-weight: bold; color: #d22222"> Giá :</span>
+                            <select name="kieuchon" style="width: 85%">
+                            <option value="behon100">Dưới 100.000 ₫</option>
+                            <option value="100den200">Từ 100.000 ₫ - 200.000 ₫ </option>
+                            <option value="lonhon200">Trên 200.000 ₫</option>
+                             </select>
+                            <div style="text-align: center;" class="item-readmore">
+                                <button type="submit" class="button1" title="Fate rinus late">
+                                    Tìm kiếm
+                                </button>
+                            </div>
+                                           
+                        </form>
+                    </div>
+                </div>
+
+            </div>
             <div class="module news1 bg-title">
 
                 <!--<div class="wrap-title">-->
@@ -16,11 +41,9 @@
                             <a href="{!!url('loai-san-pham/'.$loai->id.'-'.$loai->slug)!!}">{{ $loai->catename }}</a>
                         </li>   
                        @endforeach
-                </li></ul>
+                    </ul>
+                </div>
             </div>
-
-
-        </div>
         <div class="module news1 bg-title">
 
             <!--<div class="wrap-title">-->
@@ -34,7 +57,8 @@
                                     <div class="bs-content">
                                         <div class="bs-title">
                                             <a href="index.php/joomla-pages/joomla-content/single-article.html" title="Bener senver cans">
-                                                Bener senver cans						</a>
+                                                Bener senver cans
+                                            </a>
                                             </div>
                                             <div class="bs-cat-date">
                                                 <span class="bs-date">26 May 2011</span>
@@ -43,7 +67,8 @@
                                                 Zute disse at libero porttitor nisi aliquet vulputate vitae at velit. Aliquam eget arcu magna, vel ...						
                                                 <div class="bs-readmore">
                                                     <a href="index.php/joomla-pages/joomla-content/single-article.html" title="Bener senver cans">
-                                                        Read more +							</a>
+                                                        Read more +
+                                                    </a>
                                                     </div>
                                                 </div>
 
@@ -54,7 +79,8 @@
                                             <div class="bs-content">
                                                 <div class="bs-title">
                                                     <a href="index.php/enkis-enka-pazine.html" title="Detus lapi tuka">
-                                                        Detus lapi tuka						</a>
+                                                        Detus lapi tuka
+                                                    </a>
                                                     </div>
                                                     <div class="bs-cat-date">
                                                         <span class="bs-date">26 May 2011</span>
@@ -63,7 +89,8 @@
                                                         Suspendisse at libero porttitor nisi aliquet vulputate vitae at velit. Aliquam eget arcu magna, vel ...						
                                                         <div class="bs-readmore">
                                                             <a href="index.php/enkis-enka-pazine.html" title="Detus lapi tuka">
-                                                                Read more +							</a>
+                                                                Read more +
+                                                            </a>
                                                             </div>
                                                         </div>
 

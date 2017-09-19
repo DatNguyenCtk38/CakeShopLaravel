@@ -21,15 +21,15 @@
                     </form>
                    
                         <!-- End Search Box -->
-                      <h1>{{ $loai_sp->catename }}</h1>
-                       @if (count($sp_theoloai)==0)
+                      <h1>Tìm thấy {{ count($products) }}  sản phẩm </h1>
+                       @if (count($products)==0)
                         Không có sản phầm nào
                         
                         @endif
                           @php
                             $i = 0;
                           @endphp
-                        @foreach ($sp_theoloai as $product)
+                        @foreach ($products as $product)
                         @php
                         if($i%3==0)
                         {
@@ -128,10 +128,10 @@
             </div><!-- end browse-view -->
                 <div class="horizontal-separator"></div>
 
-                @if (count($sp_theoloai)>0)
+                @if (count($products)>0)
                     <div class="pagging-sort" style="margin-bottom: 10px">
                     <div class="pagination clearfix">
-                       {{ $sp_theoloai->links() }}
+                       {{ $products->appends(request()->input())->links()}}
                     </div>
 
 

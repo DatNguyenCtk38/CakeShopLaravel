@@ -196,4 +196,22 @@ class PageController extends Controller
         $product = Product::where('name','like','%'.$req->key.'%')->orWhere('unit_price',$req->key)->get();
         return view('page.timkiem',compact('product'));
     }
+    public function postTimTheoGia(Request $req){
+        $products;
+        switch ($req->kieuchon) {
+            case 'behon100':
+                 $products= Product::where('unit_price','<',100000)->paginate(6);
+                break;
+            case '100den200':
+                 $products= Product::whereBetween('unit_price', [100000, 200000])->paginate(6);
+                # code...
+                break;
+            case 'lonhon200':
+                $products= Product::where('unit_price','>',200000)->paginate(6);
+                # code...
+                break;
+            
+        }
+        return view('page.timtheogia',compact('products'));
+    }
 }

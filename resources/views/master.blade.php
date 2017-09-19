@@ -81,7 +81,7 @@ body a{
   <script src="public/source/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="public/source/components/com_virtuemart/assets/js/vmprices.js" type="text/javascript"></script>
   <script src="public/source/components/com_virtuemart/assets/js/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
-  <script src="public/source/templates/sj_bakery/menusys/class/common/js/jquery.easing.1.3.js" type="text/javascript"></script>
+  
   <script src="public/source/templates/sj_bakery/menusys/class/mega/assets/jquery.megamenu.js" type="text/javascript"></script>
   <script src="public/source/templates/sj_bakery/js/ytcpanel.js" type="text/javascript"></script>
   <script src="public/source/templates/sj_bakery/asset/minicolors/jquery.miniColors.min.js" type="text/javascript"></script>
