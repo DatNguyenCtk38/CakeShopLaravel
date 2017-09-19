@@ -21,7 +21,7 @@
                     </form>
                    
                         <!-- End Search Box -->
-                      <h1>Tìm thấy {{ count($products) }}  sản phẩm </h1>
+                      <h1>Tìm thấy {{ $products->total() }}  sản phẩm </h1>
                        @if (count($products)==0)
                         Không có sản phầm nào
                         
