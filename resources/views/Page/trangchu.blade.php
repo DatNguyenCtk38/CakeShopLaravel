@@ -220,7 +220,17 @@
                                 <input type="hidden" name="view" value="category">
                     </form>
                         <!-- End Search Box -->
-                      <h1>Valentine Cake</h1>
+                     <div class="row">
+                                <h1 class="span8">Bánh mới</h1>
+                             <div class="span4">
+                                 <span style="font-weight: bold; color: #d22222"> Sắp xếp </span>
+                                <select name="kieuchon" style="width: 80%">
+                                <option value="behon100">Giảm dần</option>
+                                <option value="100den200">Tăng dần </option>
+                                <option value="lonhon200">Nổi bật nhất</option>
+                             </select>
+                             </div>
+                        </div>
                           @php
                             $i = 0;
                           @endphp
@@ -328,7 +338,20 @@
                     <div class="pagination clearfix">
                        {{ $promotion_product->links() }}
                     </div>
-
+                    <div class="orderby-displaynumber">
+        
+        
+        <div class="floatleft">
+            <div class="orderlistcontainer">
+                <div class="title">Xem theo &nbsp</div>
+                <select id="name" name="type" onchange="sortchange()" style="width: 66%">
+                    <option value="name">Tên sản phẩm</option>
+                    <option value="des">Giá giảm dần </option>
+                    <option value="asc">Giá tăng dần</option>
+                 </select>
+            </div>
+        </div>
+    </div>
 
                 </div>
 

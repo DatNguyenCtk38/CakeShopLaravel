@@ -1,4 +1,5 @@
-function addcart(id) {
+
+    function addcart(id) {
 
         $.ajax({
 
@@ -18,6 +19,4 @@ function addcart(id) {
             }
         });
     }
-
-
   

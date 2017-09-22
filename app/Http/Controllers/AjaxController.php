@@ -54,4 +54,7 @@ class AjaxController extends Controller
          $req->session()->put('cart',$cart);
           return response()->json($cart);
     }
+    public function SortChangeajax(Request $req){
+       
+    }
 }

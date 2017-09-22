@@ -21,7 +21,17 @@
                     </form>
                    
                         <!-- End Search Box -->
-                      <h1>{{ $loai_sp->catename }}</h1>
+                        <div class="row">
+                                <h1 class="span8">{{ $loai_sp->catename }} {{$sp_theoloai->total()}} sản phẩm</h1>
+                             <div class="span4">
+                                 <span style="font-weight: bold; color: #d22222"> Sắp xếp </span>
+                                <select name="kieuchon" style="width: 82%">
+                                <option value="behon100">Giảm dần</option>
+                                <option value="100den200">Tăng dần </option>
+                                <option value="lonhon200">Nổi bật nhất</option>
+                             </select>
+                             </div>
+                        </div>
                        @if (count($sp_theoloai)==0)
                         Không có sản phầm nào
                         
@@ -128,7 +138,7 @@
             </div><!-- end browse-view -->
                 <div class="horizontal-separator"></div>
 
-                @if (count($sp_theoloai)>0)
+                @if (count($sp_theoloai)>9)
                     <div class="pagging-sort" style="margin-bottom: 10px">
                     <div class="pagination clearfix">
                        {{ $sp_theoloai->links() }}

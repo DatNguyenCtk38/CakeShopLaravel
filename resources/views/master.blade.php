@@ -244,3 +244,9 @@ jQuery(function($) {
         }
    
    </script>
+   <script type="text/javascript">
+      function sortchange() {
+           var x = document.getElementById("name").value;
+           alert(x);
+      }
+   </script>

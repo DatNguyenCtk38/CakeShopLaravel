@@ -95,6 +95,10 @@ Route::get('DeleteCart',[
 	'as'=>'DeleteCart',
 	'uses'=>'AjaxController@getDeletecartajax'
 ]);
+Route::get('SortChange', [
+	'as'=>'SortChange',
+	'uses'=>'AjaxController@SortChangeajax'
+]);
 //////////////admin
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 

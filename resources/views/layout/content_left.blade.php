@@ -11,10 +11,10 @@
                         <form method="get" action="{{ route('timtheogia') }}">
                           
                            <span style="font-weight: bold; color: #d22222"> Giá :</span>
-                            <select name="kieuchon" style="width: 85%">
-                            <option value="behon100">Dưới 100.000 ₫</option>
-                            <option value="100den200">Từ 100.000 ₫ - 200.000 ₫ </option>
-                            <option value="lonhon200">Trên 200.000 ₫</option>
+                            <select name="price" style="width: 85%">
+                            <option value="0to100">Dưới 100.000 ₫</option>
+                            <option value="100to200">Từ 100.000 ₫ - 200.000 ₫ </option>
+                            <option value="200tomax">Trên 200.000 ₫</option>
                              </select>
                             <div style="text-align: center;" class="item-readmore">
                                 <button type="submit" class="button1" title="Fate rinus late">

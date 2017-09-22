@@ -198,15 +198,15 @@ class PageController extends Controller
     }
     public function postTimTheoGia(Request $req){
         $products;
-        switch ($req->kieuchon) {
-            case 'behon100':
+        switch ($req->price) {
+            case '0to100':
                  $products= Product::where('unit_price','<',100000)->paginate(6);
                 break;
-            case '100den200':
+            case '100to200':
                  $products= Product::whereBetween('unit_price', [100000, 200000])->paginate(6);
                 # code...
                 break;
-            case 'lonhon200':
+            case '200tomax':
                 $products= Product::where('unit_price','>',200000)->paginate(6);
                 # code...
                 break;
