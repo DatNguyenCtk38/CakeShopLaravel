@@ -8,10 +8,10 @@
                         <h3 class="modtitle">Tìm kiếm</h3>
                     </div>
                     <div class="box">
-                        <form method="get" action="{{ route('timtheogia') }}">
+                        <form method="get" action="{{ route('timkiem') }}">
                           
                            <span style="font-weight: bold; color: #d22222"> Giá :</span>
-                            <select name="price" style="width: 85%">
+                            <select name="keyword" style="width: 85%">
                             <option value="0to100">Dưới 100.000 ₫</option>
                             <option value="100to200">Từ 100.000 ₫ - 200.000 ₫ </option>
                             <option value="200tomax">Trên 200.000 ₫</option>
@@ -35,9 +35,33 @@
                 <div class="modcontent clearfix">
                     
                     <ul class="nav menu _menu">
-                        
+                        @php
+                            $id = 0;
+                            $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") .
+                             "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                            $myArray = explode('/', $actual_link);
+                           // echo "<script>alert( 'Debug Objects: " . $myArray[4] . "' );</script>";
+                            if ($myArray[4]=='loai-san-pham') {
+                                $slug = $myArray[count($myArray)-1];
+                                $array =  explode('-', $slug);
+                                $id = $array[0];
+                               
+                                 
+                            }
+                            elseif ($myArray[4]=='chi-tiet-san-pham') {
+                               $id=9999;
+                            }
+                            //echo "<script>alert( 'Debug Objects: " . $id . "' );</script>";
+                        @endphp
                         @foreach ($loai_sp as $loai)
-                         <li class="item-688">
+                         <li class="item-688 @if (($loai->id == $id)&&($id!=0))
+                             current active
+                            
+                         @endif @if (isset($product))
+                             @if (($loai->id == $product->id_type)&&($id!=0))
+                             current active
+                         @endif"
+                         @endif> 
                             <a href="{!!url('loai-san-pham/'.$loai->id.'-'.$loai->slug)!!}">{{ $loai->catename }}</a>
                         </li>   
                        @endforeach

@@ -228,7 +228,11 @@
 
 		<td align="right"><span class="priceColor2"></span></td>
 		<td align="right"><span class="priceColor2"></span></td>
-	<td align="right"><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc"></span><span id="totalPrice" class="PricesalesPrice">{{number_format($totalPrice)}} ₫</span></div></td>
+	<td align="right"><div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc"></span><span id="totalPrice" class="PricesalesPrice">@if (isset($totalPrice))
+		{{number_format($totalPrice)}} 
+		@else
+		0
+	@endif₫</span></div></td>
 </tr>
 
 </tbody>
@@ -286,22 +290,7 @@ jQuery(document).ready(function($) {
 		});
 	}); //]]>
 </script>
-<script id="vm.checkoutFormSubmit_js" type="text/javascript">//<![CDATA[ 
-jQuery(document).ready(function($) {
-		jQuery(this).vm2front("stopVmLoading");
-		jQuery("#checkoutFormSubmit").bind("click dblclick", function(e){
-			jQuery(this).vm2front("startVmLoading");
-			e.preventDefault();
-			jQuery(this).attr("disabled", "true");
-			jQuery(this).removeClass( "vm-button-correct" );
-			jQuery(this).addClass( "vm-button" );
-			jQuery(this).fadeIn( 400 );
-			var name = jQuery(this).attr("name");
-			$("#checkoutForm").append("<input name=\""+name+"\" value=\"1\" type=\"hidden\">");
-			$("#checkoutForm").submit();
-		});
-	}); //]]>
-</script>
+
 <script id="autocheck_js" type="text/javascript">//<![CDATA[ 
 jQuery(document).ready(function(){
 

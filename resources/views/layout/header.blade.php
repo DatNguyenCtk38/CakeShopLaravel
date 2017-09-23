@@ -132,17 +132,13 @@
                 <div id="position-1" class="span4">
                     <!--<div class="yt-position-inner">-->
                     <!--BEGIN Search Box -->
-                    <form action="http://demo.smartaddons.com/public/source/templates/joomla3/sj-bakery/index.php/specialty-cake/search" method="get" class="form-search">
+                    <form action="{{ route('timkiem') }}" method="get" class="form-search">
                         <div class="search finder ">
                             <input name="keyword" id="mod_virtuemart_search" maxlength="20" class="inputbox search-query input-medium icon-search" 
                                    type="text" size="20" value="" placeholder="Search...">
                             <button type="submit" value="Search" class="button finder " onclick="this.form.keyword.focus();"><i class="icon-search icon-white"></i> 
                             </button>
                         </div>
-                        <input type="hidden" name="limitstart" value="0">
-                        <input type="hidden" name="option" value="com_virtuemart">
-                        <input type="hidden" name="view" value="category">
-                        <input type="hidden" name="virtuemart_category_id" value="0">
                     </form>
 
                     <!-- End Search Box -->

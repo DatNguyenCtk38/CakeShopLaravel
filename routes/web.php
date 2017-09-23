@@ -79,8 +79,8 @@ Route::get('tim-kiem',[
 	'as'=>'timkiem',
 	'uses'=>'PageController@getTimKiem'
 	]);
-Route::get('tim-theo-gia',[
-	'as'=>'timtheogia',
+Route::get('search',[
+	'as'=>'timkiem',
 	'uses'=>'PageController@postTimTheoGia'
 ]);
 Route::get('Addcartajax', [

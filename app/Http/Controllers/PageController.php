@@ -198,7 +198,7 @@ class PageController extends Controller
     }
     public function postTimTheoGia(Request $req){
         $products;
-        switch ($req->price) {
+        switch ($req->keyword) {
             case '0to100':
                  $products= Product::where('unit_price','<',100000)->paginate(6);
                 break;
@@ -210,8 +210,11 @@ class PageController extends Controller
                 $products= Product::where('unit_price','>',200000)->paginate(6);
                 # code...
                 break;
+            default:
+                $products = Product::where('name','like','%'.$req->keyword.'%')->orWhere('unit_price',$req->keyword)->paginate(6);
+                break;
             
         }
-        return view('page.timtheogia',compact('products'));
+        return view('page.timkiem',compact('products'));
     }
 }
