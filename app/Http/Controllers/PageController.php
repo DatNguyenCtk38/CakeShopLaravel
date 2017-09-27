@@ -29,8 +29,23 @@ class PageController extends Controller
     	//return view('page.trangchu',['slide'=>$slide]);
     	return view('page.trangchu',compact('top3Crepe','promotion_product'));
     }
-    public function getLoaiSp($type){
-        $sp_theoloai = Product::where('id_type',$type)->paginate(9);
+    public function getLoaiSp($type, Request $req){
+        $sp_theoloai;
+        switch ($req->order) {
+            case 'price-asc':
+               $sp_theoloai = Product::where('id_type',$type)->orderBy('unit_price', 'asc')->paginate(9);
+                break;
+            case 'price-desc':
+               $sp_theoloai = Product::where('id_type',$type)->orderBy('unit_price', 'desc')->paginate(9);
+                break;
+            case 'name':
+               $sp_theoloai = Product::where('id_type',$type)->orderBy('name', 'asc')->paginate(9);
+                break;
+            default:
+                $sp_theoloai = Product::where('id_type',$type)->paginate(9);
+                break;
+        }
+        
        
         $loai_sp = ProductType::where('id',$type)->first();
         //print_r($loai_sp);

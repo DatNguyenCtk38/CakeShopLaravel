@@ -24,12 +24,31 @@
                         <div class="row">
                                 <h1 class="span8">{{ $loai_sp->catename }} {{$sp_theoloai->total()}} sản phẩm</h1>
                              <div class="span4">
-                                 <span style="font-weight: bold; color: #d22222"> Sắp xếp </span>
-                                <select name="kieuchon" style="width: 82%">
-                                <option value="behon100">Giảm dần</option>
-                                <option value="100den200">Tăng dần </option>
-                                <option value="lonhon200">Nổi bật nhất</option>
-                             </select>
+                                
+                                <form class="form-inline" method="get" action="{!!url('loai-san-pham/'.$loai_sp->id.'-'.$loai_sp->slug)!!}">
+
+                                   <div class="form-group">
+                                     <span style="font-weight: bold; color: #d22222"> Sắp xếp </span>
+                                         <select id="order" name="order" style="width: 82%" onchange="OrderProduct({{$loai_sp->id}})">
+                                    <option value="price-desc">Chọn</option>
+                                    <option value="price-desc">Giảm dần</option>
+                                    <option value="price-asc">Tăng dần </option>
+                                    <option value="name">Tên</option>
+                                    </select>
+                                    <script>
+
+                                        function OrderProduct(id) {
+                                            var val = document.getElementById("order").value;
+                                           
+                                            if (id != '') {
+                                                window.location = '{!!url('loai-san-pham/'.$loai_sp->id.'-'.$loai_sp->slug)!!}' +'?order='+ val;
+                                            } else {
+                                                window.location = 'danhmuc?order=' + val;
+                                        }
+                                        }
+                                    </script>
+                                   </div>
+                                </form>
                              </div>
                         </div>
                        @if (count($sp_theoloai)==0)
@@ -138,10 +157,10 @@
             </div><!-- end browse-view -->
                 <div class="horizontal-separator"></div>
 
-                @if (count($sp_theoloai)>9)
+                @if (count($sp_theoloai)>6)
                     <div class="pagging-sort" style="margin-bottom: 10px">
                     <div class="pagination clearfix">
-                       {{ $sp_theoloai->links() }}
+                       {{ $sp_theoloai->appends(request()->input())->links()}}
                     </div>
 
 
