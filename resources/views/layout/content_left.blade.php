@@ -35,33 +35,9 @@
                 <div class="modcontent clearfix">
                     
                     <ul class="nav menu _menu">
-                        @php
-                            $id = 0;
-                            $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") .
-                             "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                            $myArray = explode('/', $actual_link);
-                           // echo "<script>alert( 'Debug Objects: " . $myArray[4] . "' );</script>";
-                            if ($myArray[4]=='loai-san-pham') {
-                                $slug = $myArray[count($myArray)-1];
-                                $array =  explode('-', $slug);
-                                $id = $array[0];
-                               
-                                 
-                            }
-                            elseif ($myArray[4]=='chi-tiet-san-pham') {
-                               $id=9999;
-                            }
-                            //echo "<script>alert( 'Debug Objects: " . $id . "' );</script>";
-                        @endphp
+                       
                         @foreach ($loai_sp as $loai)
-                         <li class="item-688 @if (($loai->id == $id)&&($id!=0))
-                             current active
-                            
-                         @endif @if (isset($product))
-                             @if (($loai->id == $product->id_type)&&($id!=0))
-                             current active
-                         @endif"
-                         @endif> 
+                         <li class="item-688">
                             <a href="{!!url('loai-san-pham/'.$loai->id.'-'.$loai->slug)!!}">{{ $loai->catename }}</a>
                         </li>   
                        @endforeach

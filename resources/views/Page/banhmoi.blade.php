@@ -1,13 +1,5 @@
-@extends('master')
-@section('content')
-<div class="content-main-inner row-fluid">
-<div class="span12">
-        <div id="system-message-container">
-        </div>
-    </div>
-    <div id="position-3" class="span12">
-        <div id="yt_component" class="span12">
-        <div class="component-inner">
+
+
             <div class="component-inner2">
                 <div class="browse-view">
                     <form action="/templates/joomla3/sj-bakery/index.php/specialty-cake" method="get">
@@ -19,23 +11,25 @@
                                 <input type="hidden" name="search" value="true">
                                 <input type="hidden" name="view" value="category">
                     </form>
-                   
                         <!-- End Search Box -->
-                      <h1>Tìm thấy {{ $products->total() }}  sản phẩm </h1>
-                       @if (count($products)==0)
-                        Không có sản phầm nào
-                        
-                        @endif
-                           @php
+                     <div class="row">
+                                <h1 class="span8">Bánh mới</h1>
+                             
+                        </div>
+                          @php
                             $i = 0;
                           @endphp
-                        @foreach ($products as $product)
-                        @if ($i%3==0)
-                           <div class="row">
-                                <div class="product  span4 vertical-separator">
-                        @else
-                            <div class="product  span4">
-                        @endif
+                        @foreach ($promotion_product as $product)
+                        @php
+                        if($i%2==0)
+                        {
+                            echo '<div class="row">';
+                            echo '<div class="product  span6 vertical-separator">';
+                        }
+                        else{
+                             echo '<div class="product  span6">';
+                        }
+                        @endphp
                         
                             
                                 
@@ -73,14 +67,15 @@
                                             </p>
                                                 <div class="btn-action clearfix">
                                                     <div class="wrap-button">
-                                                        <a href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}" title="Diten face xare" class="button1 product-details">Detail
+                                                        <a href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}" title="Diten face xare" class="button1 product-details">Chi tiết
                                                         </a>
                                                     </div>
                                                         <div class="addtocart-area">
                                                             <form method="post" class="product js-recalculate" action="#">
                                                                 <div class="addtocart-bar">
                                                                 <span class="addtocart-button">
-                                                                <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart"/>
+                                                                <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart(@php echo $product->id;@endphp)"
+                                                                    >
                                                                 </span>
 
                                                 <div class="clear"></div>
@@ -106,13 +101,15 @@
                            
                     
                   
-                      @php
+                     @php
                         $i++;
-                        
+                        if($i%2==0)
+                        {
+                            echo '</div>';
+
+                        }
+
                     @endphp   
-                    @if ($i%3==0)
-                        </div>
-                    @endif
                
                  @endforeach
                 <div class="horizontal-separator"></div>
@@ -122,46 +119,23 @@
             </div><!-- end browse-view -->
                 <div class="horizontal-separator"></div>
 
-                @if (count($products)>5)
-                    <div class="pagging-sort" style="margin-bottom: 10px">
+                <div class="pagging-sort" style="margin-bottom: 10px">
                     <div class="pagination clearfix">
-                       {{ $products->appends(request()->input())->links()}}
+                       {{ $promotion_product->appends(request()->input())->links() }}
                     </div>
-
+                    <div class="orderby-displaynumber">
+        
+        
+        <div class="floatleft">
+            <div class="orderlistcontainer">
+                <div class="title">Xem theo &nbsp</div>
+                <select id="name" name="type" onchange="sortchange()" style="width: 66%">
+                    <option value="name">Tên sản phẩm</option>
+                    <option value="des">Giá giảm dần </option>
+                    <option value="asc">Giá tăng dần</option>
+                 </select>
+            </div>
+        </div>
+    </div>
 
                 </div>
-                @endif
-
-            </div><!-- end browse-view -->
-
-
-
-    <script id="jsVars_js" type="text/javascript">//<![CDATA[ 
-        vmSiteurl = 'http://demo.smartaddons.com/templates/joomla3/sj-bakery/' ;
-        vmLang = "";
-        Virtuemart.addtocart_popup = '1' ; 
-    usefancy = true; //]]>
-    </script>
-
-    <script id="ready.vmprices_js" type="text/javascript">//<![CDATA[ 
-        jQuery(document).ready(function($) {
-            Virtuemart.product(jQuery("form.product"));
-
-        /*$("form.js-recalculate").each(function(){
-            if ($(this).find(".product-fields").length && !$(this).find(".no-vm-bind").length) {
-                var id= $(this).find('input[name="virtuemart_product_id[]"]').val();
-                Virtuemart.setproducttype($(this),id);
-
-            }
-        });*/
-    }); //]]>
-    </script>
-
-    </div></div>
-    </div>
-
-        <!--</div>-->
-    </div>
-    <span style="display:none">Hide Main content block</span>
-</div>
-@endsection

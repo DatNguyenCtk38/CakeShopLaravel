@@ -59,16 +59,12 @@
                             $i = 0;
                           @endphp
                         @foreach ($sp_theoloai as $product)
-                        @php
-                        if($i%3==0)
-                        {
-                            echo '<div class="row">';
-                            echo '<div class="product  span4 vertical-separator">';
-                        }
-                        else{
-                             echo '<div class="product  span4">';
-                        }
-                        @endphp
+                        @if ($i%3==0)
+                           <div class="row">
+                                <div class="product  span4 vertical-separator">
+                        @else
+                            <div class="product  span4">
+                        @endif
                         
                             
                                 
@@ -141,14 +137,12 @@
                   
                      @php
                         $i++;
-                        if($i%3==0)
-                        {
-                            echo '</div>';
-
-                        }
-
+                        
                     @endphp   
-               
+                    @if ($i%3==0)
+                        </div>
+                    @endif
+                   
                  @endforeach
                 <div class="horizontal-separator"></div>
 

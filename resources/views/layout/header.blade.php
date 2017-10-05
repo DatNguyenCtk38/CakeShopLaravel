@@ -25,7 +25,7 @@
                                             <span class="title-link">Đăng xuất</span>
                                         </a>
                                     @else
-                                        <a class="register-switch text-font" href="index.php/joomla-pages/2013-02-21-09-25-47/register.html">
+                                        <a class="register-switch text-font" href="{{ route('dangky') }}">
                                             <span class="title-link">Đăng kí</span>
                                         </a>
                                     @endif

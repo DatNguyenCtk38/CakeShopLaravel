@@ -9,6 +9,7 @@ use File;
 class SanPhamController extends Controller
 {
     public function getDanhSachSanPham(){
+         $nhomsp = ProductType::all();
     	$danhSachSP = DB::table('products')
         ->select('products.*','type_products.catename')
     	->join('type_products','products.id_type','=','type_products.id')
@@ -17,38 +18,16 @@ class SanPhamController extends Controller
     	//print_r($danhSachSP);
     	//die();
         //
-    	return view('admin.sanpham.danhsach',compact('danhSachSP'));
+    	return view('admin.sanpham.danhsach',compact('danhSachSP','nhomsp'));
     }
     
     public function getThemSanPham(){
         $nhomsp = ProductType::all();
     	return view('admin.sanpham.them',compact('nhomsp'));
     }
-    public function postThemSanPham(Request $req){
-         $this->validate($req,
-            [
-                'name'=>'required|unique:products,name|min:6|max:50',
-                'image'=>'required',
-                'unit_price'=>'required|integer|between:1000,9999999',
-                'promotion_price'=>'integer|between:1000,9999999',
-                
-            ],
-            [
-                'name.required'=>"Vui lòng điền tên sản phẩm",
-                'name.unique'=>"Tên thể loại đã bị trùng",
-                'name.min'=>"Tên thể loại ít nhất 6 kí tự",
-                'name.max'=>"Tên thể loại không dài quá 50 kí tự",
-                'image.required'=>"Vui lòng chọn hình ảnh",
-                'unit_price.required'=>"Vui lòng điền giá sản phẩm",
-               
-                'unit_price.between'=>"Giá sản phẩm phải nằm từ 1000 đồng đến 9999999 đồng",
-               
-                'promotion_price.between'=>"Giá sản phẩm phải nằm từ 1000 đồng đến 9999999 đồng",
-                'unit.required'=>"Vui lòng nhập đơn vị sản phẩm",
-                
-                'image.required'=>"Vui lòng chọn hình ảnh",
-            ]
-            );
+   public function postThemSanPham(Request $req){
+
+        
         $sanPham = new Product();
 
         $sanPham->name = $req->name;
@@ -66,11 +45,73 @@ class SanPhamController extends Controller
 
             $sanPham->image = $filename;
 
-            $req->file('image')->move('public/source/image/product/',$filename);
+            $req->file('image')->move('public/source/images/stories/virtuemart/product/',$filename);
         }
-       
+        
         $sanPham->save();
-        return redirect()->route('danhsachsanpham')->with('thongbao','Thêm thành công');
+        //ajax về
+        $danhSachSP = DB::table('products')
+        ->select('products.*','type_products.catename')
+        ->join('type_products','products.id_type','=','type_products.id')
+        ->orderby('products.id','desc')
+        ->get();
+        $output = '';
+        $output.='
+                    <table class="table table-striped table-bordered table-hover" id="example">
+                        <thead>
+
+                            <tr align="center">
+                                <th>ID</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Nhóm</th>
+                               
+                                <th>Hình ảnh</th>
+                                
+                                <th>Giá</th>
+                                <th>KM</th>
+                                <th>Đơn vị</th>
+                                <th>Mới</th>
+                                <th>Xóa</th>
+                                <th>Sửa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    ';
+
+                                foreach($danhSachSP as $sanpham){
+                                    $xoa = "admin/sanpham/xoasanpham/".$sanpham->id."";
+                                    $sua = "admin/sanpham/sua-san-pham/".$sanpham->id."";
+        $output.='           
+                                    <tr class="odd gradeX" align="center">
+                                        <td>'.$sanpham->id.'</td>
+                                        <td>'.$sanpham->name.'</td>
+                                        <td>'.$sanpham->catename.'</td>
+                                        
+                                        <td><img width="100px" height="100px" src="public/source/images/stories/virtuemart/product/'.$sanpham->image.'"></td>
+                                        
+                                        <td>'.$sanpham->unit_price.'</td>
+                                        <td>'.$sanpham->promotion_price.'</td>
+                                        <td>'.$sanpham->unit.'</td>
+                                        <td>'.$sanpham->new.'</td>
+                                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href='.$xoa.'> Xóa</a></td>
+                                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href='.$sua.'> Sửa</a></td>
+                                       
+                                    </tr>
+                ';
+                               }
+         $output.='  </tbody>
+                    </table>
+                     <script type="text/javascript">
+                      $("#example").dataTable( 
+                    {
+                    "bSort" : false,
+                    "searching": true,
+                    " paging": true
+                    } );
+                    </script>
+                 ';
+       
+       return response()->json($output);
     }
     public function getSuaSanPham($id){
         $sanPham = Product::find($id);
@@ -88,8 +129,8 @@ class SanPhamController extends Controller
             [
                 'name.required'=>"Vui lòng điền tên sản phẩm",
                
-                'name.min'=>"Tên thể loại ít nhất 6 kí tự",
-                'name.max'=>"Tên thể loại không dài quá 50 kí tự",
+                'name.min'=>"Tên sản phẩm ít nhất 6 kí tự",
+                'name.max'=>"Tên sản phẩm không dài quá 50 kí tự",
                 'unit_price.required'=>"Vui lòng điền giá sản phẩm",
                
                 'unit_price.between'=>"Giá sản phẩm phải nằm từ 1000 đồng đến 9999999 đồng",

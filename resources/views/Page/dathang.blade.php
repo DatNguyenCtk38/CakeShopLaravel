@@ -35,8 +35,10 @@
                 
 <div class="cart-view">
 	<div class="vm-cart-header-container">
+
 		<div class="width50 floatleft vm-cart-header">
 			<h1>Giỏ hàng</h1>
+
 			<div class="payments_signin_button"></div>
 		</div>
 				<div class="width50 floatleft right vm-continue-shopping">
@@ -65,7 +67,15 @@
 	    	<input type="hidden" name="_token" value="{{csrf_token()}}">
     <fieldset class="userdata">
 	     <div>
-	     	<p>Địa chỉ giao hàng của quý khách</p>
+	     	<p>@if (Auth::check())
+	     		{{-- expr --}}
+	     	
+	     	@else
+	     		<h3 style="color: #00abff">Bạn chưa đăng nhập. Nếu có tài khoản hãy<span><a href="#mod-login" role="button" class="login-switch text-font" title="" data-toggle="modal">
+                        Đăng nhập 
+                </a></span> </h3>
+	     		
+	     	@endif</p>
 	     <p class="width10 floatleft" id="name">
             Họ tên
 		</p>

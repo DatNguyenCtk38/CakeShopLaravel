@@ -244,9 +244,23 @@ jQuery(function($) {
         }
    
    </script>
+  
    <script type="text/javascript">
       function sortchange() {
-           var x = document.getElementById("name").value;
-           alert(x);
+           var style = document.getElementById("name").value;
+          
+          $.ajax({
+                url: "{{ route('SortChange') }}",
+                type: "get",
+                dataType: "json",
+                data: {
+                    type: style,
+                },
+                success: function (data) {
+                  //console.log(result);
+                   $('#component-inner').html(data.html);
+                }
+            });
       }
    </script>
+   

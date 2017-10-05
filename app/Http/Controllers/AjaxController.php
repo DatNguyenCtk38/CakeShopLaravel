@@ -55,6 +55,24 @@ class AjaxController extends Controller
           return response()->json($cart);
     }
     public function SortChangeajax(Request $req){
-       
+        $promotion_product;
+        switch ($req->type) {
+          case 'des':
+          $promotion_product =  Product::where('promotion_price','<>',0)->orderBy('unit_price', 'desc')->paginate(6);
+            # code...
+            break;
+          case 'asc':
+          $promotion_product =  Product::where('promotion_price','<>',0)->orderBy('unit_price', 'asc')->paginate(6);
+            break;
+          case 'name':
+          $promotion_product =  Product::where('promotion_price','<>',0)->orderBy('name', 'asc')->paginate(6);
+            break;
+          default:
+            # code...
+            break;
+        }
+
+        $returnHtml = view('Page.banhmoi',compact('promotion_product'))->render();
+        return response()->json( array('success' => true, 'html'=>$returnHtml) );
     }
 }

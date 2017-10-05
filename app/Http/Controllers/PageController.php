@@ -25,7 +25,7 @@ class PageController extends Controller
         $top3Crepe = Product::where('id_type',4)->take(9)->get();
        
     	//print_r($top3Crepe);
-    	//die();
+    //	die();
     	//return view('page.trangchu',['slide'=>$slide]);
     	return view('page.trangchu',compact('top3Crepe','promotion_product'));
     }
@@ -175,6 +175,7 @@ class PageController extends Controller
         $user->password = Hash::make($req->password);
         $user->phone = $req->phone;
         $user->address = $req->address;
+        $user->authority = 0;
         $user->save();
         return redirect()->back()->with('thanhcong','Tạo tài khoản thành công');
     }

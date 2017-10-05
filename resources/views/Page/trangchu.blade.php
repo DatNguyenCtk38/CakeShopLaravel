@@ -32,17 +32,16 @@
                         $i = 0;
                     @endphp
                      @foreach ($top3Crepe as $product)
+                   	@if ($i % 3==0)
+                   		@if ($i ==0)
+                   			<div class="item active ">
+                                  <div class="line">
+                   		@else
+                   			<div class="item ">
+                                  <div class="line">
+                   		@endif
+                   	@endif
                    
-                    @php
-                        if($i%3==0)
-                        {
-                            if($i ==0) echo '<div class="item active ">
-                                  <div class="line">';
-                            else
-                                echo '<div class="item ">
-                                  <div class="line">';
-                        }
-                    @endphp
                         
                            
                                 <div class="item-wrap style2">
@@ -133,14 +132,16 @@
                                         </div>
                                     </div>
                                 </div>
-                    @php
-                        $i++;
-                        if($i%3==0)
-                        {
-                            echo '</div>
-                                  </div>';
-                        }
-                    @endphp   
+                   		@php
+                   			$i++;
+                   		@endphp
+                        
+                        @if ($i%3==0)
+                        	</div>
+                                  </div>
+                        @endif
+                       
+                    
                             
 
                      @endforeach
@@ -207,7 +208,9 @@
 
         </div>
         <div id="yt_component" class="span12">
-        <div class="component-inner">
+        <div id="component-inner" class="component-inner">
+              
+
             <div class="component-inner2">
                 <div class="browse-view">
                     <form action="/templates/joomla3/sj-bakery/index.php/specialty-cake" method="get">
@@ -222,14 +225,7 @@
                         <!-- End Search Box -->
                      <div class="row">
                                 <h1 class="span8">Bánh mới</h1>
-                             <div class="span4">
-                                 <span style="font-weight: bold; color: #d22222"> Sắp xếp </span>
-                                <select name="kieuchon" style="width: 80%">
-                                <option value="behon100">Giảm dần</option>
-                                <option value="100den200">Tăng dần </option>
-                                <option value="lonhon200">Nổi bật nhất</option>
-                             </select>
-                             </div>
+                             
                         </div>
                           @php
                             $i = 0;
@@ -354,6 +350,7 @@
     </div>
 
                 </div>
+  
 
             </div><!-- end browse-view -->
 
