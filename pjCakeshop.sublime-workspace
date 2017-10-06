@@ -1,0 +1,1190 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pro",
+				"promotion_price"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"req",
+				"required|min:2|max:50"
+			],
+			[
+				"if",
+				"if\tif …"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"retu",
+				"$returnHtml〔variable〕"
+			],
+			[
+				"Pro",
+				"Product"
+			],
+			[
+				"route",
+				"route\tblade-route"
+			],
+			[
+				"is",
+				"isset"
+			],
+			[
+				"brea",
+				"break"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"span",
+				"span4"
+			],
+			[
+				"bs3",
+				"bs3-col\tbs3-col"
+			],
+			[
+				"bs",
+				"bs3-col\tbs3-col"
+			],
+			[
+				"pa",
+				"paginate"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"vl",
+				"value\tAttr"
+			],
+			[
+				"pri",
+				"print_r〔function〕"
+			],
+			[
+				"Rou",
+				"Route::get\tBasic Get Route."
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"Au",
+				"Auth::logout\tLog the user out of the application."
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"loa",
+				"loai_sp"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"va",
+				"virtuemart"
+			],
+			[
+				"sto",
+				"stories"
+			],
+			[
+				"vi",
+				"virtuemart"
+			],
+			[
+				"num",
+				"number_format"
+			],
+			[
+				"promotion",
+				"promotion_product"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"th",
+				"line-through"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"php",
+				"php\tblade-php"
+			],
+			[
+				"en",
+				"endforeach"
+			],
+			[
+				"for",
+				"foreach\tblade-foreach"
+			],
+			[
+				"sec",
+				"sec\tblade-section"
+			],
+			[
+				"gr",
+				"group"
+			],
+			[
+				"comp",
+				"compact〔function〕"
+			],
+			[
+				"sl",
+				"slSanPham"
+			],
+			[
+				"A",
+				"App"
+			],
+			[
+				"fo",
+				"foreach\tforeach …"
+			],
+			[
+				"prin",
+				"print〔function〕"
+			],
+			[
+				"oncl",
+				"onclick=\"addcart"
+			],
+			[
+				"s",
+				"source"
+			],
+			[
+				"San",
+				"SanPhamController@getSuaSanPham"
+			],
+			[
+				"che",
+				"checked"
+			],
+			[
+				"ch",
+				"checked\tAttr"
+			],
+			[
+				"or",
+				"orderBy"
+			],
+			[
+				"san",
+				"$sanPham〔variable〕"
+			],
+			[
+				"uni",
+				"unit_price"
+			],
+			[
+				"fonts",
+				"fonts.css"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"prod",
+				"products.name"
+			],
+			[
+				"produc",
+				"products"
+			],
+			[
+				"bi",
+				"bill_detail"
+			],
+			[
+				"product",
+				"products"
+			],
+			[
+				"p",
+				"padding-left"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"d",
+				"dashed〔value〕"
+			],
+			[
+				"boder",
+				"border"
+			],
+			[
+				"hi",
+				"hidden"
+			],
+			[
+				"flo",
+				"float: 〔property〕"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
+				"border-",
+				"border-top"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"Mail",
+				"Mail::send\tSend a new message using a view."
+			],
+			[
+				"ad",
+				"address"
+			],
+			[
+				"Bil",
+				"BillDetail〔namespace〕"
+			],
+			[
+				"co",
+				"$collection〔variable〕"
+			],
+			[
+				"sub",
+				"subject〔function〕"
+			],
+			[
+				"form",
+				"from〔function〕"
+			],
+			[
+				"Route",
+				"Route::get\tBasic Get Route."
+			],
+			[
+				"ar",
+				"array"
+			],
+			[
+				"Pr",
+				"Product"
+			],
+			[
+				"cat",
+				"catename.unique"
+			],
+			[
+				"Product",
+				"ProductType"
+			],
+			[
+				"Prod",
+				"ProductType〔namespace〕"
+			],
+			[
+				"Ro",
+				"Route::post\tBasic Post Route."
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"ca",
+				"catename"
+			],
+			[
+				"The",
+				"TheloaiController@getSuaTheLoai"
+			],
+			[
+				"b",
+				"Book〔class〕"
+			],
+			[
+				"funtio",
+				"function_exists"
+			],
+			[
+				"Rout",
+				"Route::get\tBasic Get Route."
+			],
+			[
+				"Us",
+				"UsersController@getlist"
+			],
+			[
+				"U",
+				"UsersController@getlist"
+			],
+			[
+				"us",
+				"uses"
+			],
+			[
+				"cr",
+				"$credentials〔variable〕"
+			],
+			[
+				"add",
+				"address"
+			],
+			[
+				"e",
+				"email"
+			],
+			[
+				"R",
+				"Route::get\tBasic Get Route."
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"B",
+				"BillDetail〔class〕"
+			],
+			[
+				"cart",
+				"cart-item-amount"
+			],
+			[
+				"to",
+				"totalQty"
+			],
+			[
+				"ty",
+				"$type〔variable〕"
+			],
+			[
+				"wh",
+				"where"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"new",
+				"newProduct"
+			],
+			[
+				"ba",
+				"base\tTag"
+			],
+			[
+				"rou",
+				"route〔function〕"
+			],
+			[
+				"pub",
+				"public〔keyword〕"
+			],
+			[
+				"funtin",
+				"create_function"
+			],
+			[
+				"li",
+				"$listWorkSheet〔variable〕"
+			],
+			[
+				"list",
+				"listWorkSheets"
+			],
+			[
+				"shet",
+				"$sheetData〔variable〕"
+			],
+			[
+				"id",
+				"$id_lop〔variable〕"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"ob",
+				"objReader"
+			],
+			[
+				"con",
+				"Connect/"
+			],
+			[
+				"requie",
+				"require〔keyword〕"
+			],
+			[
+				"my",
+				"$mysqli〔variable〕"
+			],
+			[
+				"btn",
+				"btnCapNhat"
+			],
+			[
+				"img",
+				"imga"
+			],
+			[
+				"me",
+				"message"
+			],
+			[
+				"anh",
+				"anhsp"
+			],
+			[
+				"get",
+				"getElementById"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/Http/Controllers/SanPhamController.php",
+			"settings":
+			{
+				"buffer_size": 8127,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/admin/sanpham/danhsach.blade.php",
+			"settings":
+			{
+				"buffer_size": 8647,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes/web.php",
+			"settings":
+			{
+				"buffer_size": 4989,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"CodeIntel",
+				"SublimeCodeIntel: Reset"
+			]
+		],
+		"width": 540.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/CakeShopLaravel",
+		"/C/xampp/htdocs/CakeShopLaravel/resources",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/master.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/pro.sublime-project",
+		"/C/xampp/htdocs/CakeShopLaravel/pjCakeshop.sublime-project",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/TheLoaiController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/danhsach.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/danhsach.blade.php",
+		"/C/xampp/htdocs/scodeweb/resources/views/home.blade.php",
+		"/C/xampp/htdocs/scodeweb/resources/views/layouts/header.blade.php",
+		"/C/xampp/htdocs/scodeweb/resources/views/layouts/master.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/trangchu.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/PageController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/AjaxController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dathang.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/them.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/SanPhamController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/routes/web.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/banhmoi.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/loaisanpham.blade.php",
+		"/C/Users/Admin/AppData/Local/Temp/Rar$DIa0.314/hello.php",
+		"/C/Users/Admin/AppData/Local/Temp/Rar$DIa0.398/products.blade.php",
+		"/C/Users/Admin/AppData/Local/Temp/Rar$DIa0.520/index.blade.php",
+		"/C/Users/Admin/AppData/Local/Temp/Rar$DIa0.111/index.php",
+		"/C/xampp/htdocs/myproject/routes/web.php",
+		"/C/xampp/htdocs/myproject/app/Http/Controllers/mycontroller.php",
+		"/E/IT_DLU/ASP.NET/WebSiteBanSach/WebSiteBanSach/Views/Layout/NguoiDungLayout.cshtml",
+		"/E/IT_DLU/ASP.NET/[Sharecode.vn] Code website ban hang multishop asp.net mvc5/MultiShop/MultiShop/Views/Home/Index.cshtml",
+		"/C/xampp/htdocs/myproject/resources/views/user.blade.php",
+		"/C/xampp/htdocs/myproject/resources/views/trangchu.blade.php",
+		"/C/xampp/htdocs/myproject/app/Http/Controllers/user.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Cart.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/timkiem.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dangky.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/header.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/components/com_virtuemart/assets/css/vm-ltr-site2d20.css",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/content_left.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/config/database.php",
+		"/C/xampp/htdocs/CakeShopLaravel/.env",
+		"/C/xampp/htdocs/CakeShopLaravel/config/app.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Providers/AppServiceProvider.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/timtheogia.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/templates/sj_bakery/js/my-js.js",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/MailController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/master.blade.php",
+		"/C/xampp/htdocs/linhkiendt/app/controller/giohang.php",
+		"/C/xampp/htdocs/Cake/app/Http/Controllers/PageController.php",
+		"/C/xampp/htdocs/Cake/app/Cart.php",
+		"/C/xampp/htdocs/Cake/app/Http/Controllers/AjaxController.php",
+		"/C/xampp/htdocs/Cake/resources/views/Page/dathang.blade.php",
+		"/C/xampp/htdocs/Cake/resources/views/master.blade.php",
+		"/C/xampp/htdocs/Cake/resources/views/Page/mail.blade.php",
+		"/C/xampp/htdocs/Cake/app/Providers/AppServiceProvider.php",
+		"/C/xampp/htdocs/Cake/pro.sublime-project",
+		"/C/xampp/htdocs/linhkiendt/view/modules/giohang.php",
+		"/C/xampp/htdocs/Cake/routes/web.php",
+		"/C/xampp/htdocs/Cake/resources/views/layout/master.blade.php",
+		"/C/xampp/htdocs/Cake/app/Http/Controllers/AdminController.php",
+		"/C/xampp/htdocs/Cake/public/source/templates/sj_bakery/js/my-js.js",
+		"/C/xampp/htdocs/Cake/resources/views/layout/footer.blade.php",
+		"/C/xampp/htdocs/Cake/resources/views/Page/trangchu.blade.php",
+		"/C/xampp/htdocs/Cake/resources/views/Page/dangnhap.blade.php",
+		"/C/xampp/htdocs/Cake/resources/views/layout/header.blade.php",
+		"/E/IT_DLU/PHP/Template/CakeShop/demo.smartaddons.com/templates/joomla3/sj-bakery/index.html",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/mail.blade.php",
+		"/C/xampp/htdocs/Cake/app/Mail/SendMail.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Mail/SendMail.php",
+		"/E/IT_DLU/PHP/Template/CakeShop/demo.smartaddons.com/templates/joomla3/sj-bakery/index.php/virtuemart/other-pages/shopping-cart/cart.html",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/chitietsanpham.blade.php",
+		"/C/xampp/htdocs/Cake/resources/views/mail.blade.php",
+		"/C/xampp/htdocs/Cake/resources/views/header.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/readme.md",
+		"/C/xampp/htdocs/CakeCopy/app/Http/Controllers/PageController.php",
+		"/C/xampp/htdocs/CakeCopy/resources/views/Page/chitietsanpham.blade.php",
+		"/C/xampp/htdocs/CakeCopy/resources/views/Page/trangchu.blade.php",
+		"/C/xampp/htdocs/CakeCopy/resources/views/master.blade.php",
+		"/C/xampp/htdocs/CakeCopy/public/source/components/com_virtuemart/assets/js/jquery.noconflict.html",
+		"/C/xampp/htdocs/CakeCopy/routes/web.php",
+		"/C/xampp/htdocs/CakeCopy/public/web.config",
+		"/E/IT_DLU/PHP/Template/CakeShop/demo.smartaddons.com/templates/joomla3/sj-bakery/index.php/virtuemart/categories-layout/product-items-two-column0e56.html",
+		"/C/Users/Admin/AppData/Local/Temp/Rar$DIa0.404/trangchu.blade.php",
+		"/C/xampp/htdocs/Cake/resources/views/Page/timkiem.blade.php",
+		"/C/xampp/htdocs/CakeCopy/public/favicon.ico",
+		"/C/xampp/htdocs/CakeCopy/resources/views/layout/master.blade.php",
+		"/C/xampp/htdocs/CakeCopy/index.php",
+		"/C/xampp/htdocs/CakeCopy/.htaccess",
+		"/C/xampp/htdocs/CakeCopy/resources/views/Page/trang-chu.blade.php",
+		"/C/xampp/htdocs/CakeCopy/resources/views/layout/index.blade.php",
+		"/C/xampp/htdocs/CakeCopy/resources/views/layout/header.blade.php",
+		"/C/xampp/htdocs/CakeCopy/resources/views/layout/footer.blade.php",
+		"/C/xampp/htdocs/CakeCopy/resources/views/layout/content_left.blade.php",
+		"/C/xampp/htdocs/CakeCopy/resources/views/header.blade.php",
+		"/C/xampp/htdocs/CakeCopy/resources/views/layout/slide.blade.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/master.blade.php",
+		"/C/xampp/htdocs/newtemplate/routes/web.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/trang-chu.blade.php",
+		"/C/xampp/htdocs/scodeweb/app/Http/Controllers/NewsController.php",
+		"/C/xampp/htdocs/scodeweb/app/Http/Controllers/Admin_usersController.php",
+		"/C/xampp/htdocs/scodeweb/app/Http/Controllers/AdminController.php",
+		"/C/xampp/htdocs/scodeweb/app/Http/Controllers/CategoryController.php",
+		"/C/xampp/htdocs/scodeweb/app/Http/Controllers/Controller.php",
+		"/C/xampp/htdocs/scodeweb/app/Http/Controllers/ProductsController.php",
+		"/C/xampp/htdocs/scodeweb/app/Http/Controllers/PagesController.php",
+		"/C/xampp/htdocs/scodeweb/app/Http/Controllers/HomeController.php",
+		"/C/xampp/htdocs/Cake/app/Http/Controllers/SanPhamController.php",
+		"/C/xampp/htdocs/Cake/app/Http/Controllers/HoaDonController.php",
+		"/C/xampp/htdocs/Cake/app/Http/Controllers/TheLoaiController.php",
+		"/C/xampp/htdocs/Cake/app/Mail/newMail.php",
+		"/C/xampp/htdocs/Cake/app/Http/Controllers/MailController.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/footer.blade.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/layout/footer.blade.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/slide.blade.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/content_left.blade.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/header.blade.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/layout/master.blade.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/index.blade.php",
+		"/C/xampp/htdocs/newtemplate/resources/views/trang-chu",
+		"/E/IT_DLU/PHP/Template/Test/master.blade.php",
+		"/E/IT_DLU/PHP/Template/Test/content_left.blade.php",
+		"/E/IT_DLU/PHP/Template/Test/header.blade.php",
+		"/E/IT_DLU/PHP/Template/Test/index.blade.php",
+		"/E/IT_DLU/PHP/Template/Test/master.html",
+		"/E/IT_DLU/PHP/Template/Test/content_left.html",
+		"/E/IT_DLU/PHP/Template/Test/slide.html",
+		"/E/IT_DLU/PHP/Template/Test/header.html",
+		"/C/xampp/htdocs/Cake/resources/views/test.blade.php",
+		"/C/xampp/htdocs/Cake/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+		"/C/xampp/htdocs/Cake/vendor/composer/ClassLoader.php",
+		"/C/xampp/htdocs/Cake/vendor/symfony/http-foundation/ResponseHeaderBag.php",
+		"/C/xampp/htdocs/Cake/vendor/laravel/framework/src/Illuminate/Foundation/AliasLoader.php"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"hasTooltip required invalid"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/Http/Controllers/SanPhamController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1242,
+								1242
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 382.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/admin/sanpham/danhsach.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4291,
+								4291
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2205.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4989,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3679,
+								3691
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1890.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.924585218703,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 58.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 124.0
+	},
+	"output.xdebug":
+	{
+		"height": 29.0
+	},
+	"pinned_build_system": "",
+	"project": "pjCakeshop.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"route",
+				"scodeweb\\app\\Http\\routes.php"
+			],
+			[
+				"",
+				"firstproject\\.env"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"14":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"16":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"18":
+				{
+					"group": 0,
+					"index": 1
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 313.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

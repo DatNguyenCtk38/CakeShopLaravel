@@ -6,6 +6,7 @@ use App\ProductType;
 use Illuminate\Http\Request;
 use DB;
 use File;
+use Validator;
 class SanPhamController extends Controller
 {
     public function getDanhSachSanPham(){
@@ -27,7 +28,33 @@ class SanPhamController extends Controller
     }
    public function postThemSanPham(Request $req){
 
-        
+         $validator = Validator::make($req->all(), [
+                'name'=>'required|min:2|max:50',
+                'unit_price'=>'required|integer|between:1000,9999999',
+                'promotion_price'=>'integer|between:1000,9999999',
+                
+            ],
+            [
+                'name.required'=>"Vui lòng điền tên sản phẩm",
+               
+                'name.min'=>"Tên sản phẩm ít nhất 2 kí tự",
+                'name.max'=>"Tên sản phẩm không dài quá 50 kí tự",
+                'unit_price.required'=>"Vui lòng điền giá sản phẩm",
+               
+                'unit_price.between'=>"Giá sản phẩm phải nằm từ 1000 đồng đến 9999999 đồng",
+               
+                'promotion_price.between'=>"Giá sản phẩm phải nằm từ 1000 đồng đến 9999999 đồng",
+                'unit.required'=>"Vui lòng nhập đơn vị sản phẩm",
+                
+            ]);
+        if ($validator->fails ()){
+             return response()->json ( array (
+                    
+                'errors' => $validator->getMessageBag ()->toArray ()
+             ) );
+        }
+       
+            
         $sanPham = new Product();
 
         $sanPham->name = $req->name;
@@ -112,6 +139,7 @@ class SanPhamController extends Controller
                  ';
        
        return response()->json($output);
+   
     }
     public function getSuaSanPham($id){
         $sanPham = Product::find($id);
@@ -121,7 +149,7 @@ class SanPhamController extends Controller
     public function postSuaSanPham(Request $req,$id){
         $this->validate($req,
             [
-                'name'=>'required|min:6|max:50',
+                'name'=>'required|min:2|max:50',
                 'unit_price'=>'required|integer|between:1000,9999999',
                 'promotion_price'=>'integer|between:1000,9999999',
                 

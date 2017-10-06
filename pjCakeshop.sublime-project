@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": "C:\\xampp\\htdocs\\CakeShopLaravel"
+		}
+	],
+	"settings":
+	{
+		"xdebug":
+		{
+			"url": "http://localhost:8080/CakeShopLaravel/"
+		}
+	}
+}

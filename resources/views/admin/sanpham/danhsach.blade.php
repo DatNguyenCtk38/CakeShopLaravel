@@ -16,13 +16,7 @@
                     </h1>
                 
                 </div>
-                @if(count($errors)>0)
-                        <div id ="notify" class="alert alert-danger">
-                            @foreach($errors->all() as $error)
-                                {{$error}}
-                            @endforeach
-                        </div>
-                @endif
+               
                 @if(Session::has('thongbao'))
                         <div id ="notify" class="alert alert-success">{{Session::get('thongbao')}}</div>
                     @endif  
@@ -83,11 +77,21 @@
    </div>
    <div class="modal-body">
     <form method="POST" id="insert_form" enctype="multipart/form-data">
+       @if(count($errors)>0)
+                        <div id ="notify" class="alert alert-danger">
+                            @foreach($errors->all() as $error)
+                                {{$error}}
+                            @endforeach
+                        </div>
+                @endif
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <div class="alert alert-danger print-error-msg" style="display:none">
+                          <ul></ul> 
+                        </div>
                         <meta name="csrf-token" content="{{ csrf_token() }}" />
                         <div class="form-group">
                             <label>Tên sản phẩm</label>
-                            <input class="form-control" required name="name" placeholder="Nhập tên danh mục">
+                            <input class="form-control"  name="name" placeholder="Nhập tên danh mục">
                             <label>Mô tả:</label>
                             <textarea class="form-control" rows="2" required name="description" placeholder="Mô tả"></textarea>
                             <label>Ảnh sản phẩm </label>
@@ -158,21 +162,37 @@
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
      $.ajax({  
     url:"{{ route('addProduct') }}",  
-    method:"POST",  
+    type:"POST",  
      data: {_token: CSRF_TOKEN},
      dataType: 'JSON',
      data:new FormData(this),
      contentType:false,  
      processData:false, 
-    success:function(data){  
-     $('#insert_form')[0].reset();  
-     $('#add_data_Modal').modal('hide');  
-     $('#list_product').html(data);  
+    success:function(data){
+      if ((data.errors)) {
+                $('.error').removeClass('hidden');
+                $('.error').text(data.errors);
+                printErrorMsg(data.errors);
+            } else {
+                 $('.error').remove();
+                 $('#insert_form')[0].reset();  
+                 $('#add_data_Modal').modal('hide');  
+                 $('#list_product').html(data); 
+            }  
+     
     }  
-   });  
+
+   }); 
+    
   }  
  )});
-
+        function printErrorMsg (msg) {
+      $(".print-error-msg").find("ul").html('');
+      $(".print-error-msg").css('display','block');
+      $.each( msg, function( key, value ) {
+        $(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+      });
+    }
 
 
  
