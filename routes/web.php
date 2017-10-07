@@ -156,7 +156,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	    	'as'=>'addProduct',
 	    	'uses'=>'SanPhamController@postThemSanPham'
 	    	]);
-	    Route::post('editProduct/{id}', [
+	    Route::post('editProduct', [
 	    	'as'=>'editProduct',
 	    	'uses'=>'SanPhamController@postSuaSanPham'
 	    	]);

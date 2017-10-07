@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"se",
+				"selected"
+			],
+			[
+				"s",
+				"size"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
+				"op",
+				"opt_vals"
+			],
+			[
+				"re",
+				"readURL"
+			],
+			[
+				"u",
+				"url"
+			],
+			[
+				"san",
+				"$sanPham〔variable〕"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"p",
+				"product_id"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"if",
+				"if\tif"
+			],
+			[
+				"sa",
+				"sanPham"
+			],
+			[
+				"de",
+				"description"
+			],
+			[
 				"pro",
 				"promotion_price"
 			],
@@ -14,14 +70,6 @@
 			[
 				"req",
 				"required|min:2|max:50"
-			],
-			[
-				"if",
-				"if\tif …"
-			],
-			[
-				"re",
-				"return"
 			],
 			[
 				"al",
@@ -54,10 +102,6 @@
 			[
 				"brea",
 				"break"
-			],
-			[
-				"op",
-				"option\tTag"
 			],
 			[
 				"span",
@@ -96,10 +140,6 @@
 				"Route::get\tBasic Get Route."
 			],
 			[
-				"fun",
-				"function"
-			],
-			[
 				"st",
 				"style"
 			],
@@ -118,10 +158,6 @@
 			[
 				"mar",
 				"margin-bottom"
-			],
-			[
-				"va",
-				"virtuemart"
 			],
 			[
 				"sto",
@@ -160,10 +196,6 @@
 				"endforeach"
 			],
 			[
-				"for",
-				"foreach\tblade-foreach"
-			],
-			[
 				"sec",
 				"sec\tblade-section"
 			],
@@ -196,10 +228,6 @@
 				"onclick=\"addcart"
 			],
 			[
-				"s",
-				"source"
-			],
-			[
 				"San",
 				"SanPhamController@getSuaSanPham"
 			],
@@ -214,10 +242,6 @@
 			[
 				"or",
 				"orderBy"
-			],
-			[
-				"san",
-				"$sanPham〔variable〕"
 			],
 			[
 				"uni",
@@ -246,10 +270,6 @@
 			[
 				"product",
 				"products"
-			],
-			[
-				"p",
-				"padding-left"
 			],
 			[
 				"bo",
@@ -494,36 +514,16 @@
 			[
 				"my",
 				"$mysqli〔variable〕"
-			],
-			[
-				"btn",
-				"btnCapNhat"
-			],
-			[
-				"img",
-				"imga"
-			],
-			[
-				"me",
-				"message"
-			],
-			[
-				"anh",
-				"anhsp"
-			],
-			[
-				"get",
-				"getElementById"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/Http/Controllers/SanPhamController.php",
+			"file": "public/source/media/system/js/myjs.js",
 			"settings":
 			{
-				"buffer_size": 8127,
+				"buffer_size": 4011,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -532,16 +532,7 @@
 			"file": "resources/views/admin/sanpham/danhsach.blade.php",
 			"settings":
 			{
-				"buffer_size": 8647,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "routes/web.php",
-			"settings":
-			{
-				"buffer_size": 4989,
+				"buffer_size": 8099,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -636,27 +627,34 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/CakeShopLaravel",
-		"/C/xampp/htdocs/CakeShopLaravel/resources",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views"
+		"/C/xampp/htdocs/CakeShopLaravel/app",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers",
+		"/C/xampp/htdocs/CakeShopLaravel/public",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js",
+		"/C/xampp/htdocs/CakeShopLaravel/routes"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/SanPhamController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/routes/web.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/danhsach.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/master.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/AjaxController.php",
 		"/C/xampp/htdocs/CakeShopLaravel/pro.sublime-project",
 		"/C/xampp/htdocs/CakeShopLaravel/pjCakeshop.sublime-project",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/TheLoaiController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/danhsach.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/danhsach.blade.php",
 		"/C/xampp/htdocs/scodeweb/resources/views/home.blade.php",
 		"/C/xampp/htdocs/scodeweb/resources/views/layouts/header.blade.php",
 		"/C/xampp/htdocs/scodeweb/resources/views/layouts/master.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/trangchu.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/PageController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/AjaxController.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dathang.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/them.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/SanPhamController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/routes/web.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/banhmoi.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/loaisanpham.blade.php",
 		"/C/Users/Admin/AppData/Local/Temp/Rar$DIa0.314/hello.php",
@@ -805,38 +803,39 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/Http/Controllers/SanPhamController.php",
+					"file": "public/source/media/system/js/myjs.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8127,
+						"buffer_size": 4011,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1242,
-								1242
+								2690,
+								2690
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 382.0,
+						"translation.y": 945.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -845,15 +844,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8647,
+						"buffer_size": 8099,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4291,
-								4291
+								6565,
+								6565
 							]
 						],
 						"settings":
@@ -864,40 +863,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2205.0,
+						"translation.y": 2250.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "routes/web.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4989,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3679,
-								3691
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1890.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -906,6 +875,34 @@
 			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
 				{
 					"buffer": 3,
 					"semi_transient": false,
@@ -933,7 +930,13 @@
 					},
 					"stack_index": 3,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
 					"buffer": 4,
 					"semi_transient": false,
@@ -961,13 +964,7 @@
 					},
 					"stack_index": 4,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 5,
 					"semi_transient": false,
@@ -995,41 +992,13 @@
 					},
 					"stack_index": 5,
 					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 27.0
 	},
 	"input":
 	{
