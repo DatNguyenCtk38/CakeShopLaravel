@@ -80,11 +80,12 @@
 	Xác nhận mật khẩu:<span class="star">&nbsp;*</span></label></div>
 				<div class="controls"><input type="password" name="re_password" id="jform_password2" value="" autocomplete="off" class="validate-password required invalid" size="30" maxlength="99" required="required" aria-required="true" aria-invalid="true"></div>
             </div>
-				<div class="control-group">
+				
+            <div class="control-group">
 				<div class="control-label">
-					<label id="jform_email1-lbl" for="jform_email1" class="" title="<strong>Email Address</strong><br />Enter your email address." aria-invalid="true">
+					<label id="jform_email2-lbl" for="jform_email2" class="" title="<strong>Confirm email Address</strong><br />Confirm your email address." aria-invalid="true">
 	Số điện thoại:<span class="star">&nbsp;*</span></label></div>
-				<div class="controls"><input type="text" name="phone" class=" required invalid" id="" value="" size="30" required="required" aria-required="true" aria-invalid="true"></div>
+				<div class="controls"><input type="text" name="phone" class=" required invalid" id="jform_email2" value="" size="30" required="required" aria-required="true" aria-invalid="true"></div>
             </div>
 				<div class="control-group">
 				<div class="control-label">

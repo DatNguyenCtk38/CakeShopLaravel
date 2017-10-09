@@ -105,13 +105,14 @@ class SanPhamController extends Controller
                         <tbody>
                     ';
 
-                                foreach($danhSachSP as $sanpham){
+                                 foreach($danhSachSP as $sanpham){
                                     $xoa = "admin/sanpham/xoasanpham/".$sanpham->id."";
                                     $sua = "admin/sanpham/sua-san-pham/".$sanpham->id."";
         $output.='           
-                                    <tr class="odd gradeX" align="center">
+                                    <tr id="row_'.$sanpham->id.'" value="'.$sanpham->id.'"  class="odd gradeX" align="center">
                                         <td>'.$sanpham->id.'</td>
-                                        <td>'.$sanpham->name.'</td>
+
+                                        <td id="td_name" value="'.$sanpham->id.'">'.$sanpham->name.'</td>
                                         <td>'.$sanpham->catename.'</td>
                                         
                                         <td><img width="100px" height="100px" src="public/source/images/stories/virtuemart/product/'.$sanpham->image.'"></td>
@@ -120,7 +121,9 @@ class SanPhamController extends Controller
                                         <td>'.$sanpham->promotion_price.'</td>
                                         <td>'.$sanpham->unit.'</td>
                                         <td>'.$sanpham->new.'</td>
-                                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href='.$xoa.'> Xóa</a></td>
+                                        <td class="center"><button id="'.$sanpham->id.'" value ="'.$sanpham->name.'" class="delete-modal btn btn-danger"  data-id="" data-name="">
+                                          <span class="glyphicon glyphicon-edit"></span> Xóa
+                                        </button></td>
                                         <td class="center"><button class="edit-modal btn btn-info" id='.$sanpham->id.' >
                                             <span class="glyphicon glyphicon-edit"></span> Sửa
                                           </button></td>
@@ -235,9 +238,10 @@ class SanPhamController extends Controller
                                     $xoa = "admin/sanpham/xoasanpham/".$sanpham->id."";
                                     $sua = "admin/sanpham/sua-san-pham/".$sanpham->id."";
         $output.='           
-                                    <tr class="odd gradeX" align="center">
+                                     <tr id="row_'.$sanpham->id.'" value="'.$sanpham->id.'"  class="odd gradeX" align="center">
                                         <td>'.$sanpham->id.'</td>
-                                        <td>'.$sanpham->name.'</td>
+
+                                        <td id="td_name" value="'.$sanpham->id.'">'.$sanpham->name.'</td>
                                         <td>'.$sanpham->catename.'</td>
                                         
                                         <td><img width="100px" height="100px" src="public/source/images/stories/virtuemart/product/'.$sanpham->image.'"></td>
@@ -246,7 +250,9 @@ class SanPhamController extends Controller
                                         <td>'.$sanpham->promotion_price.'</td>
                                         <td>'.$sanpham->unit.'</td>
                                         <td>'.$sanpham->new.'</td>
-                                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href='.$xoa.'> Xóa</a></td>
+                                        <td class="center"><button id="'.$sanpham->id.'" value ="'.$sanpham->name.'" class="delete-modal btn btn-danger"  data-id="" data-name="">
+                                          <span class="glyphicon glyphicon-edit"></span> Xóa
+                                        </button></td>
                                         <td class="center"><button class="edit-modal btn btn-info" id='.$sanpham->id.' >
                                             <span class="glyphicon glyphicon-edit"></span> Sửa
                                           </button></td>
@@ -267,9 +273,10 @@ class SanPhamController extends Controller
                  ';
          return response()->json($output);
     }
-    public function getXoaSanPham($id){
-        $sanPham = Product::find($id);
+    public function postXoaSanPham(Request $req){
+        $sanPham = Product::find($req->id_product);
         $sanPham->delete();
-        return redirect()->back()->with('thongbao','Xóa thành công');
+       ;
+        return $req->id_product;
     }
 }

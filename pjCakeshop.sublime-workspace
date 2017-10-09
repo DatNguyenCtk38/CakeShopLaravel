@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"fun\tFunction"
+			],
+			[
+				"red",
+				"ready〔function〕"
+			],
+			[
+				"res",
+				"response〔function〕"
+			],
+			[
+				"pro",
+				"product_name"
+			],
+			[
 				"se",
 				"selected"
 			],
@@ -44,10 +60,6 @@
 				"false"
 			],
 			[
-				"fun",
-				"function〔keyword〕"
-			],
-			[
 				"if",
 				"if\tif"
 			],
@@ -58,10 +70,6 @@
 			[
 				"de",
 				"description"
-			],
-			[
-				"pro",
-				"promotion_price"
 			],
 			[
 				"err",
@@ -506,37 +514,11 @@
 			[
 				"con",
 				"Connect/"
-			],
-			[
-				"requie",
-				"require〔keyword〕"
-			],
-			[
-				"my",
-				"$mysqli〔variable〕"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "public/source/media/system/js/myjs.js",
-			"settings":
-			{
-				"buffer_size": 4011,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/admin/sanpham/danhsach.blade.php",
-			"settings":
-			{
-				"buffer_size": 8099,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
 		{
 			"contents": "",
 			"settings":
@@ -631,18 +613,22 @@
 		"/C/xampp/htdocs/CakeShopLaravel/app/Http",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers",
 		"/C/xampp/htdocs/CakeShopLaravel/public",
-		"/C/xampp/htdocs/CakeShopLaravel/public/source",
-		"/C/xampp/htdocs/CakeShopLaravel/public/source/media",
-		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system",
-		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js",
+		"/C/xampp/htdocs/CakeShopLaravel/resources",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page",
 		"/C/xampp/htdocs/CakeShopLaravel/routes"
 	],
 	"file_history":
 	[
+		"/E/IT_DLU/ASP.NET/BANHANGMVC5/WebBanQuanAo/WebBanQuanAo/Views/Home/Index.cshtml",
+		"/E/IT_DLU/ASP.NET/BANHANGMVC5/WebBanQuanAo/WebBanQuanAo/Views/Layout/HomeLayout.cshtml",
+		"/E/IT_DLU/ASP.NET/BANHANGMVC5/WebBanQuanAo/WebBanQuanAo/Views/Home/MenuPartial.cshtml",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/SanPhamController.php",
 		"/C/xampp/htdocs/CakeShopLaravel/routes/web.php",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js/myjs.js",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/danhsach.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/master.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dathang.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/AjaxController.php",
 		"/C/xampp/htdocs/CakeShopLaravel/pro.sublime-project",
 		"/C/xampp/htdocs/CakeShopLaravel/pjCakeshop.sublime-project",
@@ -653,7 +639,6 @@
 		"/C/xampp/htdocs/scodeweb/resources/views/layouts/master.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/trangchu.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/PageController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dathang.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/them.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/banhmoi.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/loaisanpham.blade.php",
@@ -762,11 +747,7 @@
 		"/E/IT_DLU/PHP/Template/Test/content_left.html",
 		"/E/IT_DLU/PHP/Template/Test/slide.html",
 		"/E/IT_DLU/PHP/Template/Test/header.html",
-		"/C/xampp/htdocs/Cake/resources/views/test.blade.php",
-		"/C/xampp/htdocs/Cake/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
-		"/C/xampp/htdocs/Cake/vendor/composer/ClassLoader.php",
-		"/C/xampp/htdocs/Cake/vendor/symfony/http-foundation/ResponseHeaderBag.php",
-		"/C/xampp/htdocs/Cake/vendor/laravel/framework/src/Illuminate/Foundation/AliasLoader.php"
+		"/C/xampp/htdocs/Cake/resources/views/test.blade.php"
 	],
 	"find":
 	{
@@ -803,70 +784,68 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"sheets":
+			[
+			]
+		},
+		{
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/source/media/system/js/myjs.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4011,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2690,
-								2690
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"word_wrap": true
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 945.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "resources/views/admin/sanpham/danhsach.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8099,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6565,
-								6565
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2250.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -929,68 +908,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
 					"type": "text"
 				}
 			]

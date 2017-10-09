@@ -147,9 +147,9 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	    	'as'=>'suasanpham',
 	    	'uses'=>'SanPhamController@getSuaSanPham'
 	    	]);
-	    Route::get('xoasanpham/{id}',[
+	    Route::post('xoasanpham',[
 	    	'as'=>'xoasanpham',
-	    	'uses'=>'SanPhamController@getXoaSanPham'
+	    	'uses'=>'SanPhamController@postXoaSanPham'
 	    	]);
 	    //POST---------------------------------------
 	    Route::post('addProduct',[

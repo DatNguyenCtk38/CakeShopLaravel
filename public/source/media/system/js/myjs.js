@@ -7,7 +7,7 @@
 
  $(document).ready(function(){
 
-     $('#insert_form').on("submit", function(event){  
+   $('#insert_form').on("submit", function(event){  
       event.preventDefault();  
       var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
       $.ajax({  
@@ -24,13 +24,13 @@
             $('.error').text(data.errors);
             printErrorMsg(data.errors);
         } else {
-         $('.error').remove();
-         $('#insert_form')[0].reset();  
-         $('#add_data_Modal').modal('hide');  
-         $('#list_product').html(data); 
-     }  
+           $('.error').remove();
+           $('#insert_form')[0].reset();  
+           $('#add_data_Modal').modal('hide');  
+           $('#list_product').html(data); 
+       }  
 
- }  
+   }  
 
 }); 
 
@@ -57,42 +57,49 @@ function readURL(input) {
 $("#profile-img").change(function(){
     readURL(this);
 });
+$(document).on('click', '.add-modal', function() {
+     $(".print-error-msg").hide();
+     $('#profile-img-tag').attr('src', null);
+    $('#add_data_Modal').modal('show');
+});
 
 $(document).on('click', '.edit-modal', function() {
-   var product_id = $(this).attr("id");
+ var product_id = $(this).attr("id");
 
-   $.ajax({  
+ $.ajax({  
     url:"admin/sanpham/sua-san-pham/"+product_id+"",  
     method:"GET",  
     data:{product_id:product_id},  
     dataType:"json",  
     success:function(data){
-     $('#edit_form')[0].reset();  
-     $('#name').val(data.sanPham.name);  
-     $('#description').val(data.sanPham.description);  
-     $('#unit_price').val(data.sanPham.unit_price);  
-     $('#promotion_price').val(data.sanPham.promotion_price);  
-     $('#unit').val(data.sanPham.unit);
-     if (data.sanPham.new == 1) {
-      $('#hot').attr("checked",true);
-      $('#no').attr("checked",false);
-  }
-  else{
-      $('#no').attr("checked",true);
-      $('#hot').attr("checked",false);
-  }
-  var src = "public/source/images/stories/virtuemart/product/"+data.sanPham.image;
-  $('#profile-img-tag-edit').attr('src', src);
-  $('#id_product').val(data.sanPham.id);
-  var x = document.getElementById("nhom");
-  var size = $('#nhom option').size(); 
-  var i;
-  for (i = 1; i < size; i++) {
-    if(x.options[i].value == data.sanPham.id_type){
-       $("#nhom option[value="+x.options[i].value+"]").attr('selected', "selected");
-   }
-}
-$('#edit_data_Modal').modal('show');
+       $(".print-error-msg").hide();
+       $('#edit_form')[0].reset();  
+       $('#name').val(data.sanPham.name);  
+       $('#description').val(data.sanPham.description);  
+       $('#unit_price').val(data.sanPham.unit_price);  
+       $('#promotion_price').val(data.sanPham.promotion_price);  
+       $('#unit').val(data.sanPham.unit);
+       if (data.sanPham.new == 1) {
+          $('#hot').attr("checked",true);
+          $('#no').attr("checked",false);
+      }
+      else{
+          $('#no').attr("checked",true);
+          $('#hot').attr("checked",false);
+
+      }
+      var src = "public/source/images/stories/virtuemart/product/"+data.sanPham.image;
+      $('#profile-img-tag-edit').attr('src', src);
+      $('#id_product').val(data.sanPham.id);
+      var x = document.getElementById("nhom");
+      var size = $('#nhom option').size(); 
+      var i;
+      for (i = 1; i < size; i++) {
+        if(x.options[i].value == data.sanPham.id_type){
+         $("#nhom option[value="+x.options[i].value+"]").attr('selected', "selected");
+     }
+ }
+ $('#edit_data_Modal').modal('show');
 
 }  
 });  
@@ -117,15 +124,15 @@ $(document).ready(function(){
                 $('.error').text(data.errors);
                 printErrorMsg(data.errors);
             } else {
-             $('.error').remove();
-             $('#edit_form')[0].reset();  
-             $('#edit_data_Modal').modal('hide');  
-             $('#list_product').html(data); 
-         }  
+               $('.error').remove();
+               $('#edit_form')[0].reset();  
+               $('#edit_data_Modal').modal('hide');  
+               $('#list_product').html(data); 
+           }  
 
-     }  
+       }  
 
- });  
+   });  
 
     })});
 
