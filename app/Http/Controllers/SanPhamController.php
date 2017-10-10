@@ -82,12 +82,13 @@ class SanPhamController extends Controller
         ->join('type_products','products.id_type','=','type_products.id')
         ->orderby('products.id','desc')
         ->get();
-        $output = '';
+         $output = '';
         $output.='
                     <table class="table table-striped table-bordered table-hover" id="example">
                         <thead>
 
                             <tr align="center">
+                                <th></th>
                                 <th>ID</th>
                                 <th>Tên sản phẩm</th>
                                 <th>Nhóm</th>
@@ -105,11 +106,12 @@ class SanPhamController extends Controller
                         <tbody>
                     ';
 
-                                 foreach($danhSachSP as $sanpham){
+                                foreach($danhSachSP as $sanpham){
                                     $xoa = "admin/sanpham/xoasanpham/".$sanpham->id."";
                                     $sua = "admin/sanpham/sua-san-pham/".$sanpham->id."";
         $output.='           
-                                    <tr id="row_'.$sanpham->id.'" value="'.$sanpham->id.'"  class="odd gradeX" align="center">
+                                     <tr id="row_'.$sanpham->id.'" value="'.$sanpham->id.'"  class="odd gradeX" align="center">
+                                      <td><input type="checkbox" name="product_id[]" class="delete_product" value="'.$sanpham->id.'" /></td>
                                         <td>'.$sanpham->id.'</td>
 
                                         <td id="td_name" value="'.$sanpham->id.'">'.$sanpham->name.'</td>
@@ -140,6 +142,14 @@ class SanPhamController extends Controller
                     "searching": true,
                     " paging": true
                     } );
+                         $("#example tbody tr").click( function( e ) {
+                            if ( $(this).hasClass("row_selected") ) {
+                                 $(":checkbox", this).trigger("click");
+                          }
+                          else {
+                                    $(":checkbox", this).trigger("click");
+                                }
+                            });
                     </script>
                  ';
        
@@ -217,6 +227,7 @@ class SanPhamController extends Controller
                         <thead>
 
                             <tr align="center">
+                                <th></th>
                                 <th>ID</th>
                                 <th>Tên sản phẩm</th>
                                 <th>Nhóm</th>
@@ -239,6 +250,7 @@ class SanPhamController extends Controller
                                     $sua = "admin/sanpham/sua-san-pham/".$sanpham->id."";
         $output.='           
                                      <tr id="row_'.$sanpham->id.'" value="'.$sanpham->id.'"  class="odd gradeX" align="center">
+                                      <td><input type="checkbox" name="product_id[]" class="delete_product" value="'.$sanpham->id.'" /></td>
                                         <td>'.$sanpham->id.'</td>
 
                                         <td id="td_name" value="'.$sanpham->id.'">'.$sanpham->name.'</td>
@@ -269,6 +281,14 @@ class SanPhamController extends Controller
                     "searching": true,
                     " paging": true
                     } );
+                    $("#example tbody tr").click( function( e ) {
+                            if ( $(this).hasClass("row_selected") ) {
+                                 $(":checkbox", this).trigger("click");
+                          }
+                          else {
+                                    $(":checkbox", this).trigger("click");
+                                }
+                            });
                     </script>
                  ';
          return response()->json($output);
@@ -278,5 +298,12 @@ class SanPhamController extends Controller
         $sanPham->delete();
        ;
         return $req->id_product;
+    }
+    public function getXoaSanPham(Request $req){
+        foreach ($req->product_id as $key => $id) {
+            $sanpham  = Product::find($id);
+            $sanpham->delete();
+        }
+        return $req->product_id[0];
     }
 }

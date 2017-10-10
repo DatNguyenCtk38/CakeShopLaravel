@@ -15,4 +15,11 @@ class HoaDonController extends Controller
     	->get();
     	return view('admin.hoadon.danhsach',compact('danhSachHoaDon'));
     }
+    public function getXoaDSHoaDon(Request $req){
+    	foreach ($req->product_id as $key => $id) {
+    		$hoaDon  = Bill::find($id);
+    		$hoaDon->delete();
+    	}
+    	return "success";
+    }
 }

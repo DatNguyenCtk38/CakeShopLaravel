@@ -1,3 +1,53 @@
+ $("#example tbody tr").click( function( e ) {
+    if ( $(this).hasClass('row_selected') ) {
+         $(':checkbox', this).trigger('click');
+         
+  }
+  else {
+            $(':checkbox', this).trigger('click');
+        }
+    });
+
+$('#delete_many').click( function() {
+    if(confirm("Bạn có chắc muốn xóa những sản phẩm trên"))
+    {
+     var id = [];
+
+     $(':checkbox:checked').each(function(i){
+        id[i] = $(this).val();
+
+    });
+
+   if(id.length === 0) //tell you if the array is empty
+   {
+    alert("Vui lòng chọn sản phẩm để xóa");
+}
+else
+{
+
+    $.ajax({  
+        url:"admin/sanpham/delete",  
+        method:"get",  
+        data:{product_id:id},  
+        success:function(data){
+           for(var i=0; i<id.length; i++)
+              {
+                
+               $('tr#row_'+id[i]+'').css('background-color', '#ccc');
+               $('tr#row_'+id[i]+'').fadeOut('slow');
+              }
+            
+            id = new Array();
+        }  
+    }); 
+
+}}
+else{
+    return false;
+}} );
+
+
+
  $('#example').dataTable( 
  {
     "bSort" : false,

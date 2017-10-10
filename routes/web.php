@@ -147,6 +147,10 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 	    	'as'=>'suasanpham',
 	    	'uses'=>'SanPhamController@getSuaSanPham'
 	    	]);
+	    Route::get('delete',[
+	    	'as'=>'delete',
+	    	'uses'=>'SanPhamController@getXoaSanPham'
+	    	]);
 	    Route::post('xoasanpham',[
 	    	'as'=>'xoasanpham',
 	    	'uses'=>'SanPhamController@postXoaSanPham'
@@ -166,6 +170,10 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 		Route::get('danhsachhoadon',[
 			'as'=>'danhsachhoadon',
 			'uses'=>'HoaDonController@getDanhSachHoaDon'
+			]);
+		Route::get('delete',[
+			'as'=>'delete',
+			'uses'=>'HoaDonController@getXoaDSHoaDon'
 			]);
 	});
 	//Tin tức
