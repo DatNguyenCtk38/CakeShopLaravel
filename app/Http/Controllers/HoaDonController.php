@@ -8,11 +8,7 @@ use Illuminate\Http\Request;
 class HoaDonController extends Controller
 {
     public function getDanhSachHoaDon(){
-    	$danhSachHoaDon = DB::table('bills')
-    	->select('bills.*','customer.name')
-    	->join('customer','bills.id_customer','=','customer.id')
-    	->orderBy('bills.id','DESC')
-    	->get();
+    	$danhSachHoaDon = Bill::all();
     	return view('admin.hoadon.danhsach',compact('danhSachHoaDon'));
     }
     public function getXoaDSHoaDon(Request $req){

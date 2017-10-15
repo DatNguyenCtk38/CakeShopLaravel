@@ -32,7 +32,9 @@
 		</div>
 		          <div id="yt_component" class="span12">
             <div class="component-inner"><div class="component-inner2">
-                
+       @if(Session::has('thongbao'))
+						<div class="alert alert-success">{{Session::get('thongbao')}}</div>
+					@endif         
 <div class="cart-view">
 	<div class="vm-cart-header-container">
 
@@ -49,14 +51,15 @@
 		
 		if (Auth::check()){
 			 $name = Auth::user()->full_name ;
-			 $gender =  Auth::user()->gender ;
+			
 			 $email =  Auth::user()->email ;
 			 $address =  Auth::user()->address ;
-			 $phone =  Auth::user()->phone ;
+			 $phone =  Auth::user()->phone_number ;
+			 
 		}
 		else{
 			 $name = "";
-			 $gender =  "";
+			
 			 $email = "" ;
 			 $address =  "" ;
 			 $phone =  "" ;
@@ -85,25 +88,7 @@
 		</p>
 		<div class="clear"></div>
 		<!--Giới tính-->
-		 <p class="width10 floatleft" id="gender">
-            Giới tính
-		</p>
-        <p class="width30 floatleft" id="gender">
-           <div class="form-block"  style="margin-bottom: 20px">
-							
-							<input id="gender" type="radio" class="input-radio" name="gender" value="nam" 
-								@if ( $gender ==0)
-									checked="checked" 
-								@endif
-							 style="width: 5%">Nam</span>
-							<input id="gender" type="radio" class="input-radio" name="gender" value="nữ" 
-								@if ( $gender ==1 )
-									checked="checked" 
-								@endif
-							style="width: 5%"><span>Nữ</span>
-										
-						</div>
-		</p>
+		
         <!-- Email-->
         <div class="clear"></div>
          <p class="width10 floatleft" id="email">

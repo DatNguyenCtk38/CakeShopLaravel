@@ -118,9 +118,8 @@
    var name = ($(this).attr('value'));
    var id = $(this).attr('id');
     $('#product_name').html(name);
-     $('#id_product_delete').val(id);  
-  $('#delete_data_Modal').modal('show');
-
+     $('#id_article_delete').val(id);  
+     //click vo thung rac. no gan  id cho the input bi an torng form
 }  );  
   });
   $(document).ready(function(){

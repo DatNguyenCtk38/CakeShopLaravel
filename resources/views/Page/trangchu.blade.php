@@ -102,21 +102,14 @@
 
                                                             <div class="addtocart-bar">
                                                                 <span class="addtocart-button">
-                                                                    <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart(@php echo $product->id;@endphp)"
-                                                                    >
+                                                                    <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart( {{$product->id}})">
+                                                                    
                                                                     
                                                                 </span> 							<!-- <label for="quantity17" class="quantity_box">Quantity: </label> -->
-                                                                <span class="quantity-box">
-                                                                    <input type="text" class="quantity-input js-recalculate" name="quantity[]" onblur="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onclick="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onchange="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onsubmit="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" value="1" data-init="1" data-step="1">
-                                                                </span>
-                                                                <span class="quantity-controls js-recalculate">
-                                                                    <input type="button" class="quantity-controls quantity-plus" value="plus">
-                                                                    <input type="button" class="quantity-controls quantity-minus" value="minus">
-                                                                </span>
+                                                                
 
 
-                                                                <input type="hidden" name="virtuemart_product_id[]" value="17">
-                                                                <noscript>&lt;input type="hidden" name="task" value="add"/&gt;</noscript> 
+                                                               
                                                             </div>			<input type="hidden" name="option" value="com_virtuemart">
                                                             <input type="hidden" name="view" value="cart">
                                                             <input type="hidden" name="virtuemart_product_id[]" value="17">

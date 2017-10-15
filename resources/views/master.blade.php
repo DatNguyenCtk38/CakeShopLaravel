@@ -10,6 +10,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="generator" content="SmartAddons.Com - the high quality products!" />
   <title>Sj Bakery - Joomla Responsive Template</title>
+
   <link href="indexc0d0.php?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
   <link href="index7b17.php?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
   <link href="public/source/templates/sj_bakery/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
@@ -28,6 +29,7 @@
   <link rel="stylesheet" href="public/source/components/com_virtuemart/assets/css/vm-ltr-reviews2d20.css?vmver=8771" type="text/css" />
   <link rel="stylesheet" href="public/source/modules/mod_sj_vm_slickslider/assets/css/sj-slickslider.css" type="text/css" />
   <link rel="stylesheet" href="public/source/modules/mod_sj_vm_slickslider/assets/css/slickslider-font-color.css" type="text/css" />
+  
   <style type="text/css">
 
 .image-content.leading img{
@@ -149,17 +151,28 @@ jQuery(function($) {
     <!--[ if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"> </ script>
     <[endif] -->
+    <style>
+      .profile{
+        color: black;
+      }
+    </style>
 </head>
   <body id="bd" class="com_virtuemart view-category red sj_bakery no-slideshow  pattern_5" onload="prettyPrint()">	
     <section id="yt_wrapper">	
   		@include('layout.header')
+     @if (request()->route()->getName() === 'trang-chu')
       @include('layout.slide')
+     @endif
   		<section id="content" class="content layout-lm nopos-
   	         nopos-breadcrumb block">
   		    <div class="yt-main">
   		        <div class="yt-main-in1 container">
   		            <div class="yt-main-in2 row-fluid">
+                      @if (request()->is('quanlytaikhoan/*'))
+                        @include('layout.menuquanly')
+                      @else
   		                @include('layout.content_left')
+                        @endif
   		                 <div id="content_main" class="span9" data-normal="span9" data-stablet="span9">
   		                	@yield('content')
   		                </div>

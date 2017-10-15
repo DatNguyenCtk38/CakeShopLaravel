@@ -66,7 +66,7 @@
 				<div class="control-label">
 					<label id="jform_username-lbl" for="jform_username" class="" title="<strong>Username</strong><br />Enter your desired username." aria-invalid="true">
 	Email:<span class="star">&nbsp;*</span></label></div>
-				<div class="controls"><input type="email" name="email" id="jform_username" value="" class="validate-username required invalid" size="30" required="required" aria-required="true" aria-invalid="true"></div>
+				<div class="controls"><input type="email" name="email" id="jform_username" value="" class="validate-email required invalid" size="30" required="required" aria-required="true" aria-invalid="true"></div>
             </div>
 				<div class="control-group">
 				<div class="control-label">

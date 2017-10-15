@@ -1,4 +1,4 @@
-@extends('admin.layout.index')
++@extends('admin.layout.index')
 @section('content')
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript"> 
@@ -35,7 +35,7 @@
             @endif  
             <!-- /.col-lg-12 -->
             <div id="listBills">
-                <table class="table table-striped table-bordered table-hover" id="example">
+                <table style="font-size: 14px" class="table table-striped table-bordered table-hover" id="example">
                     <thead>
                         <tr align="center" >
                             <th></th>
@@ -54,7 +54,7 @@
                         <tr id="{{$hoadon->id}}" value ="{{$hoadon->id}}" class="odd gradeX" align="center">
                             <td><input type="checkbox" name="customer_id[]" class="delete_customer" value="{{$hoadon->id}}" /></td>
                             <td>{{$hoadon->id}}</td>
-                            <td>{{$hoadon->name}}</td>
+                            <td>{{$hoadon->customer_name}}</td>
                             <td>{{$hoadon->created_at}}</td>
                             <td>@if ($hoadon->status == 0)
                                 Chưa xử lý
@@ -77,6 +77,15 @@
 @endsection
 @section('script')
 <script type="text/javascript">
+   $("#example tbody tr").click( function( e ) {
+    if ( $(this).hasClass('row_selected') ) {
+         $(':checkbox', this).trigger('click');
+         
+  }
+  else {
+            $(':checkbox', this).trigger('click');
+        }
+    });
   $('#example').dataTable( 
   {
     "bSort" : false,
@@ -88,14 +97,6 @@
   var arrayId = new Array();
   var id;
   /* Add a click handler to the rows - this could be used as a callback */
-  $("#example tbody tr").click( function( e ) {
-    if ( $(this).hasClass('row_selected') ) {
-         $(':checkbox', this).trigger('click');
-  }
-  else {
-            $(':checkbox', this).trigger('click');
-        }
-    });
 
 
   /* Add a click handler for the delete row */
@@ -106,7 +107,7 @@
 
      $(':checkbox:checked').each(function(i){
         id[i] = $(this).val();
-    });
+      });
 
    if(id.length === 0) //tell you if the array is empty
    {

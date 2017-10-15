@@ -26,6 +26,7 @@
       <label>Mô tả:</label>
       <textarea class="form-control" rows="2" required name="description" placeholder="Mô tả"></textarea>
       <label>Ảnh sản phẩm </label>
+     
       <input type="file" class="form-control" id="profile-img" name="image" />
       <img src="" id="profile-img-tag" width="200px" />
       <br>

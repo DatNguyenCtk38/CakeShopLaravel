@@ -14,6 +14,45 @@
 Route::get('send', 'MailController@getSend');
 Route::get('choi', 'MailController@getChoi');
 //
+
+Route::group(['prefix' => 'quanlytaikhoan'], function() {
+    Route::get('ho-so', [
+	'as'=>'ho-so',
+	'uses'=>"FrontUserController@getQuanLyTaiKhoan"
+	]);
+	Route::get('editemail', [
+	'as'=>'editemail',
+	'uses'=>"FrontUserController@getEditEmail"
+	]);
+	Route::post('editemail',[
+	'as'=>'editemail',
+	'uses'=>"FrontUserController@postEditEmail"
+	]);
+	Route::get('editProfile',[
+	'as'=>'editprofile',
+	'uses'=>'FrontUserController@getEditProfile'
+	]);
+	Route::post('editProfile',[
+	'as'=>'editprofile',
+	'uses'=>'FrontUserController@postEditProfile'
+	]);
+	Route::get('changePassword',[
+	'as'=>'changePassword',
+	'uses'=>'FrontUserController@getchangePassword'
+	]);
+	Route::post('changePassword',[
+	'as'=>'changePassword',
+	'uses'=>'FrontUserController@postchangePassword'
+	]);
+	Route::get('lich-su-mua-hang', [
+	'as'=>'lichsumuahang',
+	'uses'=>'FrontUserController@getLichSuMuaHang'
+	]);
+	Route::get('chi-tiet-mua-hang/{id}', [
+	'as'=>'chitietmuahang',
+	'uses'=>'FrontUserController@getChiTietMuaHang'
+	]);
+});
 Route::get('/',[
 	'as'=>'trang-chu',
 	'uses'=>'PageController@getIndex'

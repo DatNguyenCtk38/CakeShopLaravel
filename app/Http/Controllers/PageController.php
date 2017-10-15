@@ -101,17 +101,19 @@ class PageController extends Controller
         $cart = Session::get('cart');
         //var_dump($cart);
         //die();
-        $customer = new Customer;
-        $customer->name =$req->name;
-        $customer->gender = $req->gender;
-        $customer->email = $req->email;
-        $customer->address = $req->address;
-        $customer->phone_number = $req->phone;
-        $customer->note = $req->notes;
-        $customer->save();
-
+        $id_customer;
+        if (Auth::check()) {
+            $id_customer = Auth::user()->id;
+        }
+        else{
+            
+                $id_customer =  null;
+        }
         $bill = new Bill;
-        $bill->id_customer = $customer->id;
+        $bill->id_user = $id_customer;
+        $bill->customer_name = $req->name;
+        $bill->phone_number = $req->phone;
+        $bill->address = $req->address;
         $bill->date_order = date('Y-m-d');
         $bill->total = $cart->totalPrice;
         $bill->payment = $req->payment_method;
@@ -139,8 +141,8 @@ class PageController extends Controller
                 ->where('bill_detail.id_bill','=',$bill->id)
                 ->get();
         //print_r($listBill);
-        die();
-        Mail::send(new SendMail($listBill,$req->name,$req->phone,$req->address,$bill->created_at,$bill->total, $customer->email));
+        
+        Mail::send(new SendMail($listBill,$req->name,$req->phone,$req->address,$bill->created_at,$bill->total, $req->email));
         //__________________________MAIL___________________
         Session::forget('cart');
         return redirect()->back()->with('thongbao','Đặt hàng thành công');
@@ -166,15 +168,16 @@ class PageController extends Controller
                 'email.email'=>'Vui lòng nhập đúng định dạng email',
                 'email.unique'=>'Email đã có người sử dụng',
                 're_password.required'=>'Vui lòng điền mật khẩu',
-                're_password.same'=>'Password không giống nhau',
-                'password.min'=>'Password phải có ít nhất 6 kí tự'
+                're_password.same'=>'Mật khẩu không giống nhau',
+                'password.min'=>'Mật khẩu phải có ít nhất 6 kí tự',
+                'password.max'=>'Mật khẩu không dài quá 20 kí tự'
             ]);
-        $user = new User();
-        $user->full_name = $req->fullname;
+        $user = new User;
+        $user->full_name =$req->fullname;    
         $user->email = $req->email;
-        $user->password = Hash::make($req->password);
-        $user->phone = $req->phone;
         $user->address = $req->address;
+        $user->phone_number = $req->phone;
+        $user->password = Hash::make($req->password);
         $user->authority = 0;
         $user->save();
         return redirect()->back()->with('thanhcong','Tạo tài khoản thành công');
@@ -206,7 +209,7 @@ class PageController extends Controller
         
     public function postLogout(){
         Auth::logout();
-        return redirect()->back();
+        return redirect()->route('trang-chu');
     }
     public function getTimKiem(Request $req){
         $product = Product::where('name','like','%'.$req->key.'%')->orWhere('unit_price',$req->key)->get();
@@ -233,4 +236,5 @@ class PageController extends Controller
         }
         return view('page.timkiem',compact('products'));
     }
+   
 }

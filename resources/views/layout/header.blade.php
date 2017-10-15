@@ -19,11 +19,13 @@
                             </ul>
                             <ul class="sj-login-regis">
 
-                                <li class="sj-register">
+                                <li class="sj-register dropdown">
                                      @if(Auth::check())
                                         <a class="register-switch text-font" href="{{ route('dangxuat') }}">
                                             <span class="title-link">Đăng xuất</span>
+
                                         </a>
+
                                     @else
                                         <a class="register-switch text-font" href="{{ route('dangky') }}">
                                             <span class="title-link">Đăng kí</span>
@@ -31,14 +33,17 @@
                                     @endif
                                 </li>
                                 
-                                <li class="sj-login">
+                                <li class="sj-login dropdown">
                                      @if(Auth::check())
-                                    <a href="javascript:void(0)" role="button" class="login-switch text-font" title="" >
+                                    <a href="{{ route('ho-so') }}" data-toggle="dropdown" role="button" class="dropdown-toggle login-switch text-font" title="" >
                                         <span class="title-link">
                                           {{Auth::user()->full_name}}
-                                           
+                                            
                                         </span>
+                                        
                                     </a>
+                                    
+       
                                     @else
                                          <a href="#mod-login" role="button" class="login-switch text-font" title="" data-toggle="modal">
                                             <span class="title-link">
@@ -170,40 +175,7 @@
 
                     </ul>	
                     <select id="yt-mobilemenu" name="menu" onchange="MobileRedirectUrl()">
-                        <option selected="selected" value="index.html">Home</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/explore">Explore</option>                
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/explore/module-variations">-- Module Variations</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/explore/extenstions">-- Extensions</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/explore/module-positions">-- Module positions</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/explore/typography">-- Typography</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/explore/404-page">-- 404 page</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages">Joomla Pages</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/joomla-content/category-blog">-- Default Pages</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/2013-02-21-09-25-47/login-form">---- Login Form</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/2013-02-21-09-25-47/register">---- Registration Form</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/contact-us-2">---- Contact Us</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/2013-02-21-09-25-47/smart-seach">---- Smart Seach</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/2013-02-21-09-25-47/weblinks">---- Weblinks</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/joomla-content">-- Joomla content</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/joomla-content/page-break-example">---- Page break example</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/joomla-content/category-blog">---- Category Blog</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/joomla-content/single-article">---- Single Article</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/joomla-content/list-all-categories">---- List All Categories</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/joomla-content/category-list">---- Category List</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/joomla-pages/joomla-content/archived-articles">---- Archived Articles</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/virtuemart">Virtuemart</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/virtuemart/categories">-- Categories</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/paris-gateaux">---- Paris Gateaux</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/fruits-cake">---- Fruits Cake</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/valentine-cake">---- Valentine Cake</option>
-                        <option value="#1">-- Other Pages</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/virtuemart/other-pages/product-detail">---- Product detail</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/virtuemart/other-pages/shopping-cart">---- Shopping Cart</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/virtuemart/other-pages/account-maintenance">---- Account Maintenance </option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/virtuemart/other-pages/list-orders">---- List Orders</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/virtuemart/other-pages/vendor-contact">---- Displays Vendor Contact</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/virtuemart/categories-layout">-- Category Layouts</option>
-                        <option value="/public/source/templates/joomla3/sj-bakery/index.php/virtuemart/categories-layout/product-items-one-column">---- Product items (one column)</option>
+                        
                         </select>
                 </div>
             </div>
