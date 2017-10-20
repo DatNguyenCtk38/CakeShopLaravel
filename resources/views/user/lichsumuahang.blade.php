@@ -54,8 +54,9 @@
                             <th class="title">STT</th>
                             <th class="title">Tên khách hàng</th>
                             <th class="title">Số điện thoại</th>
+                            <th class="titile">Địa chỉ</th>
                             <th class="title">Thời gian</th>
-                            <th class="title">Tình trạng</th>
+                            
                             <th class="title">Tổng tiền</th>
                             <th class="titile">Chi tiết</th>
                         </tr>
@@ -69,13 +70,9 @@
                             <td>{!!$i!!}</td>
                             <td>{{$hoadon->customer_name}}</td> 
                             <td>{{$hoadon->phone_number}}</td>
+                            <td>{{ $hoadon->address }}</td>
                             <td>{{$hoadon->date_order}}</td>
-                            <td>@if ($hoadon->status == 0)
-                                Đã thanh toán
-                                @else
-                                Đang vận chuyển
-                            @endif
-                        	</td>
+                            
                            	<td>{{number_format($hoadon->total)}} đồng</td>
                            	<td><a style="color: #122db9" href="{{ route('chitietmuahang',$hoadon->id) }}">Xem chi tiết</a>	</td>
                         </tr>
@@ -90,16 +87,22 @@
 						</div>
 
 					</div>
-					@if (count($danhSachHoaDon)>5)
+				
 								
 							
 					<div class="pagging-sort" style="margin-bottom: 10px">
                     <div class="pagination clearfix">
                       	{{ $danhSachHoaDon->links() }}
                     </div>
-                    @endif
+                   
 
                 </div>
+                <div class="clear"></div>
+				<a href="{{ url()->previous() }}" style="height: 36px;background: #0077b3;
+				background-position: 0 -160px;color: #fff;cursor: pointer;
+    			text-align: center;padding: 10px;border-radius: 5px"
+
+				 id="back"  class="">Quay lại</a>
 				</div>
 			</div>
 			@endsection

@@ -8,6 +8,7 @@ use App\BillDetail;
 use App\Bill;
 use Auth;
 use Hash;
+use App\Discount_code;
 class FrontUserController extends Controller
 {
     public function getQuanLyTaiKhoan(){
@@ -114,11 +115,26 @@ class FrontUserController extends Controller
     }
     public function getLichSuMuaHang(){
         $id = Auth::user()->id;
-        $danhSachHoaDon = Bill::where('id_user',$id)->paginate(5);
+        $danhSachHoaDon = Bill::where('id_user',$id)->where('status',1)->paginate(5);
         return view('user.lichsumuahang',compact('danhSachHoaDon'));
     }	
     public function getChiTietMuaHang($id){
         $chiTietMuaHang = BillDetail::where('id_bill',$id)->paginate(5);
         return view('user.chitietmuahang',compact('chiTietMuaHang'));
+    }
+    public function getDonHang(){
+        $id = Auth::user()->id;
+        $danhSachHoaDon = Bill::where('id_user',$id)->where('status',0)->paginate(5);
+        return view('user.dondathang',compact('danhSachHoaDon'));
+    }
+    public function xoadondathang(Request $req){
+            $hoaDon = Bill::find($req->id);
+            $hoaDon->delete();
+            return $req->id;
+     
+    }
+    public function getMaGiamGia(){
+        $danhSachMa = Discount_code::where('user_id',Auth::user()->id)->paginate(5);
+        return view('user.magiamgia',compact('danhSachMa'));
     }
 }

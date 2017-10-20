@@ -10,6 +10,7 @@ use App\Cart;
 use App\Customer;
 use App\Bill;
 use App\BillDetail;
+use App\Discount_code;
 use App\User;
 use Hash;
 use Auth;
@@ -74,5 +75,14 @@ class AjaxController extends Controller
 
         $returnHtml = view('Page.banhmoi',compact('promotion_product'))->render();
         return response()->json( array('success' => true, 'html'=>$returnHtml) );
+    }
+    public function CheckCode(Request $req){
+        $code = Discount_code::where('name',$req->code_name)->get();
+        if (count($code) > 0) {
+           return response()->json(array('success'=>$code[0]->value,'response'=>1));
+        }
+        else{
+           return response()->json(array('success'=>0,'response'=>0));
+        }
     }
 }

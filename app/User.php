@@ -29,4 +29,7 @@ class User extends Authenticatable
      public function bill(){
         return $this->hasMany('App\Bill','id_user','id');
     }
+     public function discount_code(){
+        return $this->hasMany('App\Discount_code','user_id','id');
+    }
 }

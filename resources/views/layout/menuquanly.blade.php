@@ -11,10 +11,10 @@
                 <!--</div>-->
                 <div class="modcontent clearfix">
                     <p><a style="color:#122db9" href="{{ route('ho-so') }}">Quản lý tài khoản</a></p>
-                    <p>Đơn đặt hàng</p>
-                    <p>Hủy đơn hàng</p>
+                    <p><a style="color:#122db9" href="{{ route('dondathang') }}">Đơn đặt hàng</a></p>
+                   
                     <p><a style="color:#122db9" href="{{ route('lichsumuahang') }}">Xem lịch sử mua hàng</a></p>
-                    <p>Mã giảm giá</p>
+                    <p><a style="color:#122db9" href="{{ route('magiamgia') }}">Mã giảm giá</a></p>
                 </div>
            
         </div>

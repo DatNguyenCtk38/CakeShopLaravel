@@ -62,7 +62,7 @@ body.sj_bakery{font-family:arial,sans-serif;}
 
 body.sj_bakery{
 	background-color:#ffffff ;
-	color:#919191 ;
+	color:#101010 ;
 }
 
 body a{

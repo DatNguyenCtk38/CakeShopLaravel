@@ -52,6 +52,18 @@ Route::group(['prefix' => 'quanlytaikhoan'], function() {
 	'as'=>'chitietmuahang',
 	'uses'=>'FrontUserController@getChiTietMuaHang'
 	]);
+	Route::get('don-dat-hang', [
+	'as'=>'dondathang',
+	'uses'=>"FrontUserController@getDonHang"
+	]);
+	Route::get('xoa-don-dat-hang', [
+	'as'=>'xoadondathang',
+	'uses'=>"FrontUserController@xoadondathang"
+	]);
+	Route::get('ma-giam-gia',[
+	'as'=>'magiamgia',
+	'uses'=>'FrontUserController@getMaGiamGia'
+	]);
 });
 Route::get('/',[
 	'as'=>'trang-chu',
@@ -135,6 +147,10 @@ Route::get('SortChange', [
 	'as'=>'SortChange',
 	'uses'=>'AjaxController@SortChangeajax'
 ]);
+Route::get('CheckCode', [
+	'as'=>'CheckCode',
+	'uses'=>'AjaxController@CheckCode'
+]);
 //////////////admin
 Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
@@ -214,6 +230,14 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 			'as'=>'delete',
 			'uses'=>'HoaDonController@getXoaDSHoaDon'
 			]);
+		Route::get('chi-tiet-hoa-don/{id}',[
+			'as'=>'chitiethoadon',
+			'uses'=>'HoaDonController@getChiTietHoaDon'
+			]);
+		Route::get('duyet', [
+			'as'=>'duyet',
+			'uses'=>'HoaDonController@getDuyet'
+		]);
 	});
 	//Tin tức
 	//Route::group(['prefix' => 'tintuc'], function() {

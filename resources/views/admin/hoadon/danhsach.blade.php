@@ -1,4 +1,4 @@
-+@extends('admin.layout.index')
+@extends('admin.layout.index')
 @section('content')
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript"> 
@@ -17,7 +17,7 @@
                 <h1 class="page-header">Danh mục
                     <small>Hóa đơn</small>
 
-                    <button style="float: right;" type="button" name="add" id="delete" data-toggle="modal" data-target="#add_data_Modal" class="btn btn-warning add-modal">Xóa</button>
+                    <button style="float: right;" type="button" name="add" id="delete" data-toggle="modal" data-target="#add_data_Modal" class="btn btn-warning add-modal"><span class="glyphicon glyphicon-trash"></span> Xóa</button>
 
 
                 </h1>
@@ -44,7 +44,7 @@
                             <th>Thời gian</th>
 
                             <th>Tình trạng</th>
-                            
+                           
                             <th>Xóa</th>
                             
                         </tr>
@@ -57,11 +57,12 @@
                             <td>{{$hoadon->customer_name}}</td>
                             <td>{{$hoadon->created_at}}</td>
                             <td>@if ($hoadon->status == 0)
-                                Chưa xử lý
+                                <a href="{{ route('chitiethoadon',$hoadon->id) }}" class="btn btn-danger"><span class=" glyphicon glyphicon-unchecked"></span> Chưa duyệt</a>
                                 @else
-                                Đã xử lý
+                                <a href="{{ route('chitiethoadon',$hoadon->id) }}"  class="btn btn-success"><span class=" glyphicon glyphicon-check"></span> Đã duyệt</a>
                             @endif</td>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{route('xoasanpham',$hoadon->id)}}"> Xóa</a></td>
+                            
+                            <td class="center"></i><a class="btn btn-danger" href="#">  <span class="glyphicon glyphicon-trash"></span> Xóa</a></td>
 
                         </tr>
                         @endforeach
@@ -125,7 +126,7 @@ else
                $('tr#'+id[i]+'').css('background-color', '#ccc');
                $('tr#'+id[i]+'').fadeOut('slow');
               }
-            id = new Array();
+            
         }  
     }); 
 

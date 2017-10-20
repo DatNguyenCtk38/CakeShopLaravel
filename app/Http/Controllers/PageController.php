@@ -16,6 +16,7 @@ use Auth;
 use Session;
 use Mail;
 use DB;
+use App\Discount_code;
 use App\Mail\SendMail;
 class PageController extends Controller
 {
@@ -94,13 +95,23 @@ class PageController extends Controller
         return redirect()->back();
     }
     public function getCheckout(){
-        
-        return view('page.dathang');
+
+        if (Auth::check()) {
+            $listDiscount = Discount_code::where('user_id',Auth::user()->id)->get();
+            return view('page.dathang',compact('listDiscount'));
+        }
+           
+            return view('page.dathang');
     }
     public function postCheckout(Request $req){
         $cart = Session::get('cart');
         //var_dump($cart);
-        //die();
+        if ($req->value_code > 0) {
+            $giamGia = $req->value_code;
+        }
+        else{
+            $giamGia = 0;
+        }
         $id_customer;
         if (Auth::check()) {
             $id_customer = Auth::user()->id;
@@ -115,12 +126,16 @@ class PageController extends Controller
         $bill->phone_number = $req->phone;
         $bill->address = $req->address;
         $bill->date_order = date('Y-m-d');
-        $bill->total = $cart->totalPrice;
+        $bill->total = $cart->totalPrice-($cart->totalPrice*0.01*$giamGia);
         $bill->payment = $req->payment_method;
         $bill->note = $req->notes;
         $bill->status = 0;
         $bill->save();
         
+        if ($giamGia >0) {
+            $discount = Discount_code::where('name',$req->code)->get();
+            $discount[0]->delete();
+        }
        
         foreach ($cart->items as $key => $value) {
             $bill_detail = new BillDetail;
@@ -145,7 +160,8 @@ class PageController extends Controller
         Mail::send(new SendMail($listBill,$req->name,$req->phone,$req->address,$bill->created_at,$bill->total, $req->email));
         //__________________________MAIL___________________
         Session::forget('cart');
-        return redirect()->back()->with('thongbao','Đặt hàng thành công');
+        
+        return view('page.thongbaodathang',compact('bill','giamGia'));
        
     }
     public function getLogin(){
@@ -236,5 +252,15 @@ class PageController extends Controller
         }
         return view('page.timkiem',compact('products'));
     }
-   
+  
+
+    public  function generateRandomString($length = 20) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
 }
