@@ -126,8 +126,13 @@
             Mã giảm giá
 		</p>
         <p class="width30 floatleft" id="code">
-             <input id="discount_code" onchange="change()" style="margin-bottom: 20px;width: 100%" type="text" name="code" class="inputbox"  placeholder="Mã giảm giá">
+             <input id="discount_code" onblur="change()" onchange="change()" style="margin-bottom: 20px;width: 100%" type="text" name="code" class="inputbox"  placeholder="Mã giảm giá">
              <input  hidden id="value_code" name="value_code">
+		</p>
+		<p class="width30 floatleft" >
+			<button style="height: 30px" class="vm-button-correct" type="button" id="checkcode" onclick="change()">
+				Kiểm tra mã code
+			</button>
 		</p>
 		<p class="width50 floatleft" id="status_code">
           
@@ -241,8 +246,15 @@
 </fieldset>
 
 
-
-	 <div class="checkout-button-top"> <button type="submit" id="checkoutFormSubmit" name="checkout" value="1" class="vm-button-correct"><span>Đặt hàng</span> </button></div>
+	
+	 <div class="checkout-button-top"> <button @if(Session::has('cart'))
+           
+           	@if (Session('cart')->totalQty>0)
+           		{{-- expr --}}
+           		@else
+           		disabled 
+           	@endif
+            @endif type="submit" id="checkoutFormSubmit" name="checkout" value="1" class="vm-button-correct"><span>Đặt hàng</span> </button></div>
 
 				<input type="hidden" name="order_language" value="en-GB">
 		<input type="hidden" name="task" value="updatecart">
@@ -267,6 +279,7 @@ var sessMin = 15;var vmAliveUrl = "index.php?option=com_virtuemart&view=virtuema
         </div>
 		 </div>
 <script type="text/javascript">
+
       function change() {
       	var name = document.getElementById("discount_code").value;
       	
@@ -289,5 +302,7 @@ var sessMin = 15;var vmAliveUrl = "index.php?option=com_virtuemart&view=virtuema
 
             });
       }
+      
+      
    </script>
 @endsection

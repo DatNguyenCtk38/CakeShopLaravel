@@ -6,31 +6,26 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-
+use Carbon\Carbon;
 class SendMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $listBillDetail;
-    public $name;
-    public $phoneNumber;
-    public $address;
-    public $create_at;
-    public $total;
-    public $mail;
+    public $bill;
+    public $email;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($listBillDetail,$name,$phoneNumber,$address,$create_at,$total,$mail)
+    
+    public function __construct($listBillDetail,$bill,$email)
     {
         $this->listBillDetail = $listBillDetail;
-        $this->name = $name;
-        $this->phoneNumber = $phoneNumber;
-        $this->address = $address;
-        $this->create_at = $create_at;
-        $this->total = $total;
-        $this->mail = $mail;
+        $this->bill = $bill;
+        $this->email = $email;
+       
     }
 
     /**
@@ -40,8 +35,7 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        //print_r($this->listBillDetail);
-        //die();
-        return $this->view('Page.mail',compact('listBillDetail','name','phoneNumber','address','create_at','total'))->to($this->mail)->from('datnguyenctk40@gmail.com','Yasuo')->subject('Đơn đặt hàng của bạn');
+        
+        return $this->view('Page.mail',compact('listBillDetail','bill','email'))->to($this->email)->from('datnguyenctk40@gmail.com','Yasuo')->subject('Đơn đặt hàng của bạn');
     }
 }

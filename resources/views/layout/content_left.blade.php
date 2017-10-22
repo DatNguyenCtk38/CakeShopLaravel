@@ -2,7 +2,7 @@
     <div class="content-left-in row-fluid">
         <div id="position-2" class="span12">
             <!--<div class="yt-position-inner">-->
-             <div class="module exclusive">
+             <div class="module ">
                  <div class="modcontent clearfix">
                     <div style="text-align: center;">
                         <h3 class="modtitle">Tìm kiếm</h3>
@@ -11,11 +11,7 @@
                         <form method="get" action="{{ route('timkiem') }}">
                           
                            <span style="font-weight: bold; color: #d22222"> Giá :</span>
-                            <select name="keyword" style="width: 85%">
-                            <option value="0to100">Dưới 100.000 ₫</option>
-                            <option value="100to200">Từ 100.000 ₫ - 200.000 ₫ </option>
-                            <option value="200tomax">Trên 200.000 ₫</option>
-                             </select>
+                            <input type="text" name="keyword">
                             <div style="text-align: center;" class="item-readmore">
                                 <button type="submit" class="button1" title="Fate rinus late">
                                     Tìm kiếm
@@ -105,32 +101,14 @@
 
 
                                 </div>
-                                <div class="module exclusive">
-
-                                    <div class="modcontent clearfix">
-
-
-                                        <div>
-                                            Exclusive Email Offers
-                                        </div>
-                                        <div>
-                                            Get exclusive Millennium &amp; Copthorne offers delivered right to your inbox
-                                        </div>
-                                        <div class="box">
-                                            <input type="text" placeholder="Your email">
-                                            <input type="button" value="search">
-                                        </div>
-                                    </div>
-
-
-                                </div>
+                               
                                 <div class="module">
 
                                     <div class="modcontent clearfix">
                                         <div class="bannergroup">
 
                                             <div class="banneritem">
-                                                <a href="http://www.smartaddons.com/" target="_blank" title="SJ Barkery">
+                                                <a href="{{ route('trang-chu') }}" target="_blank" title="SJ Barkery">
                                                     <img src="public/source/images/banners/bakery.png" alt="SJ Barkery">
                                                 </a>
                                                 <div class="clr"></div>

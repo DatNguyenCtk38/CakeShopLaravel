@@ -151,7 +151,7 @@
             </div><!-- end browse-view -->
                 <div class="horizontal-separator"></div>
 
-                @if (count($sp_theoloai)>6)
+              
                     <div class="pagging-sort" style="margin-bottom: 10px">
                     <div class="pagination clearfix">
                        {{ $sp_theoloai->appends(request()->input())->links()}}
@@ -159,7 +159,7 @@
 
 
                 </div>
-                @endif
+                
 
             </div><!-- end browse-view -->
 

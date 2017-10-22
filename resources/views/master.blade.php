@@ -157,7 +157,7 @@ jQuery(function($) {
       }
     </style>
 </head>
-  <body id="bd" class="com_virtuemart view-category red sj_bakery no-slideshow  pattern_5" onload="prettyPrint()">	
+  <body id="bd" class="com_virtuemart view-category red sj_bakery no-slideshow  pattern_5" >	
     <section id="yt_wrapper">	
   		@include('layout.header')
      @if (request()->route()->getName() === 'trang-chu')
@@ -251,7 +251,10 @@ jQuery(function($) {
                   var totalPrice = result.totalPrice;
                    totalPrice = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                   $('#totalPrice').html(totalPrice+"₫");
-                  $('#row_'+id).fadeOut(1000);                   
+                  $('#row_'+id).fadeOut(1000);
+                  if (result.totalQty == 0 ) {
+                    $('#checkoutFormSubmit').attr("disabled",true);
+                  }                 
                 }
             });
         }

@@ -150,14 +150,11 @@ class PageController extends Controller
         //--------------------------MAIL-------------------
         //Mail::send(new newMail());
         //$listBill = BillDetail::where('id_bill',$bill->id)->get();
-        $listBill= DB::table('bill_detail')
-                ->join('products','products.id','bill_detail.id_product')
-                ->select('bill_detail.*','products.name','products.image')
-                ->where('bill_detail.id_bill','=',$bill->id)
+        $listBill= BillDetail::where('bill_detail.id_bill','=',$bill->id)
                 ->get();
         //print_r($listBill);
         
-        Mail::send(new SendMail($listBill,$req->name,$req->phone,$req->address,$bill->created_at,$bill->total, $req->email));
+        Mail::send(new SendMail($listBill,$bill,$req->email));
         //__________________________MAIL___________________
         Session::forget('cart');
         

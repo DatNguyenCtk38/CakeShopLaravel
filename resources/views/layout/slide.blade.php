@@ -26,15 +26,28 @@
                                  data-interval="5000" data-pause="hover">
                                 <!-- Slickslider items -->
                                 <div class="slickslider-items bg-style1">
-                                    <div class="slickslider-item item clearfix">
+                                    @php
+                                        $i = 0;
+                                    @endphp
+                                    @foreach ($slide as $sl)
+                                        @if ($i ==0)
+                                            <div class="slickslider-item item clearfix active">
+                                                 
+                                        @else
+                                            <div class="slickslider-item item clearfix">
+                                                 
+                                        @endif
+                                        
 
                                         <div class="item-image">
                                             <div class="btn-pre" data-id="#sj-slickslider232" data-jslide="prev"></div>
                                             <div class="btn-next" data-id="#sj-slickslider232" data-jslide="next"></div>
-                                            <img class="bg_slideshow" src="public/source/templates/sj_bakery/images/bg_slideshow.png" alt="">
+                                            <img class="bg_slideshow" src="public/source/images/stories/virtuemart/product/{{ $sl->image }}" alt="">
                                             <div class="item-image-inner">
-                                                <a href="index.php/virtuemart/categories/capin-sika-ziten-detail.html" title="Capin sika ziten">
-                                                    <img src="public/source/cache/resized/cfa5d3338d5373e678dc25ff3d122191.jpg" alt="Capin sika ziten" title="Capin sika ziten">
+                                                <a href="{!!url('chi-tiet-san-pham/'.$sl->id.'-'.$sl->slug)!!}" title="{{
+                                                    $sl->name
+                                                }}">
+                                                    <img style="height: 281px" src="public/source/images/stories/virtuemart/product/{{ $sl->image }}" alt="{{ $sl->name }}" title="{{ $sl->name }}">
                                                 </a>
                                             </div>
                                         </div>
@@ -43,87 +56,17 @@
                                             <div class="item-content-inner">
 
                                                 <div class="item-title">
-                                                    <a href="index.php/virtuemart/categories/capin-sika-ziten-detail.html" title="Capin sika ziten">
-                                                        Capin sika ziten
+                                                    <a href="{!!url('chi-tiet-san-pham/'.$sl->id.'-'.$sl->slug)!!}" title="{{ $sl->name }}">
+                                                        {{ $sl->name }}
                                                     </a>
                                                 </div>
 
                                                 <div class="item-price">
                                                     <div class="PricesalesPrice vm-display vm-price-value">
-                                                        <span class="PricesalesPrice">102,85 €</span></div>
+                                                        <span class="PricesalesPrice">{{ number_format($sl->unit_price) }}</span></div>
                                                 </div>
                                                 <div class="item-description">
-                                                    <p>Katin mase pokan eros quis justo sed nonummy et Donec et. Hendrerit velit orci sagittis eu Aenean pharetra 
-                                                        faucibus eu laoreet nunc. Tincidunt nulla a Nulla eu convallis ...</p>
-                                                </div>
-                                                <div class="item-addtocart">
-                                                    <div class="addtocart-area">
-                                                        <form method="post" class="product js-recalculate" action="#">
-                                                            <div class="addtocart-bar">
-                                                                <span class="addtocart-button">
-                                                                    <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart">
-                                                                </span> 							
-                                                                <!-- <label for="quantity88" class="quantity_box">Quantity: </label> -->
-                                                                <span class="quantity-box">
-                                                                    <input type="text" class="quantity-input js-recalculate" name="quantity[]"
-                                                                           onblur="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');
-                                                                           " onclick="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');"
-                                                                           onchange="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" 
-                                                                           onsubmit="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" 
-                                                                           value="1" data-init="1" data-step="1">
-                                                                </span>
-                                                                <span class="quantity-controls js-recalculate">
-                                                                    <input type="button" class="quantity-controls quantity-plus" value="plus">
-                                                                    <input type="button" class="quantity-controls quantity-minus" value="minus">
-                                                                </span>
-
-
-                                                                <input type="hidden" name="virtuemart_product_id[]" value="88">
-                                                                <noscript>&lt;input type="hidden" name="task" value="add"/&gt;</noscript> 
-                                                            </div>			<input type="hidden" name="option" value="com_virtuemart">
-                                                            <input type="hidden" name="view" value="cart">
-                                                            <input type="hidden" name="virtuemart_product_id[]" value="88">
-                                                            <input type="hidden" class="pname" value="Capin sika ziten">
-                                                            <input type="hidden" name="Itemid" value="435">		</form>
-
-                                                    </div>
-
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slickslider-item item clearfix active">
-
-                                        <div class="item-image">
-                                            <div class="btn-pre" data-id="#sj-slickslider232" data-jslide="prev"></div>
-                                            <div class="btn-next" data-id="#sj-slickslider232" data-jslide="next"></div>
-                                            <img class="bg_slideshow" src="public/source/templates/sj_bakery/images/bg_slideshow.png" alt="">
-                                            <div class="item-image-inner">
-                                                <a href="index.php/virtuemart/categories/dace-rita-simas-detail.html" title="Dace rita simas">
-                                                    <img src="public/source/cache/resized/af7c81176e1dd4f96432082c62ef741b.jpg" alt="Dace rita simas" title="Dace rita simas">
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-content ">
-                                            <div class="item-content-inner">
-
-                                                <div class="item-title">
-                                                    <a href="index.php/virtuemart/categories/dace-rita-simas-detail.html" title="Dace rita simas">
-                                                        Dace rita simas
-                                                    </a>
-                                                </div>
-
-                                                <div class="item-price">
-                                                    <div class="PricesalesPrice vm-display vm-price-value">
-                                                        <span class="PricesalesPrice">64,13 €</span></div>
-                                                </div>
-                                                <div class="item-description">
-                                                    <p>Hipas mase pokan eros quis justo sed nonummy et Donec et. 
-                                                        Hendrerit velit orci sagittis eu Aenean pharetra faucibus eu laoreet nunc.
-                                                        Tincidunt nulla a Nulla eu convallis ...</p></div>
+                                                    <p>{{ $sl->description }}</p></div>
                                                 <div class="item-addtocart">
                                                     <div class="addtocart-area">
                                                         <form method="post" class="product js-recalculate" action="#">
@@ -158,223 +101,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="slickslider-item item clearfix">
-
-                                        <div class="item-image">
-                                            <div class="btn-pre" data-id="#sj-slickslider232" data-jslide="prev"></div>
-                                            <div class="btn-next" data-id="#sj-slickslider232" data-jslide="next"></div>
-                                            <img class="bg_slideshow" src="public/source/templates/sj_bakery/images/bg_slideshow.png" alt="">
-                                            <div class="item-image-inner">
-                                                <a href="index.php/virtuemart/categories/hace-dace-zeta-detail.html" title="Hace dace zeta">
-                                                    <img src="public/source/cache/resized/c020c8e7c24d31b76815c7e50a5b531a.jpg" alt="Hace dace zeta" title="Hace dace zeta">
-                                                </a>
-                                            </div>
                                         </div>
-
-                                        <div class="item-content ">
-                                            <div class="item-content-inner">
-
-                                                <div class="item-title">
-                                                    <a href="index.php/virtuemart/categories/hace-dace-zeta-detail.html" title="Hace dace zeta">
-                                                        Hace dace zeta
-                                                    </a>
-                                                </div>
-
-                                                <div class="item-price">
-                                                    <div class="PricesalesPrice vm-display vm-price-value">
-                                                        <span class="PricesalesPrice">89,54 €</span></div>
-                                                </div>
-
-
-
-
-                                                <div class="item-description">
-                                                    <p>Piten mase pokan eros quis justo sed nonummy et Donec et.
-                                                        Hendrerit velit orci sagittis eu Aenean pharetra faucibus eu laoreet nunc. 
-                                                        Tincidunt nulla a Nulla eu convallis ...</p></div>
-                                                <div class="item-addtocart">
-                                                    <div class="addtocart-area">
-                                                        <form method="post" class="product js-recalculate" action="#">
-                                                            <div class="addtocart-bar">
-                                                                <span class="addtocart-button">
-                                                                    <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart"></span> 							
-                                                                <!-- <label for="quantity91" class="quantity_box">Quantity: </label> -->
-                                                                <span class="quantity-box">
-                                                                    <input type="text" class="quantity-input js-recalculate" name="quantity[]" 
-                                                                           onblur="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" 
-                                                                           onclick="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');"
-                                                                           onchange="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" 
-                                                                           onsubmit="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" 
-                                                                           value="1" data-init="1" data-step="1">
-                                                                </span>
-                                                                <span class="quantity-controls js-recalculate">
-                                                                    <input type="button" class="quantity-controls quantity-plus" value="plus">
-                                                                    <input type="button" class="quantity-controls quantity-minus" value="minus">
-                                                                </span>
-
-
-                                                                <input type="hidden" name="virtuemart_product_id[]" value="91">
-                                                                <noscript>&lt;input type="hidden" name="task" value="add"/&gt;</noscript> 
-                                                            </div>			<input type="hidden" name="option" value="com_virtuemart">
-                                                            <input type="hidden" name="view" value="cart">
-                                                            <input type="hidden" name="virtuemart_product_id[]" value="91">
-                                                            <input type="hidden" class="pname" value="Hace dace zeta">
-                                                            <input type="hidden" name="Itemid" value="435">		</form>
-
-                                                    </div>
-
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slickslider-item item clearfix">
-
-                                        <div class="item-image">
-                                            <div class="btn-pre" data-id="#sj-slickslider232" data-jslide="prev"></div>
-                                            <div class="btn-next" data-id="#sj-slickslider232" data-jslide="next"></div>
-                                            <img class="bg_slideshow" src="public/source/templates/sj_bakery/images/bg_slideshow.png" alt="">
-                                            <div class="item-image-inner">
-                                                <a href="index.php/virtuemart/categories/jace-nika-sire-detail.html" title="Jace nika sire">
-                                                    <img src="public/source/cache/resized/e508c2adceaf938a34f8b4ed5c93593e.jpg" alt="Jace nika sire" title="Jace nika sire">
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-content ">
-                                            <div class="item-content-inner">
-
-                                                <div class="item-title">
-                                                    <a href="index.php/virtuemart/categories/jace-nika-sire-detail.html" title="Jace nika sire">
-                                                        Jace nika sire
-                                                    </a>
-                                                </div>
-
-                                                <div class="item-price">
-                                                    <div class="PricesalesPrice vm-display vm-price-value"><span class="PricesalesPrice">88,33 €</span></div>
-                                                </div>
-
-
-
-
-                                                <div class="item-description">
-                                                    <p>Ketun mase pokan eros quis justo sed nonummy et Donec et. Hendrerit velit orci sagittis eu
-                                                        Aenean pharetra faucibus eu laoreet nunc. Tincidunt nulla a Nulla eu convallis ...</p>
-                                                </div>
-                                                <div class="item-addtocart">
-
-                                                    <div class="addtocart-area">
-                                                        <form method="post" class="product js-recalculate" action="#">
-
-                                                            <div class="addtocart-bar">
-                                                                <span class="addtocart-button">
-                                                                    <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart">
-                                                                </span> 							<!-- <label for="quantity85" class="quantity_box">Quantity: </label> -->
-                                                                <span class="quantity-box">
-                                                                    <input type="text" class="quantity-input js-recalculate" name="quantity[]" 
-                                                                           onblur="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');"
-                                                                           onclick="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');"
-                                                                           onchange="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" 
-                                                                           onsubmit="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');"
-                                                                           value="1" data-init="1" data-step="1">
-                                                                </span>
-                                                                <span class="quantity-controls js-recalculate">
-                                                                    <input type="button" class="quantity-controls quantity-plus" value="plus">
-                                                                    <input type="button" class="quantity-controls quantity-minus" value="minus">
-                                                                </span>
-
-
-                                                                <input type="hidden" name="virtuemart_product_id[]" value="85">
-                                                                <noscript>&lt;input type="hidden" name="task" value="add"/&gt;</noscript> 
-                                                            </div>			<input type="hidden" name="option" value="com_virtuemart">
-                                                            <input type="hidden" name="view" value="cart">
-                                                            <input type="hidden" name="virtuemart_product_id[]" value="85">
-                                                            <input type="hidden" class="pname" value="Jace nika sire">
-                                                            <input type="hidden" name="Itemid" value="435">
-                                                        </form>
-
-                                                    </div>
-
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slickslider-item item clearfix">
-
-                                        <div class="item-image">
-                                            <div class="btn-pre" data-id="#sj-slickslider232" data-jslide="prev"></div>
-                                            <div class="btn-next" data-id="#sj-slickslider232" data-jslide="next"></div>
-                                            <img class="bg_slideshow" src="public/source/templates/sj_bakery/images/bg_slideshow.png" alt="">
-                                            <div class="item-image-inner">
-                                                <a href="index.php/virtuemart/categories/kates-face-zace-detail.html" title="Kates face zace">
-                                                    <img src="public/source/cache/resized/353bb6c007bde287ee7cd19af6edc9ad.jpg" alt="Kates face zace" title="Kates face zace">
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-content ">
-                                            <div class="item-content-inner">
-
-                                                <div class="item-title">
-                                                    <a href="index.php/virtuemart/categories/kates-face-zace-detail.html" title="Kates face zace">
-                                                        Kates face zace
-                                                    </a>
-                                                </div>
-
-                                                <div class="item-price">
-                                                    <div class="PricesalesPrice vm-display vm-price-value"><span class="PricesalesPrice">38,72 €</span></div>
-                                                </div>
-
-
-
-
-                                                <div class="item-description">
-                                                    <p>Dakin mase pokan eros quis justo sed nonummy et Donec et. Hendrerit velit orci sagittis eu
-                                                        Aenean pharetra faucibus eu laoreet nunc. Tincidunt nulla a Nulla eu convallis ...</p></div>
-                                                <div class="item-addtocart">
-
-                                                    <div class="addtocart-area">
-                                                        <form method="post" class="product js-recalculate" action="#">
-
-                                                            <div class="addtocart-bar">
-                                                                <span class="addtocart-button">
-                                                                    <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart">
-                                                                </span> 
-                                                                <!-- <label for="quantity90" class="quantity_box">Quantity: </label> -->
-                                                                <span class="quantity-box">
-                                                                    <input type="text" class="quantity-input js-recalculate" name="quantity[]" 
-                                                                           onblur="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" 
-                                                                           onclick="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" 
-                                                                           onchange="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" 
-                                                                           onsubmit="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');"
-                                                                           value="1" data-init="1" data-step="1">
-                                                                </span>
-                                                                <span class="quantity-controls js-recalculate">
-                                                                    <input type="button" class="quantity-controls quantity-plus" value="plus">
-                                                                    <input type="button" class="quantity-controls quantity-minus" value="minus">
-                                                                </span>
-
-
-                                                                <input type="hidden" name="virtuemart_product_id[]" value="90">
-                                                                <noscript>&lt;input type="hidden" name="task" value="add"/&gt;</noscript> 
-                                                            </div>			<input type="hidden" name="option" value="com_virtuemart">
-                                                            <input type="hidden" name="view" value="cart">
-                                                            <input type="hidden" name="virtuemart_product_id[]" value="90">
-                                                            <input type="hidden" class="pname" value="Kates face zace">
-                                                            <input type="hidden" name="Itemid" value="435">		</form>
-
-                                                    </div>
-
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
+                                     @php
+                                        $i++;
+                                    @endphp
+                                    @endforeach
                                 </div>
 
                                 <!-- Slickslider nav -->

@@ -86,22 +86,10 @@
                                         <span class="addtocart-button">
                                             <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart(@php echo $product->id;@endphp)"
                                                                     >             </span>                             <!-- <label for="quantity33" class="quantity_box">Quantity: </label> -->
-                                        <span class="quantity-box">
-                                            <input type="text" class="quantity-input js-recalculate" name="quantity[]" onblur="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onclick="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onchange="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" onsubmit="Virtuemart.checkQuantity(this, 1, 'You can buy this product only in multiples of %s pieces!');" value="1" data-init="1" data-step="1">
-                                        </span>
-                                        <span class="quantity-controls js-recalculate">
-                                            <input type="button" class="quantity-controls quantity-plus" value="plus">
-                                            <input type="button" class="quantity-controls quantity-minus" value="minus">
-                                        </span>
+                                      
 
 
-                                        <input type="hidden" name="virtuemart_product_id[]" value="33">
-                                        <noscript>&lt;input type="hidden" name="task" value="add"/&gt;</noscript> 
-                                    </div>          <input type="hidden" name="option" value="com_virtuemart">
-                                    <input type="hidden" name="view" value="cart">
-                                    <input type="hidden" name="virtuemart_product_id[]" value="33">
-                                    <input type="hidden" class="pname" value="Wace vika sike">
-                                    <input type="hidden" name="Itemid" value="690">     </form>
+                                          </form>
 
                             </div>
 
@@ -114,12 +102,12 @@
 
                     <div class="desc-review">
                         <div class="title-tabs">
-                            <div class="active desc">Description</div>
+                            <div class="active desc">Mô tả</div>
                             
                         </div>
                         <div class="detail-tabs">
                             <div class="product-description active">
-                                <p>em tesque eu pretium qui</p>
+                                <p>{{ $product->description}}</p>
                             </div>
                         </div>
                     </div>
@@ -131,15 +119,7 @@
         <div class="component-inner">
             <div class="component-inner2">
                 <div class="browse-view">
-                    <form action="/templates/joomla3/sj-bakery/index.php/specialty-cake" method="get">
-                        <div class="virtuemart_search">
-                            <br>
-                                <input name="keyword" class="inputbox" type="text" size="20" value="">
-                                <input type="submit" value="Search in shop" class="button" onclick="this.form.keyword.focus();">
-                        </div>
-                                <input type="hidden" name="search" value="true">
-                                <input type="hidden" name="view" value="category">
-                    </form>
+                   
                         <!-- End Search Box -->
                      
                           @php
@@ -244,22 +224,7 @@
 
 
 
-                    <script id="jsVars_js" type="text/javascript">//<![CDATA[ 
-                        vmSiteurl = '../../index.html';
-                        vmLang = "";
-                        Virtuemart.addtocart_popup = '1';
-                        usefancy = true; //]]>
-                    </script>
-
-                    <script id="ready.vmprices_js" type="text/javascript">//<![CDATA[ 
-                        jQuery(document).ready(function ($) {
-                            Virtuemart.product(jQuery("form.product"));
-                        }); //]]>
-                    </script>
-                    <script id="ajaxContent_js" type="text/javascript">//<![CDATA[ 
-                        Virtuemart.container = jQuery('.productdetails-view');
-                        Virtuemart.containerSelector = '.productdetails-view'; //]]>
-                    </script>
+                    
                 </div>
 
             </div></div>

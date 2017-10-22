@@ -122,7 +122,7 @@
             </div><!-- end browse-view -->
                 <div class="horizontal-separator"></div>
 
-                @if (count($products)>5)
+               
                     <div class="pagging-sort" style="margin-bottom: 10px">
                     <div class="pagination clearfix">
                        {{ $products->appends(request()->input())->links()}}
@@ -130,7 +130,7 @@
 
 
                 </div>
-                @endif
+                
 
             </div><!-- end browse-view -->
 

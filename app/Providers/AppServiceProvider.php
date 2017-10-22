@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\ProductType;
 use App\Cart;
+use App\Product;
 use Session;
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,11 @@ class AppServiceProvider extends ServiceProvider
             $loai_sp = ProductType::all();
             
             $view->with('loai_sp',$loai_sp);
+        });
+        view()->composer('layout.slide',function($view){
+            $slide = Product::take(5)->orderby('products.id','desc')->get();
+            
+            $view->with('slide',$slide);
         });
         view()->composer('header',function($view){
             if (Session('cart')) {

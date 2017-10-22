@@ -168,11 +168,17 @@
                 <div id="yt_menuposition" class="span10 offset2">
                     <ul id="meganavigator" class="navi">
                         <li class="active level1 first" style="float: left;">
-                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Home</span></a>	
+                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Trang chủ</span></a>	
                         </li>
-
-                        
-
+                        <li class="active level1 first" style="float: left;">
+                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Sản phẩm</span></a>   
+                        </li>
+                        <li class="active level1 first" style="float: left;">
+                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Tin tức</span></a>   
+                        </li>
+                        <li class="active level1 first" style="float: left;">
+                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Liên hệ</span></a>   
+                        </li>
                     </ul>	
                     <select id="yt-mobilemenu" name="menu" onchange="MobileRedirectUrl()">
                         
