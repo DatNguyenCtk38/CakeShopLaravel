@@ -38,13 +38,12 @@
 <div class="cart-view">
 	<div class="vm-cart-header-container">
 
-		<div class="width50 floatleft vm-cart-header">
-			<h1>Giỏ hàng</h1>
+		<div class="width50 floatleft ">
+			<h1 style="color: black">Giỏ hàng</h1>
 
 			<div class="payments_signin_button"></div>
 		</div>
-				<div class="width50 floatleft right vm-continue-shopping">
-			<a class="continue_link" href="/templates/joomla3/sj-bakery/index.php/specialty-cake">Continue Shopping</a>		</div>
+				
 		<div class="clear"></div>
 	</div>
 	@php
@@ -74,7 +73,7 @@
 	     		{{-- expr --}}
 	     	
 	     	@else
-	     		<h3 style="color: #00abff">Bạn chưa đăng nhập. Nếu có tài khoản hãy<span><a href="#mod-login" role="button" class="login-switch text-font" title="" data-toggle="modal">
+	     		<h3>Bạn chưa đăng nhập. Nếu có tài khoản hãy<span><a href="#mod-login" role="button" class="login-switch text-font" title="" data-toggle="modal">
                         Đăng nhập 
                 </a></span> </h3>
 	     		
@@ -140,7 +139,7 @@
 		<div class="clear"></div>
 		<!--Giới tính-->
 		 <p class="width10 floatleft" id="gender">
-            <h1>Phương thức thanh toán</h1>
+            <h1 style="color: black">Phương thức thanh toán</h1>
 		</p>
         <p class="width50 floatleft" id="payment_method">
            <div class="form-block"  style="margin-bottom: 20px">
@@ -249,18 +248,32 @@
 	
 	 <div class="checkout-button-top"> <button @if(Session::has('cart'))
            
-           	@if (Session('cart')->totalQty>0)
-           		{{-- expr --}}
+           		@if (Session('cart')->totalQty>0)
+           		
            		@else
            		disabled 
-           	@endif
-            @endif type="submit" id="checkoutFormSubmit" name="checkout" value="1" class="vm-button-correct"><span>Đặt hàng</span> </button></div>
+           		@endif
+           	@else
+           	disabled
+            @endif type="submit" id="checkoutFormSubmit" onclick="ShowProgressAnimation()" name="checkout" value="1" class="vm-button-correct"><span>Đặt hàng</span> </button>
+
+        </div>
 
 				<input type="hidden" name="order_language" value="en-GB">
 		<input type="hidden" name="task" value="updatecart">
 		<input type="hidden" name="option" value="com_virtuemart">
 		<input type="hidden" name="view" value="cart">
 	</form>
+	 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	
+	<div id="loading-div-background">
+    <div id="loading-div" class="ui-corner-all" >
+      <img style="height:80px;margin:30px;" src="public/source/images/stories/virtuemart/product/loading.gif" alt="Loading.."/>
+      <h2 style="color:black;font-weight:normal;">Hệ thống đang xử lý</h2>
+      <p style="color: black" >Vui lòng đợi trong giây lát</p>
+     </div>
+</div>
+	
 </div>
 
 
@@ -279,8 +292,23 @@ var sessMin = 15;var vmAliveUrl = "index.php?option=com_virtuemart&view=virtuema
         </div>
 		 </div>
 <script type="text/javascript">
+	$(document).ready(function () {
+            $("#loading-div-background").css({ opacity: 0.8 });
+           
+        });
 
-      function change() {
+		
+        function ShowProgressAnimation() {
+           
+
+            $("#loading-div-background").show();
+
+        }
+
+	
+
+
+    function change() {
       	var name = document.getElementById("discount_code").value;
       	
               $.ajax({

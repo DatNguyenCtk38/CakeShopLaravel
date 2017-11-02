@@ -102,24 +102,20 @@
                                             </p>
                                                 <div class="btn-action clearfix">
                                                     <div class="wrap-button">
-                                                        <a href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}" title="Diten face xare" class="button1 product-details">Detail
+                                                        <a href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}" title="Diten face xare" class="button1 product-details">Chi tiết
                                                         </a>
                                                     </div>
                                                         <div class="addtocart-area">
                                                             <form method="post" class="product js-recalculate" action="#">
                                                                 <div class="addtocart-bar">
                                                                 <span class="addtocart-button">
-                                                                <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart"/>
+                                                                <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart(@php echo $product->id;@endphp)"
+                                                                    >
                                                                 </span>
 
                                                 <div class="clear"></div>
                                                                 </div>
-                                            <input type="hidden" class="pname" value="Diten face xare">
-                                            <input type="hidden" name="option" value="com_virtuemart">
-                                            <input type="hidden" name="view" value="cart">
-                                            <input type="hidden" class="quantity-input js-recalculate" name="quantity[]" value="1">
-                                            <noscript>&lt;input type="hidden" name="task" value="add"/&gt;</noscript>
-                                            <input type="hidden" name="virtuemart_product_id[]" value="54">
+                                           
                                         </form>
 
                                         <div class="clear"></div>

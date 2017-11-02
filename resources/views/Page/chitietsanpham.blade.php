@@ -114,7 +114,7 @@
 
 
                     <div class="product-related-products">
-                        <h4>Related Products</h4>
+                        <h1>Sản phẩm liên quan</h1>
                         <div id="yt_component" class="span12">
         <div class="component-inner">
             <div class="component-inner2">
@@ -151,7 +151,7 @@
                                         <div class="info-product">
                                             <h2><a style="font-size: 13px" href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}">{{ $product->name }}</a></h2>
                                             <div class="product-price marginbottom12" id="productPrice54">
-                                                <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Price: </span><span class="PricesalesPrice">{{ number_format($product->unit_price )  }} ₫</span></div>
+                                                <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Giá: </span><span class="PricesalesPrice">{{ number_format($product->unit_price )  }} ₫</span></div>
                                             </div>
                                             <p class="product_s_desc">
                                                 Makin zaten gravida eros quis justo sed nonummy...
@@ -159,13 +159,19 @@
                                                 <div class="btn-action clearfix">
                                                     
                                                         <div class="addtocart-area">
+
                                                             <form method="post" class="product js-recalculate" action="#">
+                                                                
                                                                 <div class="addtocart-bar">
                                                                 <span class="addtocart-button">
                                                                <input type="button" style="color: white" id="addtocart" name="addtocart" class="addtocart-button" value="Giỏ hàng" onclick="addcart(@php echo $product->id;@endphp)"
                                                                     >
                                                                 </span>
-
+                                                 <div style="margin-left: 19px" class="wrap-button">
+                                                        <a href="{!!url('chi-tiet-san-pham/'.$product->id.'-'.$product->slug)!!}" title="Diten face xare" class="button1 product-details">Chi tiết
+                                                        </a>
+                                                    </div>               
+                                                                
                                                 <div class="clear"></div>
                                                                 </div>
                                             <input type="hidden" class="pname" value="Diten face xare">

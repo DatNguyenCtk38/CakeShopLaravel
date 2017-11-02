@@ -62,7 +62,7 @@ ul.navi {margin: 0 ;padding: 0;list-style: none;}
 	}
 	ul.navi li.level1.active > .item-link,
 	ul.navi li.level1:hover > .item-link {
-		color: #ff7b30;
+		color: white;
 	}
 	
 /*---- Show All Submenu---- */

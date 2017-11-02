@@ -43,12 +43,13 @@
 								@endif
 				<form method="post" action="{{ route('editprofile') }}" >
 			 	<input type="hidden" name="_token" value="{{csrf_token()}}">
+
 			 	<p class="width20 floatleft profile" id="name">
         		    Họ và tên
 				</p>
 
        			 <p class="width30 floatleft" id="name">
-         		   <input required style="margin-bottom: 20px;width: 130%;color: black" type="text" name="name" value="" class="profile inputbox" size="18" placeholder="Họ tên">
+         		   <input required style="margin-bottom: 20px;width: 130%;color: black" type="text" name="name" value="{{Auth::user()->full_name}}" class="profile inputbox" size="18" placeholder="Họ tên">
 				</p>
 				<div class="clear"></div>
 				<p class="width20 floatleft profile" id="name">
@@ -56,7 +57,7 @@
 				</p>
 
        			 <p class="width30 floatleft" id="name">
-         		   <input required style="margin-bottom: 20px;width: 130%;color: black" type="text" name="address" class="profile inputbox" size="18" placeholder="Địa chỉ ">
+         		   <input required style="margin-bottom: 20px;width: 130%;color: black" type="text" value="{{Auth::user()->address}}" name="address" class="profile inputbox" size="18" placeholder="Địa chỉ ">
 				</p>
 				<div class="clear"></div>
 				<p class="width20 floatleft profile" id="name">
@@ -64,7 +65,7 @@
 				</p>
 
        			 <p class="width30 floatleft" id="name">
-         		   <input required style="margin-bottom: 20px;width: 130%;color: black" type="text" name="phone_number" class="profile inputbox" size="18" placeholder="Số điện thoại">
+         		   <input required style="margin-bottom: 20px;width: 130%;color: black" type="text" value="{{Auth::user()->phone_number}}" name="phone_number" class="profile inputbox" size="18" placeholder="Số điện thoại">
 				</p>
 				<div class="clear"></div>
 				<p class="width20 floatleft profile" id="name">

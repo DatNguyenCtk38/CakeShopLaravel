@@ -10,8 +10,8 @@
                     <div class="box">
                         <form method="get" action="{{ route('timkiem') }}">
                           
-                           <span style="font-weight: bold; color: #d22222"> Giá :</span>
-                            <input type="text" name="keyword">
+                           <span style="font-weight: bold; color: #d22222">Tìm kiếm</span>
+                            <input style ="width:190px" type="text" name="keyword">
                             <div style="text-align: center;" class="item-readmore">
                                 <button type="submit" class="button1" title="Fate rinus late">
                                     Tìm kiếm
@@ -26,7 +26,7 @@
             <div class="module news1 bg-title">
 
                 <!--<div class="wrap-title">-->
-                <h3 class="modtitle">Categories</h3>
+                <h3 class="modtitle">Thể loại</h3>
                 <!--</div>-->
                 <div class="modcontent clearfix">
                     

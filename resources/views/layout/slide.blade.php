@@ -72,7 +72,7 @@
                                                         <form method="post" class="product js-recalculate" action="#">
                                                             <div class="addtocart-bar">
                                                                 <span class="addtocart-button">
-                                                                    <input type="submit" name="addtocart" class="addtocart-button" value="Add to Cart" title="Add to Cart">	
+                                                                    <input type="submit" name="addtocart" class="addtocart-button" value="Giỏ hàng" title="Add to Cart">	
                                                                 </span> 					
                                                                 <!-- <label for="quantity89" class="quantity_box">Quantity: </label> -->
                                                                 <span class="quantity-box">

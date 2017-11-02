@@ -96,8 +96,9 @@
 																				
 		</fieldset>
 			<div>
-			<button type="submit" class=" button2" style="overflow:visible;">Đăng ký</button>
-						<a class="button2" href="{{ route('trang-chu') }}" title="Cancel">Hủy</a>
+
+			<button type="submit" class=" vm-button-correct" style="overflow:visible;height: 33px">Đăng ký</button>
+					
 			<input type="hidden" name="option" value="com_users">
 			<input type="hidden" name="task" value="registration.register">
 			<input type="hidden" name="c1941dd593ac4622b2f1ad90fa8a7f6f" value="1">		</div>

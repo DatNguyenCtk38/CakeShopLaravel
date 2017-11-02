@@ -13,8 +13,8 @@
                                     </a>
                                 </li>
                                 <li class="sj-register">
-                                    <a class="register-switch text-font" href="index.php/joomla-pages/2013-02-21-09-25-47/register.html">
-                                        Register</a>
+                                    <a  style="color: #fdfdfd" class="register-switch text-font" href="index.php/joomla-pages/2013-02-21-09-25-47/register.html">
+                                        Đăng kí</a>
                                 </li>
                             </ul>
                             <ul class="sj-login-regis">
@@ -22,13 +22,13 @@
                                 <li class="sj-register dropdown">
                                      @if(Auth::check())
                                         <a class="register-switch text-font" href="{{ route('dangxuat') }}">
-                                            <span class="title-link">Đăng xuất</span>
+                                            <span  style="color: #fdfdfd" class="title-link">Đăng xuất</span>
 
                                         </a>
 
                                     @else
                                         <a class="register-switch text-font" href="{{ route('dangky') }}">
-                                            <span class="title-link">Đăng kí</span>
+                                            <span  style="color: #fdfdfd" class="title-link">Đăng kí</span>
                                         </a>
                                     @endif
                                 </li>
@@ -36,7 +36,7 @@
                                 <li class="sj-login dropdown">
                                      @if(Auth::check())
                                     <a href="{{ route('ho-so') }}" data-toggle="dropdown" role="button" class="dropdown-toggle login-switch text-font" title="" >
-                                        <span class="title-link">
+                                        <span  style="color: #fdfdfd" class="title-link">
                                           {{Auth::user()->full_name}}
                                             
                                         </span>
@@ -45,8 +45,8 @@
                                     
        
                                     @else
-                                         <a href="#mod-login" role="button" class="login-switch text-font" title="" data-toggle="modal">
-                                            <span class="title-link">
+                                         <a id="dangnhap" href="#mod-login" role="button" class="login-switch text-font" title="" data-toggle="modal">
+                                            <span style="color: #fdfdfd" class="title-link">
                                           Đăng nhập
                                            
                                         </span>
@@ -61,6 +61,14 @@
                                                 <div class="sj_box_title">
                                                     <h3>Đăng nhâp</h3>
                                                 </div>
+                                                @if(count($errors)>0)
+                                                <div class="alert alert-danger">
+                                                    @foreach($errors->all() as $error)
+                                                        {{$error}}
+                                                    @endforeach
+                                                </div>
+                                            @endif
+                                          
                                                 <div class="sj_box_content">
                                                     <form id="login_form" action="{{route('login')}}" method="post">
                                                         <input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -85,10 +93,10 @@
                                                             <div class="login_button">
                                                                 <p id="form_login_remember">
                                                                     <input id="modlgn-remember" type="checkbox" name="remember" class="checkbox" value="yes">
-                                                                    <label for="modlgn-remember">Remember Me</label>
+                                                                    <label for="modlgn-remember">Nhớ tài khoản</label>
                                                                 </p>
                                                                 <div class="button2">
-                                                                    <input type="submit" name="Submit" class="button" value="Log in">
+                                                                    <input type="submit" name="Submit" class="button" value="Đăng nhập">
                                                                 </div>
                                                             </div>
                                                             <input type="hidden" name="option" value="com_users">
@@ -117,10 +125,10 @@
                         <div class="modcontent clearfix">
                             <!-- Default of smart -->
                             <div class="vmCartModule  cart blank" id="vmCartModule">
-                                <h3 class="title"><a href="{{ route('dathang') }}">Giỏ hàng</a></h3>
+                                <h3 class="title"><a style="color: #fdfdfd" href="{{ route('dathang') }}">Giỏ hàng</a></h3>
 
 
-                                <div class="total_products gio-hang-tb">(@if(Session::has('cart'))
+                                <div  style="color: #fdfdfd" class="total_products gio-hang-tb">(@if(Session::has('cart'))
                                 {{Session('cart')->totalQty}}
                                         @else 0
                                     @endif)</div>
@@ -165,19 +173,19 @@
                         </a>
                     </h1>
                 </div>
-                <div id="yt_menuposition" class="span10 offset2">
+                <div  id="yt_menuposition" class="span10 offset2">
                     <ul id="meganavigator" class="navi">
                         <li class="active level1 first" style="float: left;">
-                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Trang chủ</span></a>	
+                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span style="font-family: inherit;color: #fdfdfd" class="menu-title">Trang chủ</span></a>	
                         </li>
                         <li class="active level1 first" style="float: left;">
-                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Sản phẩm</span></a>   
+                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span style="font-family: inherit;color: #fdfdfd" class="menu-title">Sản phẩm</span></a>   
                         </li>
                         <li class="active level1 first" style="float: left;">
-                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Tin tức</span></a>   
+                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span style="font-family: inherit;color: #fdfdfd"  class="menu-title">Tin tức</span></a>   
                         </li>
                         <li class="active level1 first" style="float: left;">
-                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Liên hệ</span></a>   
+                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span style="font-family: inherit;color: #fdfdfd" class="menu-title">Liên hệ</span></a>   
                         </li>
                     </ul>	
                     <select id="yt-mobilemenu" name="menu" onchange="MobileRedirectUrl()">
@@ -188,3 +196,4 @@
         </div>
     </div>
 </section>
+

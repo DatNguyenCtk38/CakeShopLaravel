@@ -45,6 +45,14 @@ class Cart
 		}
 		
 	}
+
+	public function raiseByone($id){
+		$this->items[$id]['qty']++;
+		$this->items[$id]['price'] += $this->items[$id]['item']['promotion_price'];
+		$this->totalQty++;
+		$this->totalPrice += $this->items[$id]['item']['promotion_price'];
+		
+	}
 	//xóa 1
 	public function reduceByOne($id){
 		$this->items[$id]['qty']--;

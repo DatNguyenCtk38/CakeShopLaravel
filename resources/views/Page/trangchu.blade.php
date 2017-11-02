@@ -11,7 +11,7 @@
             <div class="modcontent clearfix">
             
                 <div id="sj_extraslider_4184451341504586970" class="sj-extraslider slide  extra-resp01-3 extra-resp02-3 extra-resp03-2 extra-resp04-1" data-interval="3000" data-pause="hover"><!--<![endif]-->
-                    <div class="heading-title">Best Sales</div><!--end heading-title-->
+                    <div class="heading-title">Sản phẩm HOT</div><!--end heading-title-->
                     <div class="extraslider-control  ">
                         <!--<a class="button-prev" href="/templates/joomla3/sj-bakery/" data-jslide="prev"></a>-->
                         <ul class="nav-page">
@@ -284,12 +284,7 @@
 
                                                 <div class="clear"></div>
                                                                 </div>
-                                            <input type="hidden" class="pname" value="Diten face xare">
-                                            <input type="hidden" name="option" value="com_virtuemart">
-                                            <input type="hidden" name="view" value="cart">
-                                            <input type="hidden" class="quantity-input js-recalculate" name="quantity[]" value="1">
-                                            <noscript>&lt;input type="hidden" name="task" value="add"/&gt;</noscript>
-                                            <input type="hidden" name="virtuemart_product_id[]" value="54">
+                                           
                                         </form>
 
                                         <div class="clear"></div>

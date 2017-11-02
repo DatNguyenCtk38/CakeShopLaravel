@@ -10,7 +10,7 @@
         <div class="component-inner">
             <div class="component-inner2">
                 <div class="browse-view">
-                    <h2>ĐẶT HÀNG THÀNH CỒNG</h2>
+                    <h2>ĐẶT HÀNG THÀNH CÔNG</h2>
                     <p class="width10 floatleft" id="name">Họ tên</p>
                     <p class="width30 floatleft" id="name">{{ $bill->customer_name }}</p>
                     <div class="clear"></div> 

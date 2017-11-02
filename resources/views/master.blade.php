@@ -43,7 +43,7 @@
 
 body.sj_bakery{font-size:12px}
 body.sj_bakery{font-family:arial,sans-serif;}
-  ul.navi li.level1 > .level1 .menu-title{font-family:Kameron, serif !important}
+  ul.navi li.level1 > .level1 .menu-title{font-family:sans-serif, serif !important}
 
 		#meganavigator ul.subnavi {
 			position: static;
@@ -74,7 +74,28 @@ body a{
 #yt_footer{background-color:#3e000b ;}
 #yt_spotlight5{background-color:#6f0a1c ;}
 
-
+  #loading-div-background 
+    {
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        background-color: #1c1c1c;
+        width:100%;
+        height:100%;
+     }
+#loading-div
+    {
+         width: 300px;
+         height: 200px;
+         background-color: white;
+         text-align:center;
+         position:absolute;
+         left: 50%;
+         top: 50%;
+         margin-left:-150px;
+         margin-top: -100px;
+     }
   </style>
   <script src="public/source/templates/sj_bakery/js/yt-script.js" type="text/javascript"></script>
   <script src="public/source/media/jui/js/jquery.min.js" type="text/javascript"></script>
@@ -93,10 +114,11 @@ body a{
   <script src="public/source/components/com_virtuemart/assets/js/jquery.ui.autocomplete.html.js" type="text/javascript"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <script src="public/source/components/com_virtuemart/assets/js/fancybox/jquery.fancybox-1.3.4.pack2d20.js?vmver=8771" type="text/javascript"></script>
-  <script src="public/source/components/com_virtuemart/assets/js/vmprices2d20.js?vmver=8771" type="text/javascript"></script>
   <script src="public/source/modules/mod_sj_vm_slickslider/assets/js/jquery-noconflict.js" type="text/javascript"></script>
   <script src="public/source/modules/mod_sj_vm_slickslider/assets/js/jcarousel.js" type="text/javascript"></script>
   <script src="public/source/modules/mod_sj_vm_slickslider/assets/js/jquery.touchwipe.1.1.1.js" type="text/javascript"></script>
+  
+  
   <script src="public/source/media/system/js/mootools-core.js" type="text/javascript"></script>
   <script src="public/source/media/system/js/core.js" type="text/javascript"></script>
   <script src="public/source/media/system/js/mootools-more.js" type="text/javascript"></script>
