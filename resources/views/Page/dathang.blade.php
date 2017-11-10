@@ -255,7 +255,11 @@
            		@endif
            	@else
            	disabled
-            @endif type="submit" id="checkoutFormSubmit" onclick="ShowProgressAnimation()" name="checkout" value="1" class="vm-button-correct"><span>Đặt hàng</span> </button>
+            @endif type="submit" id="checkoutFormSubmit" onclick="@if (Auth::check())
+            	ShowProgressAnimation()
+            @else
+            	{{-- false expr --}}
+            @endif" name="checkout" value="1" class="vm-button-correct"><span>Đặt hàng</span> </button>
 
         </div>
 
@@ -264,8 +268,8 @@
 		<input type="hidden" name="option" value="com_virtuemart">
 		<input type="hidden" name="view" value="cart">
 	</form>
-	 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 	
+	<script src="public/source/templates/sj_bakery/js/jquery-latest.js" type="text/javascript"></script>
 	<div id="loading-div-background">
     <div id="loading-div" class="ui-corner-all" >
       <img style="height:80px;margin:30px;" src="public/source/images/stories/virtuemart/product/loading.gif" alt="Loading.."/>

@@ -62,8 +62,7 @@
               <td>{{$sanpham->new}}</td>
               
               <td class="center">
-                <button id="{{$sanpham->id}}" value="{{$sanpham->name}}" class="delete-modal btn btn-danger"  data-id=""
-                data-name="">
+                <button onclick="xoasanpham('{{$sanpham->name}}',{{$sanpham->id}})" id="{{$sanpham->id}}" value="{{$sanpham->name}}" class="delete-modal btn btn-danger" >
                 <span class="glyphicon glyphicon-trash"></span> Xóa
               </button></td>
               <td class="center"><button class="edit-modal btn btn-info" id="{{$sanpham->id}}" data-id=""
@@ -84,54 +83,27 @@
 <!--EDIT -->
 @include('admin.sanpham.sua')
 <!-- DELETE-->
-<div id="delete_data_Modal" class="modal fade">
- <div class="modal-dialog">
-  <div class="modal-content">
-   <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <h4 class="modal-title">Xóa</h4>
-  </div>
-  <form method="post" id="delete_form" enctype="multipart/form-data">
-      <input class="form-control"  type="hidden" id="id_product_delete" name="id_product">
-  <div class="modal-body">
-    
-    <input type="hidden" name="_token" value="{{csrf_token()}}">
-    Bạn có chắc chắn muốn xóa sản phẩm <span id="product_name"></span>
-    <meta name="delete-token" content="{{ csrf_token() }}" />
-  </div>
-  <div class="modal-footer">
-    <button type="submit"  class="btn btn-danger delete"> <span class="glyphicon glyphicon-trash"></span> Xóa </button>
-   
-    <button type="button" class="btn btn-warning" data-dismiss="modal">
-      <span class='glyphicon glyphicon-remove'></span> Đóng
-    </button>
-  </div>
-</form>
-</div>
-</div>
-</div>
+@include('admin.sanpham.xoa')
 @endsection
 @section('script')
 <script type="text/javascript">
-  $(document).ready(function () {
-    $(document).on('click', '.delete-modal', function() {
-   var name = ($(this).attr('value'));
-   var id = $(this).attr('id');
+   function xoasanpham(name,id) {
+   
     $('#product_name').html(name);
      $('#id_article_delete').val(id);  
-     //click vo thung rac. no gan  id cho the input bi an torng form
-}  );  
-  });
+     $('#id_product_delete').val(id);
+     $('#delete_data_Modal').modal('show');  
+  }
   $(document).ready(function(){
 
    $('#delete_form').on("submit", function(event){  
       event.preventDefault(); 
       var id = $('#id_product_delete').attr('value');
-
+      var CSRF_TOKEN = $('meta[name="delete-token"]').attr('content');
       $.ajax({  
         url:"admin/sanpham/xoasanpham",  
         type:"post",  
-      
+        data: {_token: CSRF_TOKEN},
         dataType: 'text',
         data:new FormData(this),
         contentType:false,  

@@ -9,7 +9,7 @@
 	  <base href="{{asset('')}}">
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="generator" content="SmartAddons.Com - the high quality products!" />
-  <title>Sj Bakery - Joomla Responsive Template</title>
+  <title>Cửa hàng bánh kem</title>
 
   <link href="indexc0d0.php?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
   <link href="index7b17.php?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
@@ -102,7 +102,7 @@ body a{
   <script src="public/source/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
   <script src="public/source/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
   <script src="public/source/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
-  <script src="public/source/components/com_virtuemart/assets/js/vmprices.js" type="text/javascript"></script>
+  
   <script src="public/source/components/com_virtuemart/assets/js/fancybox/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
   
   <script src="public/source/templates/sj_bakery/menusys/class/mega/assets/jquery.megamenu.js" type="text/javascript"></script>

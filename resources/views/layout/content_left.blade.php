@@ -10,7 +10,7 @@
                     <div class="box">
                         <form method="get" action="{{ route('timkiem') }}">
                           
-                           <span style="font-weight: bold; color: #d22222">Tìm kiếm</span>
+                           <span style="font-weight: bold; color: #d22222">Từ khóa</span>
                             <input style ="width:190px" type="text" name="keyword">
                             <div style="text-align: center;" class="item-readmore">
                                 <button type="submit" class="button1" title="Fate rinus late">
@@ -43,7 +43,7 @@
         <div class="module news1 bg-title">
 
             <!--<div class="wrap-title">-->
-            <h3 class="modtitle">Latest News</h3>
+            <h3 class="modtitle">Tin tức</h3>
             <!--</div>-->
             <div class="modcontent clearfix">
                 <div id="sj_basic_news_15045869711116694499" class="sj-basic-news">
@@ -53,17 +53,17 @@
                                     <div class="bs-content">
                                         <div class="bs-title">
                                             <a href="index.php/joomla-pages/joomla-content/single-article.html" title="Bener senver cans">
-                                                Bener senver cans
+                                                Khuyễn mãi trung thu 2017
                                             </a>
                                             </div>
                                             <div class="bs-cat-date">
-                                                <span class="bs-date">26 May 2011</span>
+                                                <span class="bs-date">23 -9 - 2017</span>
                                             </div>
                                             <div class="bs-description">
-                                                Zute disse at libero porttitor nisi aliquet vulputate vitae at velit. Aliquam eget arcu magna, vel ...						
+                                               Tưng bừng trung thu 2017, khuyến mãi các mặt hàng từ ngày 23 - 27 tháng 9 ...						
                                                 <div class="bs-readmore">
-                                                    <a href="index.php/joomla-pages/joomla-content/single-article.html" title="Bener senver cans">
-                                                        Read more +
+                                                    <a href="{{ route('trang-chu') }}">
+                                                        xem thêm
                                                     </a>
                                                     </div>
                                                 </div>
@@ -75,17 +75,17 @@
                                             <div class="bs-content">
                                                 <div class="bs-title">
                                                     <a href="index.php/enkis-enka-pazine.html" title="Detus lapi tuka">
-                                                        Detus lapi tuka
+                                                        Khuyến mãi kỉ niệm 1 năm
                                                     </a>
                                                     </div>
                                                     <div class="bs-cat-date">
-                                                        <span class="bs-date">26 May 2011</span>
+                                                        <span class="bs-date">20 - 8 - 2017</span>
                                                     </div>
                                                     <div class="bs-description">
-                                                        Suspendisse at libero porttitor nisi aliquet vulputate vitae at velit. Aliquam eget arcu magna, vel ...						
+                                                        Nhân dịp kỉ niệm một năm. Chúng tối khuyến mãi 20%  ...						
                                                         <div class="bs-readmore">
-                                                            <a href="index.php/enkis-enka-pazine.html" title="Detus lapi tuka">
-                                                                Read more +
+                                                            <a href="{{ route('trang-chu') }}">
+                                                                xem thêm
                                                             </a>
                                                             </div>
                                                         </div>

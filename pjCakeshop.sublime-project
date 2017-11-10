@@ -2,7 +2,10 @@
 	"folders":
 	[
 		{
-			"path": "C:\\xampp\\htdocs\\CakeShopLaravel"
+			"path": "."
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\MyProject"
 		}
 	],
 	"settings":

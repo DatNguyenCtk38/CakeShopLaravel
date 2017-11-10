@@ -7,12 +7,12 @@
 				    	<div class="module open-hours blank">
 	    
 	    			<!--<div class="wrap-title">-->
-				<h3 class="modtitle">Opening Hours</h3>
+				<h3 class="modtitle">Giờ mở cửa</h3>
 			<!--</div>-->
 	    	    <div class="modcontent clearfix">
 		
 
-<span class="block-desc">Halvah apple pie cake lollipop lollipop cookie. Carrot cake bonbon.</span>
+<span class="block-desc">Của hàng bán bánh kem Đà Lạt.</span>
 <ul>
 <li><a href="#">MON to TUE - 10 AM to 10 PM</a></li>
 <li><a href="#">SAT - 12 AM to 12 PM</a></li>
@@ -31,7 +31,7 @@
 				    	<div class="module choose-us blank">
 	    
 	    			<!--<div class="wrap-title">-->
-				<h3 class="modtitle">Why Choose Us</h3>
+				<h3 class="modtitle">Lý do chọn chung tôi</h3>
 			<!--</div>-->
 	    	    <div class="modcontent clearfix">
 		
@@ -55,13 +55,13 @@
 				    	<div class="module contact-us blank">
 	    
 	    			<!--<div class="wrap-title">-->
-				<h3 class="modtitle">Contact Information</h3>
+				<h3 class="modtitle">Thống tin liên hệ</h3>
 			<!--</div>-->
 	    	    <div class="modcontent clearfix">
 		
 
 <ul>
-<li><span class="address-contact">Corner of Frankfort Street - New York City</span></li>
+<li><span class="address-contact">1/30 Trần Nhân Tông</span></li>
 <li><span class="mobi-contact">
 <span>+ 084 - 04 - 1234567</span>
 <span>+ 084 - 04 - 1234567</span>
@@ -90,7 +90,7 @@
 				    	<div class="module social blank">
 	    
 	    			<!--<div class="wrap-title">-->
-				<h3 class="modtitle">Social with Us</h3>
+				<h3 class="modtitle">Liên hệ với chúng tôi</h3>
 			<!--</div>-->
 	    	    <div class="modcontent clearfix">
 		

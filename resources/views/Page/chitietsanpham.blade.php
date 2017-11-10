@@ -154,7 +154,7 @@
                                                 <div class="PricesalesPrice vm-display vm-price-value"><span class="vm-price-desc">Giá: </span><span class="PricesalesPrice">{{ number_format($product->unit_price )  }} ₫</span></div>
                                             </div>
                                             <p class="product_s_desc">
-                                                Makin zaten gravida eros quis justo sed nonummy...
+                                                {{str_limit($product->description, $limit = 50, $end = '...')}}
                                             </p>
                                                 <div class="btn-action clearfix">
                                                     

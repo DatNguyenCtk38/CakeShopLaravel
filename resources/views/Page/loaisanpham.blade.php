@@ -98,7 +98,7 @@
                                                     @endif</div>
                                             </div>
                                             <p class="product_s_desc">
-                                                Makin zaten gravida eros quis justo sed nonummy...
+                                                {{str_limit($product->description, $limit = 50, $end = '...')}}
                                             </p>
                                                 <div class="btn-action clearfix">
                                                     <div class="wrap-button">

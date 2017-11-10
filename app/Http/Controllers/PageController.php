@@ -22,12 +22,10 @@ class PageController extends Controller
 {
     public function getIndex(){
     	
-    	$promotion_product = Product::where('promotion_price','<>',0)->paginate(6);
+    	$promotion_product = Product::where('new','<>',1)->orderby('id','desc')->paginate(6);
         $top3Crepe = Product::where('id_type',4)->take(9)->get();
        
-    	//print_r($top3Crepe);
-    //	die();
-    	//return view('page.trangchu',['slide'=>$slide]);
+    	
     	return view('page.trangchu',compact('top3Crepe','promotion_product'));
     }
     public function getLoaiSp($type, Request $req){

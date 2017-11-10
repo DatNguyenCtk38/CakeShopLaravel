@@ -123,7 +123,7 @@ class SanPhamController extends Controller
                                         <td>'.$sanpham->promotion_price.'</td>
                                         <td>'.$sanpham->unit.'</td>
                                         <td>'.$sanpham->new.'</td>
-                                        <td class="center"><button id="'.$sanpham->id.'" value ="'.$sanpham->name.'" class="delete-modal btn btn-danger"  data-id="" data-name="">
+                                        <td class="center"><button onclick="xoasanpham()" id="'.$sanpham->id.'" value ="'.$sanpham->name.'" class="delete-modal btn btn-danger"  data-id="" data-name="">
                                           <span class="glyphicon glyphicon-edit"></span> Xóa
                                         </button></td>
                                         <td class="center"><button class="edit-modal btn btn-info" id='.$sanpham->id.' >
@@ -142,14 +142,7 @@ class SanPhamController extends Controller
                     "searching": true,
                     " paging": true
                     } );
-                         $("#example tbody tr").click( function( e ) {
-                            if ( $(this).hasClass("row_selected") ) {
-                                 $(":checkbox", this).trigger("click");
-                          }
-                          else {
-                                    $(":checkbox", this).trigger("click");
-                                }
-                            });
+                        
                     </script>
                  ';
        
@@ -262,7 +255,7 @@ class SanPhamController extends Controller
                                         <td>'.$sanpham->promotion_price.'</td>
                                         <td>'.$sanpham->unit.'</td>
                                         <td>'.$sanpham->new.'</td>
-                                        <td class="center"><button id="'.$sanpham->id.'" value ="'.$sanpham->name.'" class="delete-modal btn btn-danger"  data-id="" data-name="">
+                                        <td class="center"><button onclick="xoasanpham()" id="'.$sanpham->id.'" value ="'.$sanpham->name.'" class="delete-modal btn btn-danger"  data-id="" data-name="">
                                           <span class="glyphicon glyphicon-edit"></span> Xóa
                                         </button></td>
                                         <td class="center"><button class="edit-modal btn btn-info" id='.$sanpham->id.' >
@@ -281,14 +274,7 @@ class SanPhamController extends Controller
                     "searching": true,
                     " paging": true
                     } );
-                    $("#example tbody tr").click( function( e ) {
-                            if ( $(this).hasClass("row_selected") ) {
-                                 $(":checkbox", this).trigger("click");
-                          }
-                          else {
-                                    $(":checkbox", this).trigger("click");
-                                }
-                            });
+                    
                     </script>
                  ';
          return response()->json($output);
@@ -296,7 +282,6 @@ class SanPhamController extends Controller
     public function postXoaSanPham(Request $req){
         $sanPham = Product::find($req->id_product);
         $sanPham->delete();
-       ;
         return $req->id_product;
     }
     public function getXoaSanPham(Request $req){

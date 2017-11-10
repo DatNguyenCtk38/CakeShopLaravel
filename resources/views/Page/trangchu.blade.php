@@ -65,7 +65,7 @@
                                             <div class="item-content">
 
                                                 <div class="item-description">
-                                                    <p>{{ $product->slug }}</p>
+                                                    <p>{{str_limit($product->description, $limit = 50, $end = '...')}}</p>
                                                     </div>
 
                                                 <div class="item-price">
@@ -195,7 +195,7 @@
             <h3 class="modtitle">Free Shipping</h3>
             <!--</div>-->
             <div class="modcontent clearfix">
-                on orders over $99. This offer is valid on all our store items
+                Miễn phí giao hàng trên toàn quốc
             </div>
 
 
@@ -267,7 +267,7 @@
                                                     @endif</div>
                                             </div>
                                             <p class="product_s_desc">
-                                                Makin zaten gravida eros quis justo sed nonummy...
+                                                {{str_limit($product->description, $limit = 50, $end = '...')}}
                                             </p>
                                                 <div class="btn-action clearfix">
                                                     <div class="wrap-button">
@@ -344,26 +344,7 @@
 
 
 
-    <script id="jsVars_js" type="text/javascript">//<![CDATA[ 
-        vmSiteurl = 'http://demo.smartaddons.com/templates/joomla3/sj-bakery/' ;
-        vmLang = "";
-        Virtuemart.addtocart_popup = '1' ; 
-    usefancy = true; //]]>
-    </script>
-
-    <script id="ready.vmprices_js" type="text/javascript">//<![CDATA[ 
-        jQuery(document).ready(function($) {
-            Virtuemart.product(jQuery("form.product"));
-
-        /*$("form.js-recalculate").each(function(){
-            if ($(this).find(".product-fields").length && !$(this).find(".no-vm-bind").length) {
-                var id= $(this).find('input[name="virtuemart_product_id[]"]').val();
-                Virtuemart.setproducttype($(this),id);
-
-            }
-        });*/
-    }); //]]>
-    </script>
+    
 
     </div></div>
     </div>

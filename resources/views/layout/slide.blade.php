@@ -7,20 +7,7 @@
                     <div class="module">
 
                         <div class="modcontent clearfix">
-                            <script id="jsVars_js" type="text/javascript">//<![CDATA[ 
-                                vmSiteurl = 'index.html';
-                                vmLang = "";
-                                Virtuemart.addtocart_popup = '1';
-                                usefancy = true; //]]>
-                            </script>
-
-                            <script id="ready.vmprices_js" type="text/javascript">//<![CDATA[ 
-                                jQuery(document).ready(function ($) {
-                                    Virtuemart.product(jQuery("form.product"));
-
-                                   
-                                }); //]]>
-                            </script>
+                           
 
                             <div id="sj-slickslider232" class="sj-slickslider  slide slickslider-right" 
                                  data-interval="5000" data-pause="hover">
@@ -63,7 +50,7 @@
 
                                                 <div class="item-price">
                                                     <div class="PricesalesPrice vm-display vm-price-value">
-                                                        <span class="PricesalesPrice">{{ number_format($sl->unit_price) }}</span></div>
+                                                        <span class="PricesalesPrice">{{ number_format($sl->unit_price) }} đồng</span></div>
                                                 </div>
                                                 <div class="item-description">
                                                     <p>{{ $sl->description }}</p></div>

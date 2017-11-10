@@ -13,7 +13,7 @@
                                     </a>
                                 </li>
                                 <li class="sj-register">
-                                    <a  style="color: #fdfdfd" class="register-switch text-font" href="index.php/joomla-pages/2013-02-21-09-25-47/register.html">
+                                    <a  style="color: #ffb6c3" class="register-switch text-font" href="index.php/joomla-pages/2013-02-21-09-25-47/register.html">
                                         Đăng kí</a>
                                 </li>
                             </ul>
@@ -22,13 +22,13 @@
                                 <li class="sj-register dropdown">
                                      @if(Auth::check())
                                         <a class="register-switch text-font" href="{{ route('dangxuat') }}">
-                                            <span  style="color: #fdfdfd" class="title-link">Đăng xuất</span>
+                                            <span  style="color: #ffb6c3" class="title-link">Đăng xuất</span>
 
                                         </a>
 
                                     @else
                                         <a class="register-switch text-font" href="{{ route('dangky') }}">
-                                            <span  style="color: #fdfdfd" class="title-link">Đăng kí</span>
+                                            <span  style="color: #ffb6c3" class="title-link">Đăng kí</span>
                                         </a>
                                     @endif
                                 </li>
@@ -36,7 +36,7 @@
                                 <li class="sj-login dropdown">
                                      @if(Auth::check())
                                     <a href="{{ route('ho-so') }}" data-toggle="dropdown" role="button" class="dropdown-toggle login-switch text-font" title="" >
-                                        <span  style="color: #fdfdfd" class="title-link">
+                                        <span  style="color: #ffb6c3" class="title-link">
                                           {{Auth::user()->full_name}}
                                             
                                         </span>
@@ -46,7 +46,7 @@
        
                                     @else
                                          <a id="dangnhap" href="#mod-login" role="button" class="login-switch text-font" title="" data-toggle="modal">
-                                            <span style="color: #fdfdfd" class="title-link">
+                                            <span style="color: #ffb6c3" class="title-link">
                                           Đăng nhập
                                            
                                         </span>
@@ -125,10 +125,10 @@
                         <div class="modcontent clearfix">
                             <!-- Default of smart -->
                             <div class="vmCartModule  cart blank" id="vmCartModule">
-                                <h3 class="title"><a style="color: #fdfdfd" href="{{ route('dathang') }}">Giỏ hàng</a></h3>
+                                <h3 class="title"><a style="color: #ffb6c3" href="{{ route('dathang') }}">Giỏ hàng</a></h3>
 
 
-                                <div  style="color: #fdfdfd" class="total_products gio-hang-tb">(@if(Session::has('cart'))
+                                <div  style="color: #ffb6c3" class="total_products gio-hang-tb">(@if(Session::has('cart'))
                                 {{Session('cart')->totalQty}}
                                         @else 0
                                     @endif)</div>
@@ -173,25 +173,62 @@
                         </a>
                     </h1>
                 </div>
-                <div  id="yt_menuposition" class="span10 offset2">
-                    <ul id="meganavigator" class="navi">
-                        <li class="active level1 first" style="float: left;">
-                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span style="font-family: inherit;color: #fdfdfd" class="menu-title">Trang chủ</span></a>	
+               <div id="yt_menuposition" class="span10 offset2">
+            <ul id="meganavigator" class="navi"><li class="active level1 first" style="float: left;">
+<li class=" level1 first">
+    <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Trang chủ</span></a>   </li>
+<li class="level1 havechild" style="float: left;">
+    <a class="level1 havechild item-link" href="{!!url('loai-san-pham/'.'1'.'-'.'banh-man')!!}"><span class="menu-title">Sản phẩm</span></a>   
+            <!-- open mega-content div -->
+        <div class="level2 mega-content" style="display: none;">
+            
+            <div class="mega-content-inner">
+                
+                <div class="mega-col first one">
+                    <ul class="subnavi level2">                      
+                        <li class="level2">
+                             <a class="level2 item-link" href="{!!url('loai-san-pham/'.'1'.'-'.'banh-man')!!}"><span class="menu-title"></span>Bánh mặn</a>    
                         </li>
-                        <li class="active level1 first" style="float: left;">
-                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span style="font-family: inherit;color: #fdfdfd" class="menu-title">Sản phẩm</span></a>   
+                        <li class="level2">
+                             <a class="level2 item-link" href="{!!url('loai-san-pham/'.'2'.'-'.'banh-ngot')!!}"><span class="menu-title"></span>Bánh ngọt</a>    
                         </li>
-                        <li class="active level1 first" style="float: left;">
-                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span style="font-family: inherit;color: #fdfdfd"  class="menu-title">Tin tức</span></a>   
+                        <li class="level2">
+                             <a class="level2 item-link" href="{!!url('loai-san-pham/'.'3'.'-'.'banh-trai-cay')!!}"><span class="menu-title"></span>Bánh trái cây</a>    
                         </li>
-                        <li class="active level1 first" style="float: left;">
-                            <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span style="font-family: inherit;color: #fdfdfd" class="menu-title">Liên hệ</span></a>   
+                        <li class="level2">
+                             <a class="level2 item-link" href="{!!url('loai-san-pham/'.'4'.'-'.'banh-kem')!!}"><span class="menu-title"></span>Bánh kem</a>    
                         </li>
-                    </ul>	
-                    <select id="yt-mobilemenu" name="menu" onchange="MobileRedirectUrl()">
-                        
-                        </select>
+                        <li class="level2">
+                             <a class="level2 item-link" href="{!!url('loai-san-pham/'.'5'.'-'.'banh-crepe')!!}"><span class="menu-title"></span>Bánh crepe</a>    
+                        </li>
+                        <li class="level2">
+                             <a class="level2 item-link" href="{!!url('loai-san-pham/'.'6'.'-'.'banh-pizza')!!}"><span class="menu-title"></span>Bánh pizza</a>    
+                        </li>
+                        <li class="level2">
+                             <a class="level2 item-link" href="{!!url('loai-san-pham/'.'7'.'-'.'banh-su-kem')!!}"><span class="menu-title"></span>Bánh su kem</a>    
+                        </li>
+                       
+                    </ul>
                 </div>
+                
+            </div>
+        </div>
+</li>
+<li class=" level1 first">
+    <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Tin tức</span></a>   </li>
+<li class=" level1 first">
+    <a class=" level1 first item-link" href="{{ route('trang-chu') }}"><span class="menu-title">Liên hệ</span></a>   </li>
+</ul>   <script type="text/javascript">
+        jQuery(function($){
+            $('#meganavigator').megamenu({ 
+                'wrap':'#meganavigator',
+                'easing': 'easeOutSine',
+                'speed': '400',
+                'justify': 'left'
+            });
+        });
+    </script>
+           </div>
             </div>
         </div>
     </div>

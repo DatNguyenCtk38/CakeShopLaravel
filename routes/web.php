@@ -70,7 +70,7 @@ Route::get('/',[
 	'uses'=>'PageController@getIndex'
 	]);
 
-Route::get('loai-san-pham/{type}',[
+Route::get('loai-san-pham/{type}-{slug}',[
 	'as'=>'loaisanpham',
 	'uses'=>'PageController@getLoaiSp'
 	]);

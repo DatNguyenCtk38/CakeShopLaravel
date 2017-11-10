@@ -1,46 +1,42 @@
-@extends('admin.layout.index')
-@section('content')
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript"> 
-      $(document).ready( function() {
-        $('#notify').delay(2000).fadeOut();
-      });
-    </script>
-<div id="page-wrapper" style="min-height: 323px;">
-        <div class="container-fluid">
-            <div class="row">
-                    
-                <div class="col-lg-12">
-                    <h1 class="page-header">Danh mục
-                        <small>Thêm mới</small>
-                    </h1>
-                </div>
-                @if(count($errors)>0)
-                        <div id ="notify" class="alert alert-danger">
-                            @foreach($errors->all() as $error)
-                                {{$error}}
-                            @endforeach
-                        </div>
-                    @endif
-                    @if(Session::get('thongbao'))
-                        <div id ="notify" class="alert alert-success">{{Session::get('thongbao')}}</div>
-                    @endif     
-                <!-- /.col-lg-12 -->
-                <div class="col-lg-7" style="padding-bottom:120px">
-                    <form action="{{route('addProductType')}}" method="POST">
-                        <input type="hidden" name="_token" value="{{csrf_token()}}">
-                        <div class="form-group">
-                            <label>Tên danh mục:</label>
-                            <input class="form-control" required name="catename" placeholder="Nhập tên danh mục">
-                        </div>
-                        <button type="submit" name="themdanhmuc" class="btn btn-default">Thêm </button>
-                        <button type="reset" class="btn btn-default">Làm mới</button>
-                    
-                </form></div>
-            </div>
-            <!-- /.row -->
-        </div>
-      
-        <!-- /.container-fluid -->
+<div id="add_data_Modal" class="modal fade">
+ <div class="modal-dialog">
+  <div class="modal-content">
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Thêm thể loại</h4>
+  </div>
+   <form method="POST" id="insert_form" enctype="multipart/form-data">
+  <div class="modal-body">
+   
+     @if(count($errors)>0)
+     <div id ="notify" class="alert alert-danger">
+      @foreach($errors->all() as $error)
+      {{$error}}
+      @endforeach
+    </div>
+    @endif
+    <input type="hidden" name="_token" value="{{csrf_token()}}">
+    <div class="alert alert-danger print-error-msg" style="display:none">
+      <ul></ul> 
+    </div>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <div class="form-group">
+     
+      <label>Tên thể loại</label>
+      <input class="form-control" required name="catename" placeholder="Nhập tên danh mục">
+    </div>
+    
+    
+    
+  </div>
+  <div class="modal-footer">
+    <button type="submit" name="themdanhmuc" class="btn btn-success"> <span class='glyphicon glyphicon-edit'></span>Thêm </button>
+   
+    <button type="button" class="btn btn-warning" data-dismiss="modal">
+      <span class='glyphicon glyphicon-remove'></span> Đóng
+    </button>
+  </div>
+</form>
 </div>
-@endsection
+</div>
+</div>

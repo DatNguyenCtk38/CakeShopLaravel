@@ -1,13 +1,4 @@
- $("#example tbody tr").click( function( e ) {
-    if ( $(this).hasClass('row_selected') ) {
-         $(':checkbox', this).trigger('click');
-         
-  }
-  else {
-            $(':checkbox', this).trigger('click');
-        }
-    });
-
+ 
 $('#delete_many').click( function() {
     if(confirm("Bạn có chắc muốn xóa những sản phẩm trên"))
     {
@@ -77,7 +68,7 @@ else{
            $('.error').remove();
            $('#insert_form')[0].reset();  
            $('#add_data_Modal').modal('hide');  
-           $('#list_product').html(data); 
+           $('#list_product').html(data.html); 
        }  
 
    }  

@@ -14,6 +14,7 @@ use App\User;
 use Hash;
 use Auth;
 use Session;
+use Validator;
 class TheLoaiController extends Controller
 {
     public function getDanhSachTheLoai(){
@@ -24,7 +25,8 @@ class TheLoaiController extends Controller
         return view('admin.theloai.them');
     }
     public function postThemTheLoai(Request $req){
-        $this->validate($req,
+           
+        $validator = Validator::make($req->all(),
             [
                 'catename'=>'required|unique:type_products,catename|min:6|max:20'
             ],
@@ -35,11 +37,23 @@ class TheLoaiController extends Controller
                 'catename.max'=>"Tên thể loại không dài quá 20 kí tự"
             ]
             );
-        $tl = new ProductType;
-        $tl->catename = $req->catename;
-        $tl->slug = str_slug($req->catename,'-');
-        $tl->save();
-        return redirect()->route('danhsachtheloai')->with('thongbao','Thêm thành công');
+        if ($validator->fails ()){
+             return response()->json ( array (
+                'errors' => $validator->getMessageBag ()->toArray ()
+             ) );
+        }
+        $theloai = new ProductType;
+        $theloai->catename = $req->catename;
+        $theloai->slug = str_slug($req->catename,'-');
+        $theloai->save();
+        $theloais = ProductType::all();
+        $returnHTML = view('admin.theloai.table',compact('theloais'))->render();// or method that you prefere to return data + RENDER is the key here
+        return response()->json(array (
+                'success' =>true,
+                'html'  =>$returnHTML
+             ));
+        
+        //return response()->json (['sanPham'=>"ádas"]);
     }
     public function getSuaTheLoai($id){
         $theloai = ProductType::find($id);

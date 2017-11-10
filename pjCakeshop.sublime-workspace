@@ -4,8 +4,36 @@
 		"selected_items":
 		[
 			[
+				"end",
+				"endsection"
+			],
+			[
 				"Au",
-				"Auth::user\tGet the currently authenticated user."
+				"Auth::check\tDetermine if the current user is authenticated."
+			],
+			[
+				"if",
+				"ife\tblade-if_else"
+			],
+			[
+				"Pro",
+				"ProductType"
+			],
+			[
+				"lo",
+				"$loai_sp〔variable〕"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"for",
+				"foreach\tblade-foreach"
+			],
+			[
+				"pro",
+				"product"
 			],
 			[
 				"onc",
@@ -26,14 +54,6 @@
 			[
 				"bac",
 				"background"
-			],
-			[
-				"Pro",
-				"Product"
-			],
-			[
-				"if",
-				"if\tif"
 			],
 			[
 				"in",
@@ -108,10 +128,6 @@
 				"color"
 			],
 			[
-				"end",
-				"endif"
-			],
-			[
 				"text-a",
 				"text-align"
 			],
@@ -176,10 +192,6 @@
 				"foreach\tforeach …"
 			],
 			[
-				"for",
-				"for\tfor …"
-			],
-			[
 				"ar",
 				"arrayId"
 			],
@@ -198,10 +210,6 @@
 			[
 				"res",
 				"response〔function〕"
-			],
-			[
-				"pro",
-				"product_name"
 			],
 			[
 				"se",
@@ -350,10 +358,6 @@
 			[
 				"fo",
 				"foreach\tforeach …"
-			],
-			[
-				"prin",
-				"print〔function〕"
 			],
 			[
 				"oncl",
@@ -510,44 +514,36 @@
 			[
 				"b",
 				"Book〔class〕"
-			],
-			[
-				"funtio",
-				"function_exists"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "resources/views/layout/header.blade.php",
+			"file": "public/source/media/system/js/theloaijs.js",
 			"settings":
 			{
-				"buffer_size": 12740,
+				"buffer_size": 5153,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "",
+			"file": "resources/views/admin/theloai/danhsach.blade.php",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Windows",
-				"name": "Xdebug Context",
-				"read_only": true,
-				"scratch": true
+				"buffer_size": 3592,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "",
+			"file": "routes/web.php",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Windows",
-				"name": "Xdebug Watch",
-				"read_only": true,
-				"scratch": true
+				"buffer_size": 6793,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -581,15 +577,15 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "ins",
+		"last_filter": "in",
 		"selected_items":
 		[
 			[
-				"ins",
+				"in",
 				"Package Control: Install Package"
 			],
 			[
-				"in",
+				"ins",
 				"Package Control: Install Package"
 			],
 			[
@@ -597,7 +593,7 @@
 				"SublimeCodeIntel: Reset"
 			]
 		],
-		"width": 834.0
+		"width": 444.0
 	},
 	"console":
 	{
@@ -618,51 +614,84 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/CakeShopLaravel",
+		"/C/xampp/htdocs/CakeShopLaravel/.tmp.drivedownload",
 		"/C/xampp/htdocs/CakeShopLaravel/app",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers",
 		"/C/xampp/htdocs/CakeShopLaravel/public",
 		"/C/xampp/htdocs/CakeShopLaravel/public/source",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js",
 		"/C/xampp/htdocs/CakeShopLaravel/resources",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page"
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai",
+		"/C/xampp/htdocs/CakeShopLaravel/routes"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/TheLoaiController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/routes/web.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/danhsach.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/table.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/danhsach.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/SanPhamController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js/myjs.js",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/xoa.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/xoa.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/sua.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/sua.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/them.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/them.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js/theloaijs.js",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/tablesanpham.balde.php",
+		"/C/xampp/htdocs/MyProject/resources/views/welcome.blade.php",
+		"/C/xampp/htdocs/MyProject/routes/web.php",
+		"/C/xampp/htdocs/MyProject/app/Http/Controllers/HomeController.php",
+		"/C/xampp/htdocs/MyProject/app/Http/Controllers/Controller.php",
+		"/C/xampp/htdocs/MyProject/.env",
+		"/C/xampp/htdocs/CakeShopLaravel/.env",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/FrontUserController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/PageController.php",
+		"/C/xampp/htdocs/MyProject/app/Product.php",
+		"/C/xampp/htdocs/CakeShopLaravel/config/view.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Product.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/footer.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/composer.json",
+		"/C/xampp/htdocs/CakeShopLaravel/.htaccess",
+		"/C/xampp/htdocs/CakeShopLaravel/app/MyClass.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/slide.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/master.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/content_left.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/MailController.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/header.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dangky.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dathang.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Providers/AppServiceProvider.php",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/templates/sj_bakery/js/jquery-latest.js",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/trangchu.blade.php",
+		"/E/IT_DLU/PHP/Template/CakeShop/demo.smartaddons.com/templates/joomla3/sj-bakery/index.html",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/loaisanpham.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/chitietsanpham.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/public/source/templates/sj_bakery/css/template.css",
 		"/C/xampp/htdocs/CakeShopLaravel/public/source/templates/sj_bakery/menusys/class/common/css/menustyle.css",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dathang.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/content_left.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/slide.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/PageController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/routes/web.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/user/thaydoithongtingiaohang.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/FrontUserController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/master.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/thongbaodathang.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/quanlytaikhoan.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/layout/index.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/danhsach.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dangky.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Cart.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/errors/404.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/AjaxController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/chitietsanpham.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/timkiem.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/trangchu.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/loaisanpham.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/footer.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/lienhe.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/banhmoi.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/dangnhap.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/gioithieu.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Slide.php",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Providers/AppServiceProvider.php",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/SanPhamController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js/myjs.js",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/mail.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Mail/SendMail.php",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Product.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/BillDetail.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Mail/Mailtrap.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Mail/newMail.php",
@@ -671,7 +700,6 @@
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/user/chitietmuahang.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/hoadon/danhsach.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/dondathang.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/sua.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/user/magiamgia.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/menuquanly.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/hoadon/chitiethoadon.blade.php",
@@ -693,7 +721,6 @@
 		"/E/IT_DLU/HTML/BdayWish-master/index.html",
 		"/E/IT_DLU/HTML/hpdb/index.html",
 		"/E/IT_DLU/HTML/Happy-Birthday-master/index.html",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/them.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/user/quanlytaikhoan.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/quanlytaikhoan.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/user/thaydoimatkhau.blade.php",
@@ -702,15 +729,12 @@
 		"/C/xampp/htdocs/CakeShopLaravel/app/Customer.php",
 		"/C/xampp/htdocs/CakeShopLaravel/config/auth.php",
 		"/C/xampp/htdocs/CakeShopLaravel/app/ProductType.php",
-		"/C/xampp/htdocs/CakeShopLaravel/.env",
 		"/C/xampp/htdocs/CakeShopLaravel/app/Bill.php",
 		"/E/IT_DLU/ASP.NET/BANHANGMVC5/WebBanQuanAo/WebBanQuanAo/Views/Home/Index.cshtml",
 		"/E/IT_DLU/ASP.NET/BANHANGMVC5/WebBanQuanAo/WebBanQuanAo/Views/Layout/HomeLayout.cshtml",
 		"/E/IT_DLU/ASP.NET/BANHANGMVC5/WebBanQuanAo/WebBanQuanAo/Views/Home/MenuPartial.cshtml",
 		"/C/xampp/htdocs/CakeShopLaravel/pro.sublime-project",
 		"/C/xampp/htdocs/CakeShopLaravel/pjCakeshop.sublime-project",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/TheLoaiController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/danhsach.blade.php",
 		"/C/xampp/htdocs/scodeweb/resources/views/home.blade.php",
 		"/C/xampp/htdocs/scodeweb/resources/views/layouts/header.blade.php",
 		"/C/xampp/htdocs/scodeweb/resources/views/layouts/master.blade.php",
@@ -730,32 +754,12 @@
 		"/C/xampp/htdocs/CakeShopLaravel/config/app.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/Page/timtheogia.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/public/source/templates/sj_bakery/js/my-js.js",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/MailController.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/layout/master.blade.php",
 		"/C/xampp/htdocs/linhkiendt/app/controller/giohang.php",
 		"/C/xampp/htdocs/Cake/app/Http/Controllers/PageController.php",
 		"/C/xampp/htdocs/Cake/app/Cart.php",
 		"/C/xampp/htdocs/Cake/app/Http/Controllers/AjaxController.php",
-		"/C/xampp/htdocs/Cake/resources/views/Page/dathang.blade.php",
-		"/C/xampp/htdocs/Cake/resources/views/master.blade.php",
-		"/C/xampp/htdocs/Cake/resources/views/Page/mail.blade.php",
-		"/C/xampp/htdocs/Cake/app/Providers/AppServiceProvider.php",
-		"/C/xampp/htdocs/Cake/pro.sublime-project",
-		"/C/xampp/htdocs/linhkiendt/view/modules/giohang.php",
-		"/C/xampp/htdocs/Cake/routes/web.php",
-		"/C/xampp/htdocs/Cake/resources/views/layout/master.blade.php",
-		"/C/xampp/htdocs/Cake/app/Http/Controllers/AdminController.php",
-		"/C/xampp/htdocs/Cake/public/source/templates/sj_bakery/js/my-js.js",
-		"/C/xampp/htdocs/Cake/resources/views/layout/footer.blade.php",
-		"/C/xampp/htdocs/Cake/resources/views/Page/trangchu.blade.php",
-		"/C/xampp/htdocs/Cake/resources/views/Page/dangnhap.blade.php",
-		"/C/xampp/htdocs/Cake/resources/views/layout/header.blade.php",
-		"/E/IT_DLU/PHP/Template/CakeShop/demo.smartaddons.com/templates/joomla3/sj-bakery/index.html",
-		"/C/xampp/htdocs/Cake/app/Mail/SendMail.php",
-		"/E/IT_DLU/PHP/Template/CakeShop/demo.smartaddons.com/templates/joomla3/sj-bakery/index.php/virtuemart/other-pages/shopping-cart/cart.html",
-		"/C/xampp/htdocs/Cake/resources/views/mail.blade.php",
-		"/C/xampp/htdocs/Cake/resources/views/header.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/readme.md"
+		"/C/xampp/htdocs/Cake/resources/views/Page/dathang.blade.php"
 	],
 	"find":
 	{
@@ -773,6 +777,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"fdfdfd",
 			"\t\t\t\n",
 			"giỏ hàng",
 			"action",
@@ -788,6 +793,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"ffb6c3",
 			"$chitiet",
 			""
 		],
@@ -805,64 +811,60 @@
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/layout/header.blade.php",
+					"file": "public/source/media/system/js/theloaijs.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12740,
+						"buffer_size": 5153,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12409,
-								12409
+								1146,
+								1146
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3294.0,
+						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 1,
+					"file": "resources/views/admin/theloai/danhsach.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 3592,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1559,
+								1571
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 630.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -870,10 +872,11 @@
 				},
 				{
 					"buffer": 2,
+					"file": "routes/web.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 6793,
 						"regions":
 						{
 						},
@@ -886,16 +889,21 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2430.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		},
 		{
@@ -967,7 +975,7 @@
 	},
 	"input":
 	{
-		"height": 35.0
+		"height": 36.0
 	},
 	"layout":
 	{
@@ -1116,7 +1124,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 313.0,
+	"side_bar_width": 220.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
