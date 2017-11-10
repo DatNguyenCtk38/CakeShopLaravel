@@ -46,7 +46,7 @@ class TheLoaiController extends Controller
         $theloai->catename = $req->catename;
         $theloai->slug = str_slug($req->catename,'-');
         $theloai->save();
-        $theloais = ProductType::all();
+        $theloais = ProductType::orderby('id','desc')->get();
         $returnHTML = view('admin.theloai.table',compact('theloais'))->render();// or method that you prefere to return data + RENDER is the key here
         return response()->json(array (
                 'success' =>true,
