@@ -146,7 +146,7 @@ class SanPhamController extends Controller
                     </script>
                  ';
        
-       return response()->json($output);
+       return response()->json(['html'=>$output]);
    
     }
     public function getSuaSanPham(Request $req){

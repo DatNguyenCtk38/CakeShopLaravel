@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"sanp",
+				"sanpham"
+			],
+			[
+				"js",
+				"json_decode"
+			],
+			[
+				"j",
+				"json_decode"
+			],
+			[
+				"the",
+				"theloai"
+			],
+			[
+				"retu",
+				"$returnHTML〔variable〕"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"src",
+				"script\tTag"
+			],
+			[
 				"end",
 				"endsection"
 			],
@@ -260,10 +288,6 @@
 				"data"
 			],
 			[
-				"retu",
-				"$returnHtml〔variable〕"
-			],
-			[
 				"route",
 				"route\tblade-route"
 			],
@@ -490,58 +514,34 @@
 			[
 				"Product",
 				"ProductType"
-			],
-			[
-				"Prod",
-				"ProductType〔namespace〕"
-			],
-			[
-				"Ro",
-				"Route::post\tBasic Post Route."
-			],
-			[
-				"var",
-				"var_dump"
-			],
-			[
-				"ca",
-				"catename"
-			],
-			[
-				"The",
-				"TheloaiController@getSuaTheLoai"
-			],
-			[
-				"b",
-				"Book〔class〕"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "public/source/media/system/js/theloaijs.js",
+			"file": "resources/views/admin/sanpham/table.blade.php",
 			"settings":
 			{
-				"buffer_size": 5153,
+				"buffer_size": 1293,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "resources/views/admin/theloai/danhsach.blade.php",
+			"file": "app/Http/Controllers/SanPhamController.php",
 			"settings":
 			{
-				"buffer_size": 3592,
+				"buffer_size": 12923,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "routes/web.php",
+			"file": "public/source/media/system/js/myjs.js",
 			"settings":
 			{
-				"buffer_size": 6793,
+				"buffer_size": 5134,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -632,20 +632,21 @@
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/TheLoaiController.php",
-		"/C/xampp/htdocs/CakeShopLaravel/routes/web.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/danhsach.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/table.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/danhsach.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/SanPhamController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/TheLoaiController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/table.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js/myjs.js",
+		"/C/xampp/htdocs/CakeShopLaravel/app/Http/Controllers/SanPhamController.php",
+		"/C/xampp/htdocs/CakeShopLaravel/routes/web.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/danhsach.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/them.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/them.blade.php",
+		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js/theloaijs.js",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/xoa.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/xoa.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/sua.blade.php",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/sua.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/theloai/them.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/them.blade.php",
-		"/C/xampp/htdocs/CakeShopLaravel/public/source/media/system/js/theloaijs.js",
 		"/C/xampp/htdocs/CakeShopLaravel/resources/views/admin/sanpham/tablesanpham.balde.php",
 		"/C/xampp/htdocs/MyProject/resources/views/welcome.blade.php",
 		"/C/xampp/htdocs/MyProject/routes/web.php",
@@ -758,8 +759,7 @@
 		"/C/xampp/htdocs/linhkiendt/app/controller/giohang.php",
 		"/C/xampp/htdocs/Cake/app/Http/Controllers/PageController.php",
 		"/C/xampp/htdocs/Cake/app/Cart.php",
-		"/C/xampp/htdocs/Cake/app/Http/Controllers/AjaxController.php",
-		"/C/xampp/htdocs/Cake/resources/views/Page/dathang.blade.php"
+		"/C/xampp/htdocs/Cake/app/Http/Controllers/AjaxController.php"
 	],
 	"find":
 	{
@@ -806,24 +806,86 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "public/source/media/system/js/theloaijs.js",
+					"file": "resources/views/admin/sanpham/table.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5153,
+						"buffer_size": 1293,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1146,
-								1146
+								0,
+								1293
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 82.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Http/Controllers/SanPhamController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1089,
+								1089
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1678.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/source/media/system/js/myjs.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1693,
+								1697
 							]
 						],
 						"settings":
@@ -834,69 +896,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/admin/theloai/danhsach.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1559,
-								1571
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 630.0,
+						"translation.y": 861.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "routes/web.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6793,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2430.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -975,7 +978,7 @@
 	},
 	"input":
 	{
-		"height": 36.0
+		"height": 40.0
 	},
 	"layout":
 	{

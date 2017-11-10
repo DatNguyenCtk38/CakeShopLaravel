@@ -168,7 +168,7 @@ $(document).ready(function(){
                $('.error').remove();
                $('#edit_form')[0].reset();  
                $('#edit_data_Modal').modal('hide');  
-               $('#list_product').html(data); 
+               $('#list_product').html(data.html); 
            }  
 
        }  
